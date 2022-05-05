@@ -8,4 +8,4 @@ More text to come don't worry
 
 [Daniel](https://www.linkedin.com/in/daniel-janos-papp/)
 [Frederikke](https://www.linkedin.com/in/frederikke-mathiesen/)
-[Victor](https://www.linkedin.com/in/victor-sehested-b1ba66197/)
+[Victor](https://www.linkedin.com/in/victor-sehested/)
