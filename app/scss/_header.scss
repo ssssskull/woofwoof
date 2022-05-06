@@ -1,9 +1,119 @@
-.header {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+.nav {
+  $self: &;
+  display: flex;
+  // top: 0;
+  // left: 0;
+  // position: fixed;
+  // width: 100%;
+  // z-index: 100;
 
-  @include breakpoint-up(large) {
-    position: absolute;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5625rem 0.625rem 0.625rem;
+    background-color: $clr-light;
+    border-bottom: 1px solid $clr-dark;
+
+    > div {
+      display: flex;
+      @include breakpoint-up(large) {
+        &:first-of-type {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    z-index: 1;
+    position: relative;
+    display: block;
+    background: $clr-light;
+    border: none;
+    width: 2.5rem;
+
+    &::before,
+    &::after {
+      background-color: currentColor;
+      content: "";
+      display: block;
+      height: 0.125rem;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transition: transform 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
+      width: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%, -0.1875rem);
+    }
+    &::after {
+      transform: translate(-75%, 0.1875rem) scaleX(0.5);
+    }
+  }
+
+  &__logo {
+    height: 16px;
+    width: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    &--search {
+      background-image: url("../../app/images/icons/Icon=Icon-search.svg");
+    }
+
+    &--profile {
+      background-image: url("../../app/images/icons/Icon=Icon-face.svg");
+    }
+
+    &--cart {
+      background-image: url("../../app/images/icons/Icon=Icon-bag.svg");
+    }
+  }
+
+  &__list {
+    display: none;
+    color: $clr-dark;
+
+    li {
+      &:not(:last-of-type)::after {
+        content: ",";
+      }
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: $h4-size;
+      letter-spacing: -0.005em;
+      white-space: nowrap;
+    }
+
+    @include breakpoint-up(large) {
+      display: flex;
+    }
+
+    &:hover {
+    }
+
+    .sub-menu {
+      display: none;
+      left: 0;
+      position: absolute;
+      right: 0;
+      //TODO fix whitespace after men and ,
+    }
   }
 }
+//#{ $self }

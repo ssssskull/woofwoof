@@ -1,0 +1,30 @@
+{
+  "name": "woofwoof",
+  "version": "1.0.0",
+  "description": "Wood Wood final project",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production mix",
+    "dev": "mix",
+    "development": "mix",
+    "watch": "mix watch",
+    "production": "cross-env NODE_ENV=production mix",
+    "prod": "cross-env NODE_ENV=production mix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssssskull/woofwoof.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssssskull/woofwoof/issues"
+  },
+  "homepage": "https://github.com/ssssskull/woofwoof#readme",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.39",
+    "resolve-url-loader": "^4.0.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.1.0"
+  }
+}
