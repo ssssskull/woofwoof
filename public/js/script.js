@@ -8,11 +8,28 @@
 /***/ (() => {
 
 var toggle = document.querySelector(".nav__toggle");
+var submenu = document.querySelector("#menu-header-menu");
+var icons = document.querySelectorAll("[data-visibility]");
+console.log(icons);
 
 if (toggle) {
   console.log(toggle);
-  toggle.addEventListener("click", function () {
+  toggle.addEventListener("click", function (e) {
     toggle.classList.toggle("nav-is-expanded");
+
+    if (toggle.classList.contains("nav-is-expanded")) {
+      submenu.classList.add("visible");
+      icons.forEach(function (el) {
+        return el.classList.add("hidden-icon");
+      });
+    } else {
+      submenu.classList.remove("visible");
+      icons.forEach(function (el) {
+        return el.classList.remove("hidden-icon");
+      });
+    }
+
+    return false;
   });
 }
 

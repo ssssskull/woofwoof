@@ -2,10 +2,12 @@
   $self: &;
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   transition: transform 0.25s ease;
   width: 100%;
+  border-bottom: 1px solid $clr-dark;
+  background-color: $clr-light;
 
   &__wrapper {
     display: flex;
@@ -14,7 +16,6 @@
     align-items: center;
     padding: 0.5625rem 0.625rem 0.625rem;
     background-color: $clr-light;
-    border-bottom: 1px solid $clr-dark;
 
     @include breakpoint-up(large) {
       padding-left: 1.25rem;
@@ -23,6 +24,7 @@
 
     > div {
       display: flex;
+
       @include breakpoint-up(large) {
         &:first-of-type {
           display: none;
@@ -85,6 +87,9 @@
     width: 2.5rem;
     height: 2.5rem;
     background-position: center;
+    visibility: visible;
+    opacity: 100%;
+    transition: opacity 0.25s ease-in-out;
 
     &--button {
       padding: 0;
@@ -139,15 +144,37 @@
   }
 
   &__list {
-    display: none;
+    display: block;
+    visibility: visible;
     color: $clr-dark;
 
-    li {
-      &:not(:last-of-type) {
-        margin-right: 0.25em;
+    background-color: #fff;
 
-        a::after {
-          content: ",";
+    @include breakpoint-down(medium) {
+      top: 100%;
+      border-bottom: 1px solid;
+      width: 100%;
+      transition: transform 0.25s cubic-bezier(0.2, 0.4, 0.7, 1),
+        visibility 0ms 0.25s;
+      z-index: -1;
+      padding: 1.25rem;
+      transform: translateY(-100%);
+      padding-left: inherit;
+      padding-right: inherit;
+      left: 0;
+      visibility: hidden;
+      right: 0;
+      position: absolute;
+    }
+
+    @include breakpoint-up(large) {
+      li {
+        &:not(:last-of-type) {
+          margin-right: 0.25em;
+
+          a::after {
+            content: ",";
+          }
         }
       }
     }
@@ -173,11 +200,12 @@
       left: 0;
       position: absolute;
       right: 0;
-      //TODO fix whitespace after men and ,
     }
   }
 }
 //#{ $self }
+
+// Header helpers
 
 .hide-for-mobile {
   @include breakpoint-down(medium) {
@@ -189,4 +217,32 @@
   @include breakpoint-up(large) {
     display: none;
   }
+}
+
+.visible {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: transform 0.25s cubic-bezier(0.2, 0.4, 0.8, 1);
+
+  .nav__icon--cart {
+    display: none;
+  }
+
+  .nav__icon--profile {
+    display: none;
+  }
+
+  .nav__icon--search {
+    display: none;
+  }
+}
+
+.hidden-icon {
+  visibility: hidden;
+  opacity: 0%;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.submenu-visible {
+  display: block;
 }

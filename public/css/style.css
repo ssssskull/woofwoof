@@ -149,10 +149,12 @@ body {
 .nav {
   display: flex;
   position: fixed;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   transition: transform 0.25s ease;
   width: 100%;
+  border-bottom: 1px solid hsl(0deg, 0%, 0%);
+  background-color: hsl(0deg, 0%, 100%);
 }
 .nav__wrapper {
   display: flex;
@@ -161,7 +163,6 @@ body {
   align-items: center;
   padding: 0.5625rem 0.625rem 0.625rem;
   background-color: hsl(0deg, 0%, 100%);
-  border-bottom: 1px solid hsl(0deg, 0%, 0%);
 }
 @media (min-width: 64em) {
   .nav__wrapper {
@@ -221,6 +222,9 @@ body {
   width: 2.5rem;
   height: 2.5rem;
   background-position: center;
+  visibility: visible;
+  opacity: 100%;
+  transition: opacity 0.25s ease-in-out;
 }
 .nav__icon--button {
   padding: 0;
@@ -238,7 +242,7 @@ body {
   background-repeat: no-repeat;
   background-position: 100%;
   text-align: initial;
-  background-image: url(../images/Icon=Icon-chevron.svg?fcd2fd2fe76064791cf353937c597c66);
+  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
 }
 @media (min-width: 64em) {
   .nav__icon--lang {
@@ -271,14 +275,35 @@ body {
   text-align: center;
 }
 .nav__list {
-  display: none;
+  display: block;
+  visibility: visible;
   color: hsl(0deg, 0%, 0%);
+  background-color: #fff;
 }
-.nav__list li:not(:last-of-type) {
-  margin-right: 0.25em;
+@media (max-width: 63.9375em) {
+  .nav__list {
+    top: 100%;
+    border-bottom: 1px solid;
+    width: 100%;
+    transition: transform 0.25s cubic-bezier(0.2, 0.4, 0.7, 1), visibility 0ms 0.25s;
+    z-index: -1;
+    padding: 1.25rem;
+    transform: translateY(-100%);
+    padding-left: inherit;
+    padding-right: inherit;
+    left: 0;
+    visibility: hidden;
+    right: 0;
+    position: absolute;
+  }
 }
-.nav__list li:not(:last-of-type) a::after {
-  content: ",";
+@media (min-width: 64em) {
+  .nav__list li:not(:last-of-type) {
+    margin-right: 0.25em;
+  }
+  .nav__list li:not(:last-of-type) a::after {
+    content: ",";
+  }
 }
 .nav__list a {
   color: inherit;
@@ -310,4 +335,29 @@ body {
   .hide-for-desktop {
     display: none;
   }
+}
+
+.visible {
+  visibility: visible;
+  transform: translateY(0%);
+  transition: transform 0.25s cubic-bezier(0.2, 0.4, 0.8, 1);
+}
+.visible .nav__icon--cart {
+  display: none;
+}
+.visible .nav__icon--profile {
+  display: none;
+}
+.visible .nav__icon--search {
+  display: none;
+}
+
+.hidden-icon {
+  visibility: hidden;
+  opacity: 0%;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.submenu-visible {
+  display: block;
 }
