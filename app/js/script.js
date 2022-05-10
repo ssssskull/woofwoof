@@ -1,21 +1,40 @@
-const toggle = document.querySelector(".nav__toggle");
-const submenu = document.querySelector("#menu-header-menu");
+const nav = document.querySelector(".nav");
+const dropdown = document.querySelector(".nav__list");
 const icons = document.querySelectorAll("[data-visibility]");
-console.log(icons);
 
-if (toggle) {
-  console.log(toggle);
+if (window.innerWidth < 1024) {
+  nav.addEventListener("click", function (e) {
+    const toggle = e.target.closest(".nav__toggle");
+    const submenu = e.target.closest(".menu-item");
 
-  toggle.addEventListener("click", function (e) {
+    if (submenu) {
+      const nestedDropdown = submenu.lastElementChild;
+      nestedDropdown.classList.toggle("sub-menu--visible");
+    }
+
+    if (!toggle) return;
+
     toggle.classList.toggle("nav-is-expanded");
 
     if (toggle.classList.contains("nav-is-expanded")) {
-      submenu.classList.add("visible");
+      dropdown.classList.add("visible");
       icons.forEach((el) => el.classList.add("hidden-icon"));
+      nav.classList.add("overlay");
     } else {
-      submenu.classList.remove("visible");
+      dropdown.classList.remove("visible");
       icons.forEach((el) => el.classList.remove("hidden-icon"));
+      nav.classList.remove("overlay");
     }
-    return false;
   });
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+};

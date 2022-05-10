@@ -1,0 +1,41 @@
+.footer {
+  &__container {
+    color: $clr-dark;
+    display: grid;
+    grid-template-areas: "customer customer" "linksA linksB" "newsletter newsletter" "campaign campaign" "end end";
+    grid-template-columns: repeat(2, 1fr);
+
+    @include breakpoint-up(large) {
+      grid-template-areas: "customer newsletter linksA linksB" "customer campaign linksA linksB" "end end end end";
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__customer {
+    border-top: 1px solid;
+    grid-area: customer;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+
+    a,
+    strong {
+      color: inherit;
+      font-size: var(--h4-size);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      line-height: 1.4;
+    }
+  }
+
+  &__links {
+    border-top: 1px solid;
+    grid-area: linksA;
+    padding: 1.25rem;
+  }
+
+  &__links + &__links {
+    border-left: 1px solid;
+    grid-area: linksB;
+  }
+}

@@ -18,7 +18,26 @@
         <a class="nav__logo" href="<?php echo home_url(); ?>">
             <img src="<?php echo get_template_directory_uri();?>/app/images/logo.svg" alt="Wood Wood" width="212" height="22">
         </a>
-         <?php wp_nav_menu(array( 'menu' => 'mobile_nav', 'container'=> false, 'menu_class' => 'nav__list', 'menu_id' => false));?>
+        <div class="nav__list">
+            <?php wp_nav_menu(array( 'menu' => 'mobile_nav', 'container'=> false, 'menu_class' => 'nav__element', 'menu_id' => false));?>
+            <div class="nav__functions">
+                <a href="" class="nav__account">My profile</a>
+                <div class="nav__lang">
+                    <strong>Language</strong>
+                    <ul>
+                        <li>
+                            <a href="">DA</a>
+                        </li>
+                        <li>
+                            <a href="">DE</a>
+                        </li>
+                        <li>
+                            <a href="">EN</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div>
             <button href="#" class="nav__icon--lang nav__icon nav__icon--button hide-for-mobile" title="Lang" aria-label="Lang">
                 <span>EN</span>
@@ -31,7 +50,4 @@
             </button>
         </div>
     </nav>
-    <!-- <nav aria-label="Navigation">
-        <?php wp_nav_menu(array( 'menu' => 'nav', 'container'=> false, 'menu_class' => 'nav__desktop hide-for-mobile', 'menu_id' => false));?>
-    </nav> -->
 </header>

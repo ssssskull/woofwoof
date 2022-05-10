@@ -1,7 +1,13 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   font-family: WW beta8, sans-serif;
   font-size: 87.5%;
   line-height: 1.6;
   margin: 0;
   padding-top: 4.2857142857em;
+  transition: all 0.2s ease;
 }

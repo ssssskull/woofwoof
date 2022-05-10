@@ -13,7 +13,7 @@ function woodwood_theme_setup() {
     'header' => 'Header menu',
     'mobile_header' => 'Header menu - Mobile',
     'footer' => 'Footer menu',
-    'sidebar' => 'Sidebar'
+    'footer_secondary' => 'Secondary footer'
   ) );
  }
 
