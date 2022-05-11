@@ -387,6 +387,9 @@ a {
   }
 }
 @media (min-width: 64em) {
+  .nav__element {
+    justify-content: center;
+  }
   .nav__element li:not(:last-of-type) {
     margin-right: 0.25em;
   }

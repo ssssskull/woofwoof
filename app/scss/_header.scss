@@ -197,6 +197,7 @@
     }
 
     @include breakpoint-up(large) {
+      justify-content: center;
       li {
         &:not(:last-of-type) {
           margin-right: 0.25em;
