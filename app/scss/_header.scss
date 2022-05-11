@@ -40,11 +40,16 @@
 
     > div {
       display: flex;
+      flex: 1;
 
       @include breakpoint-up(large) {
         &:first-of-type {
           display: none;
         }
+      }
+
+      &:last-of-type {
+        justify-content: end;
       }
     }
   }
@@ -91,9 +96,12 @@
   &__logo {
     height: 16px;
     width: auto;
+    margin-right: auto;
+    width: max-content;
+    flex: 1;
 
     img {
-      width: 100%;
+      width: auto;
       height: 100%;
     }
   }

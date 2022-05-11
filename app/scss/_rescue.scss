@@ -1,7 +1,8 @@
 .rescue {
-  //min-height: calc(100vh - 3.75rem);
+  display: grid;
+  grid-template-areas: "content";
 
-  &__inner {
+  &__container {
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -12,9 +13,7 @@
     max-width: 40em;
   }
 
-  &__links {
-    border-top: 1px solid;
-    grid-area: linksA;
-    padding: 1.25rem;
+  &__btn {
+    text-decoration: underline;
   }
 }

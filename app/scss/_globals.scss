@@ -1,8 +1,3 @@
-html,
-body {
-  height: 100%;
-}
-
 body {
   font-family: WW beta8, sans-serif;
   font-size: 87.5%;
@@ -10,4 +5,7 @@ body {
   margin: 0;
   padding-top: 4.2857142857em;
   transition: all 0.2s ease;
+  display: grid;
+  grid-template: "content" 1fr "footer"/100%;
+  min-height: calc(100vh - 3.75rem);
 }

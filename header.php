@@ -19,7 +19,7 @@
             <img src="<?php echo get_template_directory_uri();?>/app/images/logo.svg" alt="Wood Wood" width="212" height="22">
         </a>
         <div class="nav__list">
-            <?php wp_nav_menu(array( 'menu' => 'mobile_nav', 'container'=> false, 'menu_class' => 'nav__element', 'menu_id' => false));?>
+            <?php wp_nav_menu(array( 'menu' => 'header_menu', 'container'=> false, 'menu_class' => 'nav__element', 'menu_id' => false));?>
             <div class="nav__functions">
                 <a href="" class="nav__account">My profile</a>
                 <div class="nav__lang">

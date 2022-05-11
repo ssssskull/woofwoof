@@ -1,4 +1,6 @@
 .footer {
+  grid-area: footer;
+
   &__container {
     color: $clr-dark;
     display: grid;
@@ -37,5 +39,113 @@
   &__links + &__links {
     border-left: 1px solid;
     grid-area: linksB;
+  }
+
+  &__newsletter {
+    border-top: 1px solid;
+    grid-area: newsletter;
+    padding: 1.25rem;
+
+    p {
+      font-size: var(--h4-size);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      line-height: 1.4;
+      margin-bottom: 0.9375rem;
+    }
+  }
+
+  &__campaign {
+    border-top: 1px solid;
+    font-size: var(--h4-size);
+    font-weight: 500;
+    grid-area: campaign;
+    letter-spacing: -0.005em;
+    line-height: 1.4;
+    padding: 1.25rem;
+
+    &-link {
+      transition: color 0.2s linear;
+      color: inherit;
+
+      span {
+        align-items: baseline;
+        display: flex;
+
+        &::before {
+          content: "▶︎";
+          font-size: 0.875rem;
+          margin-right: 1rem;
+          position: relative;
+          top: -0.1em;
+        }
+      }
+    }
+  }
+  &__campaign,
+  &__links,
+  &__newsletter {
+    border-left: 1px solid;
+  }
+  &__end {
+    align-items: center;
+    border-top: 1px solid;
+    display: grid;
+    grid-area: end;
+    grid-template-columns: 1fr auto auto;
+    padding: 1.25rem;
+    font-weight: 400;
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(3, minmax(max-content, 1fr));
+    }
+  }
+
+  &__copyright {
+    margin-bottom: 0;
+  }
+
+  &__some {
+    display: flex;
+    @include breakpoint-up(large) {
+      justify-self: center;
+    }
+  }
+
+  &__icon {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+    display: block;
+    height: 1.875rem;
+    width: 1.875rem;
+
+    &--twitter {
+      background-image: url("../../app/images/icons/Icon=SoMe-twitter.svg");
+    }
+    &--facebook {
+      background-image: url("../../app/images/icons/Icon=SoMe-facebook.svg");
+    }
+    &--instagram {
+      background-image: url("../../app/images/icons/Icon=SoMe-instagram.svg");
+    }
+    &--vimeo {
+      background-image: url("../../app/images/icons/Icon=SoMe-vimeo.svg");
+    }
+    &--spotify {
+      background-image: url("../../app/images/icons/Icon=SoMe-spotify.svg");
+    }
+    &-label {
+      clip: rect(0 0 0 0);
+      border: 0;
+      display: block;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      white-space: nowrap;
+      width: 1px;
+    }
   }
 }
