@@ -147,16 +147,16 @@ body {
 }
 
 @font-face {
-  font-family: "ww_beta8medium";
-  src: url(../fonts/wwbeta8-medium-webfont.woff2?e929cbe12e932a7f0ab5bc4cd2459cdc) format("woff2"), url(../fonts/wwbeta8-medium-webfont.woff?069046903e203a97e2e9f5ac50aac37e) format("woff");
-  font-weight: normal;
+  font-family: WW beta8;
   font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/wwbeta8-medium-webfont.woff2?e929cbe12e932a7f0ab5bc4cd2459cdc) format("woff2"), url(../fonts/wwbeta8-medium-webfont.woff?069046903e203a97e2e9f5ac50aac37e) format("woff");
 }
 @font-face {
-  font-family: "ww_beta8regular";
-  src: url(../fonts/wwbeta8-regular-webfont.woff2?ce510d7bb393ab0a418a525c48097a1d) format("woff2"), url(../fonts/wwbeta8-regular-webfont.woff?785b910b1f0d2ef7ff6b1cd28a50389f) format("woff");
-  font-weight: normal;
+  font-family: WW beta8;
   font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/wwbeta8-regular-webfont.woff2?ce510d7bb393ab0a418a525c48097a1d) format("woff2"), url(../fonts/wwbeta8-regular-webfont.woff?785b910b1f0d2ef7ff6b1cd28a50389f) format("woff");
 }
 :root {
   --base-size: 0.875rem;
@@ -192,7 +192,7 @@ h1 {
   font-size: var(--h1-size);
   letter-spacing: -0.0125em;
   line-height: 1.09375;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 p {
@@ -388,7 +388,7 @@ a {
 }
 @media (min-width: 64em) {
   .nav__element {
-    justify-content: center;
+    justify-content: 700;
   }
   .nav__element li:not(:last-of-type) {
     margin-right: 0.25em;
@@ -404,6 +404,7 @@ a {
   font-size: var(--h4-size);
   letter-spacing: -0.005em;
   white-space: nowrap;
+  font-weight: 700;
 }
 @media (min-width: 64em) {
   .nav__element {
@@ -426,7 +427,7 @@ a {
   padding-top: 1.25rem;
 }
 .nav__element .sub-menu li:nth-child(n+6) {
-  font-weight: 500;
+  font-weight: 700;
 }
 .nav__element .sub-menu li:nth-child(n+6) a {
   font-size: var(--h5-size);
@@ -447,6 +448,7 @@ a {
   background-color: hsl(0deg, 0%, 100%);
   padding-left: 1.25rem;
   padding-bottom: 1.25rem;
+  font-weight: 700;
 }
 .nav__functions a {
   text-decoration: none;
@@ -577,7 +579,7 @@ a {
 .footer__customer strong {
   color: inherit;
   font-size: var(--h4-size);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.005em;
   line-height: 1.4;
 }
@@ -585,6 +587,9 @@ a {
   border-top: 1px solid;
   grid-area: linksA;
   padding: 1.25rem;
+}
+.footer__links a {
+  font-weight: 700;
 }
 .footer__links + .footer__links {
   border-left: 1px solid;
@@ -597,7 +602,7 @@ a {
 }
 .footer__newsletter p {
   font-size: var(--h4-size);
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: -0.005em;
   line-height: 1.4;
   margin-bottom: 0.9375rem;
@@ -605,7 +610,7 @@ a {
 .footer__campaign {
   border-top: 1px solid;
   font-size: var(--h4-size);
-  font-weight: 500;
+  font-weight: 700;
   grid-area: campaign;
   letter-spacing: -0.005em;
   line-height: 1.4;

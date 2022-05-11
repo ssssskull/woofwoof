@@ -197,7 +197,7 @@
     }
 
     @include breakpoint-up(large) {
-      justify-content: center;
+      justify-content: 700;
       li {
         &:not(:last-of-type) {
           margin-right: 0.25em;
@@ -216,6 +216,7 @@
       font-size: var(--h4-size);
       letter-spacing: -0.005em;
       white-space: nowrap;
+      font-weight: 700;
     }
 
     @include breakpoint-up(large) {
@@ -240,7 +241,7 @@
         }
 
         &:nth-child(n + 6) {
-          font-weight: 500;
+          font-weight: 700;
 
           a {
             font-size: var(--h5-size);
@@ -269,6 +270,7 @@
     background-color: $clr-light;
     padding-left: 1.25rem;
     padding-bottom: 1.25rem;
+    font-weight: 700;
 
     a {
       text-decoration: none;

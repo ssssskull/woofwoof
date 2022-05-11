@@ -24,7 +24,7 @@
     strong {
       color: inherit;
       font-size: var(--h4-size);
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: -0.005em;
       line-height: 1.4;
     }
@@ -34,6 +34,10 @@
     border-top: 1px solid;
     grid-area: linksA;
     padding: 1.25rem;
+
+    a {
+      font-weight: 700;
+    }
   }
 
   &__links + &__links {
@@ -48,7 +52,7 @@
 
     p {
       font-size: var(--h4-size);
-      font-weight: 500;
+      font-weight: 700;
       letter-spacing: -0.005em;
       line-height: 1.4;
       margin-bottom: 0.9375rem;
@@ -58,7 +62,7 @@
   &__campaign {
     border-top: 1px solid;
     font-size: var(--h4-size);
-    font-weight: 500;
+    font-weight: 700;
     grid-area: campaign;
     letter-spacing: -0.005em;
     line-height: 1.4;
