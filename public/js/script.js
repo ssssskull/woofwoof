@@ -7,6 +7,7 @@
   \**************************/
 /***/ (() => {
 
+// Nav functionality
 var nav = document.querySelector(".nav");
 var dropdown = document.querySelector(".nav__list");
 var icons = document.querySelectorAll("[data-visibility]");
@@ -38,7 +39,8 @@ if (window.innerWidth < 1024) {
       nav.classList.remove("overlay");
     }
   });
-}
+} // Nav hide on scroll
+
 
 var prevScrollpos = window.pageYOffset;
 
@@ -52,7 +54,20 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
-};
+}; // Input field anim
+
+
+var inputField = document.querySelector("#newsletter");
+var inputLabel = document.querySelector(".footer__newsletter-field");
+
+if (inputField) {
+  inputField.addEventListener("focus", function (e) {
+    inputLabel.classList.add("has-focus");
+  });
+  inputField.addEventListener("blur", function (e) {
+    inputLabel.classList.remove("has-focus");
+  });
+}
 
 /***/ }),
 

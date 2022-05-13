@@ -1,11 +1,48 @@
+html {
+  @include breakpoint-up("xlarge") {
+    font-size: 114.2857142857%;
+  }
+}
+
 body {
   font-family: WW beta8, sans-serif;
   font-size: 87.5%;
   line-height: 1.6;
   margin: 0;
-  padding-top: 4.2857142857em;
+  padding-top: 4.28em;
   transition: all 0.2s ease;
   display: grid;
   grid-template: "content" 1fr "footer"/100%;
   min-height: calc(100vh - 3.75rem);
+}
+
+.main {
+  &--split {
+    @include breakpoint-up(large) {
+      border-left: 1px solid;
+    }
+  }
+}
+
+.site-content {
+  display: grid;
+  grid-template-areas: "content";
+  grid-template-columns: 1fr;
+
+  &--split {
+    display: grid;
+    @include breakpoint-up(large) {
+      grid-template-areas: "sidebar content";
+      grid-template-columns: 1fr 3fr;
+    }
+  }
+}
+
+.sidebar {
+  border-bottom: 1px solid #000;
+  @include breakpoint-up(large) {
+    grid-area: sidebar;
+    border: 0;
+  }
+  padding: 1.25rem;
 }

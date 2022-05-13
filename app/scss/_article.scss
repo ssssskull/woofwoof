@@ -1,0 +1,13 @@
+.document {
+  padding: 1.25rem;
+  @include breakpoint-up(large) {
+    padding: 6% 11.11111%;
+  }
+
+  &__subheading {
+    font-size: var(--h4-size);
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 1.4;
+  }
+}

@@ -94,7 +94,7 @@
   }
 
   &__logo {
-    height: 16px;
+    height: 1rem;
     width: auto;
     margin-right: auto;
     width: max-content;
@@ -161,7 +161,7 @@
 
       span {
         font-size: 0.625rem;
-        color: #fff;
+        color: $clr-light;
         text-align: center;
       }
     }
@@ -197,7 +197,7 @@
     }
 
     @include breakpoint-up(large) {
-      justify-content: 700;
+      justify-content: center;
       li {
         &:not(:last-of-type) {
           margin-right: 0.25em;
@@ -207,16 +207,6 @@
           }
         }
       }
-    }
-
-    a {
-      display: block;
-      color: inherit;
-      text-decoration: none;
-      font-size: var(--h4-size);
-      letter-spacing: -0.005em;
-      white-space: nowrap;
-      font-weight: 700;
     }
 
     @include breakpoint-up(large) {
@@ -373,4 +363,17 @@
     transition-delay: 0ms;
     width: 100%;
   }
+}
+
+.current_page_item {
+  color: $clr-grey;
+}
+
+nav .menu-item a {
+  display: block;
+  text-decoration: none;
+  font-size: var(--h4-size);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  font-weight: 700;
 }

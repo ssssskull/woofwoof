@@ -134,16 +134,54 @@ table {
   border-spacing: 0;
 }
 
+@media (min-width: 120em) {
+  html {
+    font-size: 114.2857142857%;
+  }
+}
+
 body {
   font-family: WW beta8, sans-serif;
   font-size: 87.5%;
   line-height: 1.6;
   margin: 0;
-  padding-top: 4.2857142857em;
+  padding-top: 4.28em;
   transition: all 0.2s ease;
   display: grid;
   grid-template: "content" 1fr "footer"/100%;
   min-height: calc(100vh - 3.75rem);
+}
+
+@media (min-width: 64em) {
+  .main--split {
+    border-left: 1px solid;
+  }
+}
+
+.site-content {
+  display: grid;
+  grid-template-areas: "content";
+  grid-template-columns: 1fr;
+}
+.site-content--split {
+  display: grid;
+}
+@media (min-width: 64em) {
+  .site-content--split {
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 1fr 3fr;
+  }
+}
+
+.sidebar {
+  border-bottom: 1px solid #000;
+  padding: 1.25rem;
+}
+@media (min-width: 64em) {
+  .sidebar {
+    grid-area: sidebar;
+    border: 0;
+  }
 }
 
 @font-face {
@@ -204,6 +242,9 @@ a {
   color: inherit;
   transition: color 0.2s linear;
   text-decoration: none;
+}
+a:hover, a:focus {
+  color: hsl(0deg, 0%, 46%);
 }
 
 .nav {
@@ -289,7 +330,7 @@ a {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 .nav__logo {
-  height: 16px;
+  height: 1rem;
   width: auto;
   margin-right: auto;
   width: -webkit-max-content;
@@ -355,7 +396,7 @@ a {
 }
 .nav__icon--cart span {
   font-size: 0.625rem;
-  color: #fff;
+  color: hsl(0deg, 0%, 100%);
   text-align: center;
 }
 @media (max-width: 63.9375em) {
@@ -388,7 +429,7 @@ a {
 }
 @media (min-width: 64em) {
   .nav__element {
-    justify-content: 700;
+    justify-content: center;
   }
   .nav__element li:not(:last-of-type) {
     margin-right: 0.25em;
@@ -396,15 +437,6 @@ a {
   .nav__element li:not(:last-of-type) a::after {
     content: ",";
   }
-}
-.nav__element a {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  font-size: var(--h4-size);
-  letter-spacing: -0.005em;
-  white-space: nowrap;
-  font-weight: 700;
 }
 @media (min-width: 64em) {
   .nav__element {
@@ -536,11 +568,20 @@ a {
   width: 100%;
 }
 
-.rescue {
-  display: grid;
-  grid-template-areas: "content";
+.current_page_item {
+  color: hsl(0deg, 0%, 46%);
 }
-.rescue__container {
+
+nav .menu-item a {
+  display: block;
+  text-decoration: none;
+  font-size: var(--h4-size);
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.rescue {
   display: flex;
   flex-direction: column;
   margin: auto;
@@ -551,6 +592,22 @@ a {
 }
 .rescue__btn {
   text-decoration: underline;
+  text-underline-position: under;
+}
+
+.document {
+  padding: 1.25rem;
+}
+@media (min-width: 64em) {
+  .document {
+    padding: 6% 11.11111%;
+  }
+}
+.document__subheading {
+  font-size: var(--h4-size);
+  font-weight: 700;
+  letter-spacing: -0.005em;
+  line-height: 1.4;
 }
 
 .footer {
@@ -577,11 +634,16 @@ a {
 }
 .footer__customer a,
 .footer__customer strong {
-  color: inherit;
   font-size: var(--h4-size);
   font-weight: 700;
   letter-spacing: -0.005em;
   line-height: 1.4;
+}
+.footer__customer-link {
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 .footer__links {
   border-top: 1px solid;
@@ -606,6 +668,71 @@ a {
   letter-spacing: -0.005em;
   line-height: 1.4;
   margin-bottom: 0.9375rem;
+}
+.footer__newsletter-fields {
+  position: relative;
+}
+.footer__newsletter-label {
+  color: hsl(0deg, 0%, 46%);
+  cursor: text;
+  position: absolute;
+  transform: translateY(calc(0.875rem + 1px));
+  transition: transform 0.18s cubic-bezier(0.2, 0.4, 0.8, 1);
+  will-change: transform;
+}
+.footer__newsletter-input {
+  background-image: linear-gradient(90deg, #000, #000 50%, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0));
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 1px;
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom: 0;
+  padding-bottom: calc(0.875rem + 1px);
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 0%);
+  display: block;
+  outline: 0;
+  padding: 0.875rem 0;
+  padding-bottom: 0.875rem;
+  width: 100%;
+}
+.footer__newsletter-btn {
+  padding: 0.875rem 0 0.875rem 1.2rem;
+  cursor: pointer;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.1s ease;
+  background-color: initial;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.footer__newsletter-btn span {
+  clip: rect(0 0 0 0);
+  border: 0;
+  display: block;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.footer__newsletter-btn::after {
+  background-image: url(../images/Icon=Icon-arrow.svg?d86521a569eea0b8d3148b3d32693491);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 1.375rem;
+  width: 1.375rem;
 }
 .footer__campaign {
   border-top: 1px solid;
@@ -669,19 +796,19 @@ a {
   width: 1.875rem;
 }
 .footer__icon--twitter {
-  background-image: url(../images/Icon=SoMe-twitter.svg?3f8d533c790a90c68e1ee450605383b4);
+  background-image: url(../images/Icon=SoMe-twitter.svg?b394c4346863ec742b96e1d4197d0391);
 }
 .footer__icon--facebook {
-  background-image: url(../images/Icon=SoMe-facebook.svg?cc3e50869e87cd12580886624b90c28d);
+  background-image: url(../images/Icon=SoMe-facebook.svg?73101f7c0ffb29fdf6018530bd7c6053);
 }
 .footer__icon--instagram {
-  background-image: url(../images/Icon=SoMe-instagram.svg?99ef5daae6309e604fc5403cd96c53d5);
+  background-image: url(../images/Icon=SoMe-instagram.svg?e0c533e95a4c1f3799db9bfa148a79a6);
 }
 .footer__icon--vimeo {
-  background-image: url(../images/Icon=SoMe-vimeo.svg?cf26c4a653c140fcedb39989dc226268);
+  background-image: url(../images/Icon=SoMe-vimeo.svg?6fd49818155ddfc58e35cbb8bd597aea);
 }
 .footer__icon--spotify {
-  background-image: url(../images/Icon=SoMe-spotify.svg?042c903797cf3931eaaca8ac08b40498);
+  background-image: url(../images/Icon=SoMe-spotify.svg?02b9f515550b53bc2a8f12d854e6d344);
 }
 .footer__icon-label {
   clip: rect(0 0 0 0);
@@ -694,4 +821,8 @@ a {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.has-focus label {
+  transform: translateY(-0.625rem);
 }

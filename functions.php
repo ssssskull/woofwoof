@@ -11,9 +11,9 @@ add_action( 'wp_enqueue_scripts', 'my_scripts');
 function woodwood_theme_setup() {
   register_nav_menus( array(
     'header' => 'Header menu',
-    'mobile_header' => 'Header menu - Mobile',
     'footer' => 'Footer menu',
-    'footer_secondary' => 'Secondary footer'
+    'footer_secondary' => 'Secondary footer',
+    'profile' => 'Profile'
   ) );
  }
 

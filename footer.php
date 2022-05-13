@@ -1,9 +1,9 @@
-<footer>
+<footer class="footer">
     <div class="footer__container">
         <div class="footer__customer">
-            <a href="/en/customer/viewprofile" class="footer__customer-link">Account</a>
-            <a href="/en/customer/viewprofile" class="footer__customer-link">CSR</a>
-            <a href="/en/customer/viewprofile" class="footer__customer-link">Account</a>
+            <a href="<?php echo home_url(); ?>/my-profile" class="footer__customer-link">My account</a>
+            <a href="#!" class="footer__customer-link">CSR</a>
+            <a href="#!" class="footer__customer-link">Account</a>
             <div class="nav__lang">
                 <strong>Language</strong>
                 <ul>
@@ -27,7 +27,17 @@
         </div>
         <form class="footer__newsletter">
             <p>Sign up for email updates and promotions.</p>
-            <button>Button</button>
+            <div class="footer__newsletter-fields">
+                <div class="footer__newsletter-field">
+                    <label for="newsletter" class="footer__newsletter-label">Email address</label>
+                    <input type="email" id="newsletter" name="email" class="footer__newsletter-input" value="">
+                </div>
+                <div class="footer__newsletter-field">
+                    <button type="submit" class="footer__newsletter-btn">
+                        <span>Submit</span>
+                    </button>
+                </div>
+            </div>
         </form>
         <div class="footer__campaign">
             <a href="#!" class="footer__campaign-link">

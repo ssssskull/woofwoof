@@ -22,11 +22,15 @@
 
     a,
     strong {
-      color: inherit;
       font-size: var(--h4-size);
       font-weight: 700;
       letter-spacing: -0.005em;
       line-height: 1.4;
+    }
+
+    &-link {
+      display: inline-block;
+      width: max-content;
     }
   }
 
@@ -56,6 +60,75 @@
       letter-spacing: -0.005em;
       line-height: 1.4;
       margin-bottom: 0.9375rem;
+    }
+
+    &-fields {
+      position: relative;
+    }
+
+    &-label {
+      color: $clr-grey;
+      cursor: text;
+      position: absolute;
+      transform: translateY(calc(0.875rem + 1px));
+      transition: transform 0.18s cubic-bezier(0.2, 0.4, 0.8, 1);
+      will-change: transform;
+    }
+
+    &-input {
+      background-image: linear-gradient(90deg, #000, #000 50%, #0000 0, #0000);
+      background-position: 0 100%;
+      background-repeat: repeat-x;
+      background-size: 4px 1px;
+      border: 1px solid $clr-light;
+      border-bottom-color: rgba(0, 0, 0, 0);
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom: 0;
+      padding-bottom: calc(0.875rem + 1px);
+      background-color: $clr-light;
+      color: $clr-dark;
+      display: block;
+      outline: 0;
+      padding: 0.875rem 0;
+      padding-bottom: 0.875rem;
+      width: 100%;
+    }
+
+    &-btn {
+      padding: 0.875rem 0 0.875rem 1.2rem;
+      cursor: pointer;
+      appearance: button;
+      border: none;
+      color: $clr-light;
+      transition: background-color 0.1s ease;
+      background-color: initial;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      span {
+        clip: rect(0 0 0 0);
+        border: 0;
+        display: block;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+      }
+
+      &::after {
+        background-image: url("../../app/images/icons/Icon=Icon-arrow.svg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        content: "";
+        display: block;
+        height: 1.375rem;
+        width: 1.375rem;
+      }
     }
   }
 
@@ -151,5 +224,12 @@
       white-space: nowrap;
       width: 1px;
     }
+  }
+}
+
+// Helpers
+.has-focus {
+  label {
+    transform: translateY(-0.625rem);
   }
 }

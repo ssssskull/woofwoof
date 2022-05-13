@@ -58,4 +58,9 @@ a {
   color: inherit;
   transition: color 0.2s linear;
   text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $clr-grey;
+  }
 }

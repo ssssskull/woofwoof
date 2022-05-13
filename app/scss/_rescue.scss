@@ -1,13 +1,8 @@
 .rescue {
-  display: grid;
-  grid-template-areas: "content";
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
 
   &__title {
     max-width: 40em;
@@ -15,5 +10,6 @@
 
   &__btn {
     text-decoration: underline;
+    text-underline-position: under;
   }
 }

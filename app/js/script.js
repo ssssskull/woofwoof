@@ -1,3 +1,5 @@
+// Nav functionality
+
 const nav = document.querySelector(".nav");
 const dropdown = document.querySelector(".nav__list");
 const icons = document.querySelectorAll("[data-visibility]");
@@ -28,6 +30,8 @@ if (window.innerWidth < 1024) {
   });
 }
 
+// Nav hide on scroll
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
@@ -38,3 +42,17 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollPos;
 };
+
+// Input field anim
+const inputField = document.querySelector("#newsletter");
+const inputLabel = document.querySelector(".footer__newsletter-field");
+
+if (inputField) {
+  inputField.addEventListener("focus", function (e) {
+    inputLabel.classList.add("has-focus");
+  });
+
+  inputField.addEventListener("blur", function (e) {
+    inputLabel.classList.remove("has-focus");
+  });
+}
