@@ -12,7 +12,7 @@ get_header();?>
             <h1 class="document__title">Hey Mathilde!</h1>
             <div class="document__content">
                 <h2 class="document__subheading">My benefits</h2>
-                <p>benefit</p>
+                <p>Wow all these benefits omg</p>
             </div>
         </article>
 </main>
