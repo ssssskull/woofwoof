@@ -64,15 +64,16 @@
 
     &::before,
     &::after {
-      background-color: currentColor;
-      content: "";
-      display: block;
-      height: 0.125rem;
-      left: 50%;
       position: absolute;
+      left: 50%;
       top: 50%;
-      transition: transform 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
+      display: block;
+      content: "";
+      height: 0.125rem;
       width: 50%;
+      background-color: currentColor;
+      color: $clr-dark;
+      transition: transform 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
     }
 
     &::before {
