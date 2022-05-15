@@ -611,6 +611,25 @@ nav .menu-item a {
   line-height: 1.4;
 }
 
+.editorial {
+  background-color: #f8f2e7;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.editorial__title {
+  padding-top: 130px;
+  padding-bottom: 36px;
+  max-width: 800px;
+}
+.editorial__subheading {
+  max-width: 1200px;
+  font-size: var(--h2-size);
+  line-height: 62.1px;
+  letter-spacing: -0.45 px;
+}
+
 .footer {
   grid-area: footer;
 }
