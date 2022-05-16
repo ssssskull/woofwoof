@@ -13,22 +13,8 @@
 }
 
 .editorial {
-  background-color: #f8f2e7;
-  text-align: center;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &__title {
-    padding-top: 130px;
-    padding-bottom: 36px;
-    max-width: 800px;
-  }
-
-  &__subheading {
-    max-width: 1200px;
-    font-size: var(--h2-size);
-    line-height: 62.1px;
-    letter-spacing: -0.45 px;
-  }
 }

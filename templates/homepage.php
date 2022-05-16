@@ -6,11 +6,15 @@ get_header();?>
 <div class="site-content">
     <main class="main">
         <article class="editorial">
-            <h1 class="editorial__title">Wood Wood The Loyalty Program</h1>
-            <div class="editorial__subheading">
-                <h2>Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</h2>
+            <div class="hero">
+                <h2 class="hero__title">Are you ready for Wood Woods club?</h2>
+                <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est velit nemo quod.</p>
+            <div class="signup">
+                <div class="div">
+                    <h3>Sign up now.</h3>
+                </div>
+            </div>
         </article>
 </main>
 </div>

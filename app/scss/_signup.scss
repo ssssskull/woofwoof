@@ -1,0 +1,44 @@
+@supports (
+  background-image:
+    image-set(
+      url("../images/signup-500w.avif") 1x,
+      url("../images/signup-500w.webp") 1x
+    )
+) {
+  .signup {
+    background-image: image-set(
+      url("../images/signup-500w.avif") 1x,
+      url("../images/signup-500w.webp") 1x
+    );
+    @include breakpoint-up(large) {
+      background-image: image-set(
+        url("../images/signup-2000w.avif") 1x,
+        url("../images/signup-2000w.webp") 1x
+      );
+    }
+  }
+}
+@supports not (
+  background-image:
+    image-set(
+      url("../images/signup-500w.avif") 1x,
+      url("../images/signup-500w.webp") 1x
+    )
+) {
+  .signup {
+    background-image: url("../images/signup-500w.jpg");
+    @include breakpoint-up(large) {
+      background-image: url("../images/signup-2000w.jpg");
+    }
+  }
+}
+
+.signup {
+  display: none;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

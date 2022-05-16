@@ -10,3 +10,9 @@ if (mix.inProduction()) {
   mix.minify(["public/css/style.css"]).version();
   mix.minify(["public/js/script.js"]).version();
 }
+
+mix.webpackConfig({
+  stats: {
+    children: true,
+  },
+});
