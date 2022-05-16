@@ -34,11 +34,54 @@
 }
 
 .signup {
-  display: none;
   width: 100%;
   height: auto;
-  max-height: 700px;
-  background-position: center;
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+
+  &__wrapper {
+    border: 1px solid;
+    width: 100%;
+    height: auto;
+    background-color: $clr-light;
+    max-width: 730px;
+    padding: 3.125rem;
+
+    h3 {
+      font-size: var(--h2-size);
+      letter-spacing: -1.27px;
+      font-weight: 700;
+    }
+  }
+
+  &__form {
+    * + * {
+      margin-top: 1.875rem;
+    }
+  }
+
+  button {
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-size: var(--base-size);
+    background-color: $clr-dark;
+    appearance: button;
+    border: none;
+    color: $clr-light;
+    transition: background-color 0.1s ease;
+
+    &:hover,
+    :focus {
+      background-color: $clr-grey;
+    }
+  }
 }
