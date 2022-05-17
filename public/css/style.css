@@ -705,7 +705,6 @@ nav .menu-item a {
 }
 .signup {
   width: 100%;
-  height: auto;
   background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -749,6 +748,41 @@ nav .menu-item a {
 .signup button:hover,
 .signup button :focus {
   background-color: hsl(0deg, 0%, 46%);
+}
+
+.events {
+  width: 100%;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 0%);
+}
+.events__wrapper {
+  padding: 1.25rem 1.25rem 2.5rem;
+}
+.events__wrapper h2 {
+  font-size: var(--h6-size);
+  font-weight: 700;
+  letter-spacing: 0.0275em;
+  line-height: 1.375;
+  text-transform: uppercase;
+}
+.events__list {
+  padding-left: calc(8.333% - 1.25rem);
+  padding-right: calc(8.333% - 1.25rem);
+}
+.events__element {
+  transition: color 0.2s linear;
+  font-size: calc(1.45995rem + 2.83753vw);
+  grid-column-gap: 1.875rem;
+  display: grid;
+  grid-template-columns: minmax(6.5ch, -webkit-max-content) 1fr;
+  grid-template-columns: minmax(6.5ch, max-content) 1fr;
+}
+.events__element h3 {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 0;
+  font-weight: 700;
+  overflow: hidden;
 }
 
 .footer {

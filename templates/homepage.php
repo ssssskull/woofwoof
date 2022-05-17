@@ -11,6 +11,25 @@ get_header();?>
                 <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
             </div>
         </div>
+        <div class="events">
+            <div class="events__wrapper">
+                <h2>Exclusive events</h2>
+                <div class="events__list">
+                    <a class="events__element" href="#!">
+                        <span>28.04.22</span>
+                        <h3>The North Face x Online Ceramics</h3>
+                    </a>
+                    <a class="events__element" href="#!">
+                        <span>28.04.22</span>
+                        <h3>The North Face x Online Ceramics</h3>
+                    </a>
+                    <a class="events__element" href="#!">
+                        <span>28.04.22</span>
+                        <h3>The North Face x Online Ceramics</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="signup">
             <div class="signup__wrapper">
                 <h3>Sign up now.</h3>
@@ -35,8 +54,8 @@ get_header();?>
                     </div>
                     <button>Sign up</button>
                 </form>
-            </div>
         </div>
+    </div>
 </main>
 </div>
 <?php get_footer(); ?>

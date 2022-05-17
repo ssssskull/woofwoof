@@ -1,0 +1,38 @@
+.events {
+  width: 100%;
+  color: $clr-light;
+  background-color: $clr-dark;
+
+  &__wrapper {
+    padding: 1.25rem 1.25rem 2.5rem;
+
+    h2 {
+      font-size: var(--h6-size);
+      font-weight: 700;
+      letter-spacing: 0.0275em;
+      line-height: 1.375;
+      text-transform: uppercase;
+    }
+  }
+
+  &__list {
+    padding-left: calc(8.333% - 1.25rem);
+    padding-right: calc(8.333% - 1.25rem);
+  }
+
+  &__element {
+    transition: color 0.2s linear;
+    font-size: calc(1.45995rem + 2.83753vw);
+    grid-column-gap: 1.875rem;
+    display: grid;
+    grid-template-columns: minmax(6.5ch, max-content) 1fr;
+
+    h3 {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin-bottom: 0;
+      font-weight: 700;
+      overflow: hidden;
+    }
+  }
+}
