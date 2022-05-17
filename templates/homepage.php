@@ -15,15 +15,24 @@ get_header();?>
             <div class="events__wrapper">
                 <h2>Exclusive events</h2>
                 <div class="events__list">
-                    <a class="events__element" href="#!">
+                    <a class="events__element" href="#!" data-img="1">
+                        <figure class="events__img">
+                            <img src="" alt="img1">
+                        </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
                     </a>
-                    <a class="events__element" href="#!">
+                    <a class="events__element" href="#!" data-img="2">
+                        <figure class="events__img">
+                            <img src="" alt="img1">
+                        </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
                     </a>
-                    <a class="events__element" href="#!">
+                    <a class="events__element" href="#!" data-img="3">
+                        <figure class="events__img">
+                            <img src="" alt="img1">
+                        </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
                     </a>

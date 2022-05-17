@@ -74,6 +74,14 @@ inputField.forEach(function (item) {
     var inputLabel = event.currentTarget.previousElementSibling;
     inputLabel.classList.remove("has-focus");
   });
+}); // Image hover effect
+// TODO eventlistener på containeren
+
+var linksCont = document.querySelector(".events__list");
+linksCont.addEventListener("mousemove", function (e) {
+  var link = e.target.closest(".events__element");
+  var linkImage = link.firstElementChild;
+  console.log(link, linkImage);
 });
 
 /***/ }),

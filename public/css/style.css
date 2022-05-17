@@ -757,8 +757,14 @@ nav .menu-item a {
 }
 .events__wrapper {
   padding: 1.25rem 1.25rem 2.5rem;
+  grid-gap: 1.25rem;
+  align-items: center;
+  display: grid;
+  grid-template: "title . view-all" auto "content content content" minmax(42vw, -webkit-max-content)/auto 1fr auto;
+  grid-template: "title . view-all" auto "content content content" minmax(42vw, max-content)/auto 1fr auto;
 }
 .events__wrapper h2 {
+  grid-area: title;
   font-size: var(--h6-size);
   font-weight: 700;
   letter-spacing: 0.0275em;
@@ -766,6 +772,7 @@ nav .menu-item a {
   text-transform: uppercase;
 }
 .events__list {
+  grid-area: content;
   padding-left: calc(8.333% - 1.25rem);
   padding-right: calc(8.333% - 1.25rem);
 }
@@ -783,6 +790,19 @@ nav .menu-item a {
   margin-bottom: 0;
   font-weight: 700;
   overflow: hidden;
+}
+.events__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 300px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
+}
+.events__img img {
+  width: 100%;
+  height: auto;
 }
 
 .footer {
