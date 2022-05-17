@@ -373,7 +373,7 @@ a:hover, a:focus {
   background-repeat: no-repeat;
   background-position: 100%;
   text-align: initial;
-  background-image: url(../images/Icon=Icon-chevron.svg?6d0f5da061b49553532e76b8b5ae381e);
+  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
 }
 @media (min-width: 64em) {
   .nav__icon--lang {
@@ -384,7 +384,7 @@ a:hover, a:focus {
   font: inherit;
 }
 .nav__icon--heart {
-  background-image: url(../images/Icon=Icon-heart.svg?c487ae145dd209715264eb31a2cf9a26);
+  background-image: url(../images/Icon=Icon-heart.svg?f3e5da5080d414b4b71189a463d09093);
 }
 @media (min-width: 64em) {
   .nav__icon--heart {
@@ -392,13 +392,13 @@ a:hover, a:focus {
   }
 }
 .nav__icon--search {
-  background-image: url(../images/Icon=Icon-search.svg?64e48fb02e71aa8e919a5035674f30b8);
+  background-image: url(../images/Icon=Icon-search.svg?155fa09c34892a8351a916ef4747226b);
 }
 .nav__icon--profile {
-  background-image: url(../images/Icon=Icon-face.svg?cf9b93f4e0f13c8920dabbb26c0849aa);
+  background-image: url(../images/Icon=Icon-face.svg?f5eaf4a5805ee3401d9053975819d2b1);
 }
 .nav__icon--cart {
-  background-image: url(../images/Icon=Icon-bag.svg?fc1ac035489a4a6c50b817193e442fc8);
+  background-image: url(../images/Icon=Icon-bag.svg?55ddb6abdd601f32e74469d56ba18458);
 }
 .nav__icon--cart span {
   font-size: 0.625rem;
@@ -964,6 +964,6 @@ nav .menu-item a {
   width: 1px;
 }
 
-.has-focus label {
+.has-focus {
   transform: translateY(-0.625rem);
 }

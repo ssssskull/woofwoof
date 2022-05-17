@@ -39,20 +39,25 @@ window.onscroll = function () {
     nav.style.top = "0";
   } else {
     nav.style.top = "-60px";
+    if (window.innerWidth >= 1920) {
+      nav.style.top = "-68.433px";
+    }
   }
   prevScrollpos = currentScrollPos;
 };
 
 // Input field anim
-const inputField = document.querySelector("#newsletter");
-const inputLabel = document.querySelector(".footer__newsletter-field");
+const inputField = document.querySelectorAll("input");
 
-if (inputField) {
-  inputField.addEventListener("focus", function (e) {
-    inputLabel.classList.add("has-focus");
+inputField.forEach((item) => {
+  item.addEventListener("focus", (event) => {
+    const inputLabel = event.currentTarget.previousElementSibling;
+    if (document.activeElement === event.currentTarget) {
+      inputLabel.classList.add("has-focus");
+    }
   });
-
-  inputField.addEventListener("blur", function (e) {
+  item.addEventListener("blur", (event) => {
+    const inputLabel = event.currentTarget.previousElementSibling;
     inputLabel.classList.remove("has-focus");
   });
-}
+});
