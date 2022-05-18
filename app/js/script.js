@@ -70,5 +70,11 @@ linksCont.addEventListener("mousemove", (e) => {
   const link = e.target.closest(".events__element");
   const linkImage = link.firstElementChild;
 
-  console.log(link, linkImage);
+  var bounding = link.getBoundingClientRect();
+
+  linkImage.style.opacity = 1;
+
+  linkImage.style.transform = `translate(${
+    e.clientX - linkImage.offsetWidth / 2
+  }px, ${e.pageY - linkImage.offsetHeight / 2}px)`;
 });

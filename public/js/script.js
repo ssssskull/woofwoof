@@ -81,7 +81,9 @@ var linksCont = document.querySelector(".events__list");
 linksCont.addEventListener("mousemove", function (e) {
   var link = e.target.closest(".events__element");
   var linkImage = link.firstElementChild;
-  console.log(link, linkImage);
+  var bounding = link.getBoundingClientRect();
+  linkImage.style.opacity = 1;
+  linkImage.style.transform = "translate(".concat(e.clientX - linkImage.offsetWidth / 2, "px, ").concat(e.pageY - linkImage.offsetHeight / 2, "px)");
 });
 
 /***/ }),

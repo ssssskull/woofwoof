@@ -805,6 +805,11 @@ nav .menu-item a {
   height: auto;
 }
 
+.is-hovered {
+  opacity: 1;
+  transition: opacity 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
+}
+
 .footer {
   grid-area: footer;
 }

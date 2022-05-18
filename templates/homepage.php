@@ -17,21 +17,48 @@ get_header();?>
                 <div class="events__list">
                     <a class="events__element" href="#!" data-img="1">
                         <figure class="events__img">
-                            <img src="" alt="img1">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
+                            </picture>
                         </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
                     </a>
                     <a class="events__element" href="#!" data-img="2">
                         <figure class="events__img">
-                            <img src="" alt="img1">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
+                            </picture>
                         </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
                     </a>
                     <a class="events__element" href="#!" data-img="3">
-                        <figure class="events__img">
-                            <img src="" alt="img1">
+                         <figure class="events__img">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
+                                sizes="(max-width: 1024px) 100vw, 640px">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
+                            </picture>
                         </figure>
                         <span>28.04.22</span>
                         <h3>The North Face x Online Ceramics</h3>
