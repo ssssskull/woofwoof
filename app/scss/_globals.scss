@@ -15,7 +15,10 @@ body {
   grid-template: "content" 1fr "footer"/100%;
   min-height: calc(100vh - 3.75rem);
 }
-
+.site {
+  overflow-x: hidden;
+  position: relative;
+}
 .main {
   display: flex;
   flex-direction: column;

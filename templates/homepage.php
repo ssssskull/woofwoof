@@ -7,7 +7,7 @@ get_header();?>
     <main class="main">
         <div class="hero">
             <div class="hero__wrapper">
-                <h2 class="hero__title">Are you ready for Wood Woods club?</h2>
+                <h2 class="hero__title">Are you ready<br>for Wood Woods club?</h2>
                 <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
             </div>
         </div>
@@ -15,21 +15,23 @@ get_header();?>
             <div class="benefits__wrapper">
                 <div class="benefits__content">
                     <h2>Enjoy the best Wood Wood has to offer – and more</h2>
-                    <div class="benefits__elem">
-                        <p>Get free shipping and returns on all orders</p>
-                    </div>
-                    <div class="benefits__elem">
-                        <p>Get free shipping and returns on all orders</p>
-                    </div>
-                    <div class="benefits__elem">
-                        <p>Get free shipping and returns on all orders</p>
-                    </div>
-                    <div class="benefits__elem">
-                        <p>Get free shipping and returns on all orders</p>
-                    </div>
-                    <div class="benefits__elem">
-                        <p>Get free shipping and returns on all orders</p>
-                    </div>
+                    <ul class="benefits__list">
+                        <li class="benefits__elem">
+                            <p>Get free shipping and returns</p>
+                        </li>
+                        <li class="benefits__elem">
+                            <p>Gain pre-access to new releases</p>
+                        </li>
+                        <li class="benefits__elem">
+                            <p>Receive personalised offers</p>
+                        </li>
+                        <li class="benefits__elem">
+                            <p>Get digital receipts</p>
+                        </li>
+                        <li class="benefits__elem">
+                            <p>Get invited to exclusive events</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
