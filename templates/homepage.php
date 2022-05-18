@@ -11,6 +11,28 @@ get_header();?>
                 <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
             </div>
         </div>
+        <div class="benefits">
+            <div class="benefits__wrapper">
+                <div class="benefits__content">
+                    <h2>Enjoy the best Wood Wood has to offer – and more</h2>
+                    <div class="benefits__elem">
+                        <p>Get free shipping and returns on all orders</p>
+                    </div>
+                    <div class="benefits__elem">
+                        <p>Get free shipping and returns on all orders</p>
+                    </div>
+                    <div class="benefits__elem">
+                        <p>Get free shipping and returns on all orders</p>
+                    </div>
+                    <div class="benefits__elem">
+                        <p>Get free shipping and returns on all orders</p>
+                    </div>
+                    <div class="benefits__elem">
+                        <p>Get free shipping and returns on all orders</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="events">
             <div class="events__wrapper">
                 <h2>Exclusive events</h2>

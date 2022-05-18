@@ -1,0 +1,41 @@
+// @supports (
+//   background-image:
+//     image-set(
+//       url("../images/hero-500w.avif") 1x,
+//       url("../images/hero-500w.webp") 1x
+//     )
+// ) {
+//   .benefits {
+//     background-image: image-set(
+//       url("../images/hero-500w.avif") 1x,
+//       url("../images/hero-500w.webp") 1x
+//     );
+//     @include breakpoint-up(large) {
+//       background-image: image-set(
+//         url("../images/hero-1400w.avif") 1x,
+//         url("../images/hero-1400w.webp") 1x
+//       );
+//     }
+//   }
+// }
+// @supports not (
+//   background-image:
+//     image-set(
+//       url("../images/hero-500w.avif") 1x,
+//       url("../images/hero-500w.webp") 1x
+//     )
+// ) {
+//   .benefits {
+//     background-image: url("../images/hero-500w.png");
+//     @include breakpoint-up(large) {
+//       background-image: url("../images/hero-1400w.png");
+//     }
+//   }
+// }
+
+// .benefits {
+//   background-position: right;
+//   background-size: contain;
+//   background-repeat: no-repeat;
+//   width: 100%;
+// }
