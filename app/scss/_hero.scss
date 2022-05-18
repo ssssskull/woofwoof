@@ -34,7 +34,9 @@
 }
 
 .hero {
-  padding: 2.5rem;
+  @include breakpoint-up(large) {
+    padding: 2.5rem;
+  }
   box-sizing: border-box;
 
   &__wrapper {

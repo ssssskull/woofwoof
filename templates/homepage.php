@@ -35,33 +35,33 @@ get_header();?>
                         <figure class="events__img">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
+                                <?php echo get_template_directory_uri();?>/app/images/event-2-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-2-600w.avif 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-2-400w.webp 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-2-600w.webp 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-2-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
                             </picture>
                         </figure>
                         <span>28.04.22</span>
-                        <h3>The North Face x Online Ceramics</h3>
+                        <h3>WOOD WOOD Life Store™ opening</h3>
                     </a>
                     <a class="events__element" href="#!" data-img="3">
                          <figure class="events__img">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
+                                <?php echo get_template_directory_uri();?>/app/images/event-3-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-3-600w.avif 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-3-400w.webp 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/event-3-600w.webp 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-3-600w.jpg" alt="Hjemmelavede boller og kaffe" loading="lazy" decoding="async" height="428">
                             </picture>
                         </figure>
-                        <span>28.04.22</span>
-                        <h3>The North Face x Online Ceramics</h3>
+                        <span>06.06.22</span>
+                        <h3>Biking through Copenhagen</h3>
                     </a>
                 </div>
             </div>

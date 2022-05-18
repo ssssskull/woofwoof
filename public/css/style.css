@@ -639,8 +639,12 @@ nav .menu-item a {
   }
 }
 .hero {
-  padding: 2.5rem;
   box-sizing: border-box;
+}
+@media (min-width: 64em) {
+  .hero {
+    padding: 2.5rem;
+  }
 }
 .hero__wrapper {
   box-sizing: border-box;
@@ -773,16 +777,32 @@ nav .menu-item a {
 }
 .events__list {
   grid-area: content;
-  padding-left: calc(8.333% - 1.25rem);
-  padding-right: calc(8.333% - 1.25rem);
+}
+@media (min-width: 64em) {
+  .events__list {
+    padding-left: calc(8.333% - 1.25rem);
+    padding-right: calc(8.333% - 1.25rem);
+  }
 }
 .events__element {
-  transition: color 0.2s linear;
-  font-size: calc(1.45995rem + 2.83753vw);
-  grid-column-gap: 1.875rem;
   display: grid;
-  grid-template-columns: minmax(6.5ch, -webkit-max-content) 1fr;
-  grid-template-columns: minmax(6.5ch, max-content) 1fr;
+  margin-bottom: 1.25rem;
+  font-size: 2.125rem;
+  line-height: 1.2;
+  transition: color 0.2s linear;
+}
+@media (min-width: 64em) {
+  .events__element {
+    font-size: calc(1.45995rem + 2.83753vw);
+    grid-column-gap: 1.875rem;
+    grid-template-columns: minmax(6.5ch, -webkit-max-content) 1fr;
+    grid-template-columns: minmax(6.5ch, max-content) 1fr;
+  }
+}
+@media (max-width: 63.9375em) {
+  .events__element span {
+    font-size: 0.61em;
+  }
 }
 .events__element h3 {
   text-overflow: ellipsis;
@@ -795,7 +815,7 @@ nav .menu-item a {
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 300px;
+  max-width: 450px;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
@@ -803,11 +823,6 @@ nav .menu-item a {
 .events__img img {
   width: 100%;
   height: auto;
-}
-
-.is-hovered {
-  opacity: 1;
-  transition: opacity 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);
 }
 
 .footer {
