@@ -76,3 +76,10 @@
     }
   }
 }
+
+// Helpers
+.image-visible {
+  @include breakpoint-up(large) {
+    opacity: 1;
+  }
+}

@@ -70,7 +70,7 @@ const linkImages = document.querySelectorAll(".events__img");
 links.forEach((link) => {
   link.addEventListener("mousemove", (e) => {
     console.log(link, link.firstElementChild);
-    link.firstElementChild.style.opacity = 1;
+    link.firstElementChild.classList.add("image-visible");
     link.firstElementChild.style.transform = `translate(${
       e.clientX - link.firstElementChild.offsetWidth / 2
     }px, ${e.pageY - link.firstElementChild.offsetHeight / 2}px)`;
@@ -78,7 +78,7 @@ links.forEach((link) => {
 
   links.forEach((link) => {
     link.addEventListener("mouseleave", (e) => {
-      link.firstElementChild.style.opacity = 0;
+      link.firstElementChild.classList.remove("image-visible");
     });
   });
 });

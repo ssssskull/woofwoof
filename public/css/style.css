@@ -825,6 +825,12 @@ nav .menu-item a {
   height: auto;
 }
 
+@media (min-width: 64em) {
+  .image-visible {
+    opacity: 1;
+  }
+}
+
 .footer {
   grid-area: footer;
 }
