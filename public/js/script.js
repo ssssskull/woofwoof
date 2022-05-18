@@ -77,13 +77,19 @@ inputField.forEach(function (item) {
 }); // Image hover effect
 // TODO eventlistener på containeren
 
-var linksCont = document.querySelector(".events__list");
-linksCont.addEventListener("mousemove", function (e) {
-  var link = e.target.closest(".events__element");
-  var linkImage = link.firstElementChild;
-  var bounding = link.getBoundingClientRect();
-  linkImage.style.opacity = 1;
-  linkImage.style.transform = "translate(".concat(e.clientX - linkImage.offsetWidth / 2, "px, ").concat(e.pageY - linkImage.offsetHeight / 2, "px)");
+var links = document.querySelectorAll(".events__element");
+var linkImages = document.querySelectorAll(".events__img");
+links.forEach(function (link) {
+  link.addEventListener("mousemove", function (e) {
+    console.log(link, link.firstElementChild);
+    link.firstElementChild.style.opacity = 1;
+    link.firstElementChild.style.transform = "translate(".concat(e.clientX - link.firstElementChild.offsetWidth / 2, "px, ").concat(e.pageY - link.firstElementChild.offsetHeight / 2, "px)");
+  });
+  links.forEach(function (link) {
+    link.addEventListener("mouseleave", function (e) {
+      link.firstElementChild.style.opacity = 0;
+    });
+  });
 });
 
 /***/ }),

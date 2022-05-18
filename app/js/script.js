@@ -64,17 +64,21 @@ inputField.forEach((item) => {
 
 // Image hover effect
 // TODO eventlistener på containeren
-const linksCont = document.querySelector(".events__list");
+const links = document.querySelectorAll(".events__element");
+const linkImages = document.querySelectorAll(".events__img");
 
-linksCont.addEventListener("mousemove", (e) => {
-  const link = e.target.closest(".events__element");
-  const linkImage = link.firstElementChild;
+links.forEach((link) => {
+  link.addEventListener("mousemove", (e) => {
+    console.log(link, link.firstElementChild);
+    link.firstElementChild.style.opacity = 1;
+    link.firstElementChild.style.transform = `translate(${
+      e.clientX - link.firstElementChild.offsetWidth / 2
+    }px, ${e.pageY - link.firstElementChild.offsetHeight / 2}px)`;
+  });
 
-  var bounding = link.getBoundingClientRect();
-
-  linkImage.style.opacity = 1;
-
-  linkImage.style.transform = `translate(${
-    e.clientX - linkImage.offsetWidth / 2
-  }px, ${e.pageY - linkImage.offsetHeight / 2}px)`;
+  links.forEach((link) => {
+    link.addEventListener("mouseleave", (e) => {
+      link.firstElementChild.style.opacity = 0;
+    });
+  });
 });
