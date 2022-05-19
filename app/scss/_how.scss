@@ -42,7 +42,7 @@
   }
 
   &__list {
-    font-size: var(--h5-size);
+    font-size: var(--base-size);
     padding: 1.5rem 0 2rem 0;
     @include breakpoint-up(large) {
       padding: 3.5rem 0 2.5rem;

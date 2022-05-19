@@ -35,7 +35,7 @@
 
 .hero {
   @include breakpoint-up(large) {
-    padding: 1.25rem;
+    padding: 0 1.25rem;
   }
   box-sizing: border-box;
 

@@ -673,7 +673,7 @@ nav .menu-item a {
 }
 @media (min-width: 64em) {
   .hero {
-    padding: 1.25rem;
+    padding: 0 1.25rem;
   }
 }
 .hero__wrapper {
@@ -972,7 +972,7 @@ nav .menu-item a {
   }
 }
 .how__list {
-  font-size: var(--h5-size);
+  font-size: var(--base-size);
   padding: 1.5rem 0 2rem 0;
 }
 @media (min-width: 64em) {
