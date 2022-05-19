@@ -32,15 +32,6 @@
     --h4-size: 1.375rem;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5em;
-  margin-top: 0;
-}
 
 h1 {
   font-size: var(--h1-size);
@@ -56,7 +47,7 @@ p {
 
 a {
   color: inherit;
-  transition: color 0.2s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
 
   &:hover,

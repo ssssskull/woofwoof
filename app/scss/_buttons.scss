@@ -1,0 +1,20 @@
+.btn {
+  &--primary {
+    background-color: $clr-dark;
+    color: $clr-light;
+    padding: 1.37rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.44px;
+    line-height: 22px;
+
+    &:hover,
+    &:focus {
+      background-color: $clr-grey;
+      color: $clr-light;
+    }
+  }
+  &--secondary {
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+}

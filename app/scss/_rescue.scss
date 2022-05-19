@@ -3,13 +3,9 @@
   flex-direction: column;
   margin: auto;
   text-align: center;
+  padding: 1.25rem;
 
   &__title {
-    max-width: 40em;
-  }
-
-  &__btn {
-    text-decoration: underline;
-    text-underline-position: under;
+    margin-bottom: 2rem;
   }
 }

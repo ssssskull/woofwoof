@@ -147,12 +147,12 @@ body {
   margin: 0;
   padding-top: 4.28em;
   transition: all 0.2s ease;
-  display: grid;
-  grid-template: "content" 1fr "footer"/100%;
-  min-height: calc(100vh - 3.75rem);
 }
 
 .site {
+  display: grid;
+  grid-template: "content" 1fr "footer"/100%;
+  min-height: calc(100vh - 3.75rem);
   overflow-x: hidden;
   position: relative;
 }
@@ -165,6 +165,7 @@ body {
 @media (min-width: 64em) {
   .main--split {
     border-left: 1px solid;
+    align-items: flex-start;
   }
 }
 
@@ -191,6 +192,26 @@ body {
   .sidebar {
     grid-area: sidebar;
     border: 0;
+  }
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+}
+@media (max-width: 63.9375em) {
+  .wrapper {
+    padding: 1.5rem 0 2rem 0;
   }
 }
 
@@ -226,16 +247,6 @@ body {
     --h4-size: 1.375rem;
   }
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-bottom: 0.5em;
-  margin-top: 0;
-}
-
 h1 {
   font-size: var(--h1-size);
   letter-spacing: -0.0125em;
@@ -250,11 +261,28 @@ p {
 
 a {
   color: inherit;
-  transition: color 0.2s linear;
+  transition: all 0.2s linear;
   text-decoration: none;
 }
 a:hover, a:focus {
   color: hsl(0deg, 0%, 46%);
+}
+
+.btn--primary {
+  background-color: hsl(0deg, 0%, 0%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 1.37rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.44px;
+  line-height: 22px;
+}
+.btn--primary:hover, .btn--primary:focus {
+  background-color: hsl(0deg, 0%, 46%);
+  color: hsl(0deg, 0%, 100%);
+}
+.btn--secondary {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .nav {
@@ -597,13 +625,10 @@ nav .menu-item a {
   flex-direction: column;
   margin: auto;
   text-align: center;
+  padding: 1.25rem;
 }
 .rescue__title {
-  max-width: 40em;
-}
-.rescue__btn {
-  text-decoration: underline;
-  text-underline-position: under;
+  margin-bottom: 2rem;
 }
 
 .document {
@@ -863,17 +888,8 @@ nav .menu-item a {
     background-position: right;
   }
 }
-.benefits__wrapper {
+.benefits__content {
   width: 100%;
-  max-width: 1360px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  display: flex;
-}
-@media (max-width: 63.9375em) {
-  .benefits__wrapper {
-    padding: 1.5rem 0 2rem 0;
-  }
 }
 @media (min-width: 64em) {
   .benefits__content {
@@ -911,11 +927,85 @@ nav .menu-item a {
 .benefits__elem {
   padding: 1rem 0 1rem 0.5rem;
 }
-.benefits__elem p {
-  margin: 0;
-}
 .benefits__elem + .benefits__elem {
   border-top: 1px solid;
+}
+
+.how__wrapper {
+  justify-content: space-between;
+}
+.how__content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1.5rem 0 3rem 0;
+  box-sizing: border-box;
+}
+@media (min-width: 64em) {
+  .how__content {
+    max-width: 600px;
+    padding: 5rem 1.25rem 0 2.5rem;
+  }
+}
+.how__illustration {
+  display: none;
+}
+.how__illustration img {
+  width: 100%;
+  height: auto;
+}
+@media (min-width: 64em) {
+  .how__illustration {
+    max-width: 600px;
+    display: block;
+  }
+}
+.how__title {
+  font-size: var(--h1-size);
+  line-height: 48.13px;
+  font-weight: 700;
+  letter-spacing: -0.55px;
+}
+@media (min-width: 64em) {
+  .how__title {
+    font-size: var(--h2-size);
+  }
+}
+.how__list {
+  font-size: var(--h5-size);
+  padding: 1.5rem 0 2rem 0;
+}
+@media (min-width: 64em) {
+  .how__list {
+    padding: 3.5rem 0 2.5rem;
+  }
+}
+.how__list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  max-width: 65ch;
+}
+.how__list li::before {
+  content: "";
+  display: inline-block;
+  background-size: 100% 100%;
+  height: 1.375rem;
+  width: 1.375rem;
+  background-image: url(../images/Icon=Icon-arrow.svg?d86521a569eea0b8d3148b3d32693491);
+  background-repeat: no-repeat;
+  background-position: left;
+  padding: 0.75rem;
+  box-sizing: border-box;
+  margin-right: 1rem;
+}
+.how__actions {
+  display: flex;
+  align-items: baseline;
+}
+.how__actions a + a {
+  margin-left: 1.5rem;
 }
 
 .footer {

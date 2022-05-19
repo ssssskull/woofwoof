@@ -11,11 +11,11 @@ body {
   margin: 0;
   padding-top: 4.28em;
   transition: all 0.2s ease;
+}
+.site {
   display: grid;
   grid-template: "content" 1fr "footer"/100%;
   min-height: calc(100vh - 3.75rem);
-}
-.site {
   overflow-x: hidden;
   position: relative;
 }
@@ -26,6 +26,7 @@ body {
   &--split {
     @include breakpoint-up(large) {
       border-left: 1px solid;
+      align-items: flex-start;
     }
   }
 }
@@ -51,4 +52,22 @@ body {
     border: 0;
   }
   padding: 1.25rem;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  @include breakpoint-down(medium) {
+    padding: 1.5rem 0 2rem 0;
+  }
 }

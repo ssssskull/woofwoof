@@ -49,18 +49,8 @@
     }
   }
 
-  &__wrapper {
-    width: 100%;
-    max-width: 1360px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    display: flex;
-    @include breakpoint-down(medium) {
-      padding: 1.5rem 0 2rem 0;
-    }
-  }
-
   &__content {
+    width: 100%;
     @include breakpoint-up(large) {
       max-width: 50%;
     }
@@ -94,10 +84,6 @@
   }
   &__elem {
     padding: 1rem 0 1rem 0.5rem;
-
-    p {
-      margin: 0;
-    }
   }
   &__elem + &__elem {
     border-top: 1px solid;
