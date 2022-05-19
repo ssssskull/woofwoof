@@ -31,7 +31,7 @@ get_header();?>
                     </ul>
                     <div class="how__actions">
                         <a href="#!" class="btn--primary">Become a member</a>
-                        <a href="#!" class="btn--secondary">Or sign in here</a>
+                        <a href="#!" class="btn--secondary">Or sign in here.</a>
                     </div>
                 </div>
             </div>
@@ -127,7 +127,10 @@ get_header();?>
                             <input type="password" id="password" name="password" class="footer__newsletter-input" value="">
                         </div>
                     </div>
-                    <button>Sign up</button>
+                    <div class="signup__actions">
+                        <button>Sign up</button>
+                        <a href="#!" class="btn--secondary">Or sign in here.</a>
+                    </div>
                 </form>
         </div>
     </div>

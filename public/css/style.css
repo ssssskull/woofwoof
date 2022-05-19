@@ -773,6 +773,7 @@ nav .menu-item a {
   border: none;
   color: hsl(0deg, 0%, 100%);
   transition: background-color 0.1s ease;
+  margin-bottom: 1.5rem;
 }
 .signup button:hover,
 .signup button :focus {
