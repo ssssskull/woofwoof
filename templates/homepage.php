@@ -131,6 +131,31 @@ get_header();?>
                 </form>
         </div>
     </div>
+    <div class="faq">
+        <div class="faq__wrapper">
+            <h3 class="faq__title">FAQ</h3>
+            <div class="faq__content">
+                <details>
+                    <summary>What if an item I want is out of stock?</summary>
+                    <main>
+                        <p>Since all of the garments are second hand, chances are they are limited and sometimes one-offs. If the item you want is out of stock in your size, you can sign up to be notified when your size is available again. Just register to be notified by emailing us.</p>
+                    </main>
+                </details>
+                <details>
+                    <summary>What is your returns & cancellation policy?</summary>
+                    <main>
+                        <p>If you're not happy with your purchase or think your goods arrived damaged, you can send any unworn* item back to us within 14 days of the delivery date. It can take up to 14 days for your return to be fully processed. Your original payment method will be refunded. It may take 2-3 days to clear depending on your bank.</p>
+                    </main>
+                </details>
+                <details>
+                    <summary>Are there any requirements?</summary>
+                    <main>
+                        <p>Our terms and conditions that you accept at time of sign up and/or order give us this consent.<br>*Products may be purchased for use by individuals under 18 years of age, but we sell only to adults, who may purchase the products with a payment card or other approved payment method.</p>
+                    </main>
+                </details>
+            </div>
+        </div>
+    </div>
 </main>
 </div>
 <?php get_footer(); ?>

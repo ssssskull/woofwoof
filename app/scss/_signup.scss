@@ -41,12 +41,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding: 5rem 1.25rem;
+  box-sizing: border-box;
 
   &__wrapper {
     border: 1px solid;
     width: 100%;
-    height: auto;
     background-color: $clr-light;
     max-width: 730px;
     padding: 3.125rem;

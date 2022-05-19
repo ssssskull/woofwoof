@@ -1,0 +1,87 @@
+.faq {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1.25rem;
+  box-sizing: border-box;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 730px;
+    @include breakpoint-up(large) {
+      padding: 3.125rem;
+    }
+  }
+
+  &__content {
+    border: 1px solid;
+
+    details {
+      color: $clr-dark;
+    }
+
+    details + details {
+      border-top: 1px solid;
+    }
+
+    summary {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      padding: 1rem 3rem 1rem 1.25rem;
+      background: $clr-light;
+      color: inherit;
+      font-size: var(--h4-size);
+      font-weight: 700;
+
+      &::after {
+        content: "";
+        display: flex;
+        position: absolute;
+        background-image: url("../images/icons/Icon=Icon-chevron.svg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 2.5rem;
+        width: 2.5rem;
+        right: 0.5rem;
+        height: 100%;
+        top: 0;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    details:not([open]) summary:hover,
+    details:not([open]) summary:focus {
+      background: $clr-light;
+      color: $clr-dark;
+    }
+
+    details[open] summary {
+      background: $clr-dark;
+      color: $clr-light;
+
+      &::after {
+        filter: invert(1);
+        transform: rotate(180deg);
+      }
+    }
+
+    details main {
+      padding: 2rem;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  &__title {
+    font-size: var(--h2-size);
+    font-weight: 700;
+    letter-spacing: -0.55px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
