@@ -1,82 +1,81 @@
-// @supports (
-//   background-image:
-//     image-set(
-//       url("../images/hero-500w.avif") 1x,
-//       url("../images/hero-500w.webp") 1x
-//     )
-// ) {
-//   .benefits {
-//     background-image: image-set(
-//       url("../images/hero-500w.avif") 1x,
-//       url("../images/hero-500w.webp") 1x
-//     );
-//     @include breakpoint-up(large) {
-//       background-image: image-set(
-//         url("../images/hero-1400w.avif") 1x,
-//         url("../images/hero-1400w.webp") 1x
-//       );
-//     }
-//   }
-// }
-// @supports not (
-//   background-image:
-//     image-set(
-//       url("../images/hero-500w.avif") 1x,
-//       url("../images/hero-500w.webp") 1x
-//     )
-// ) {
-//   .benefits {
-//     background-image: url("../images/hero-500w.png");
-//     @include breakpoint-up(large) {
-//       background-image: url("../images/hero-1400w.png");
-//     }
-//   }
-// }
+@supports (
+  background-image:
+    image-set(
+      url("../images/benefit-bg-1000w.avif") 1x,
+      url("../images/benefit-bg-1000w.webp") 1x
+    )
+) {
+  .benefits {
+    &::after {
+      background-image: image-set(
+        url("../images/benefit-bg-1000w.avif") 1x,
+        url("../images/benefit-bg-1000w.webp") 1x
+      );
+    }
+  }
+}
+@supports not (
+  background-image:
+    image-set(
+      url("../images/benefit-bg-1000w.avif") 1x,
+      url("../images/benefit-bg-1000w.webp") 1x
+    )
+) {
+  .benefits {
+    &::after {
+      background-image: url("../images/benefit-bg-1000w.jpg");
+    }
+  }
+}
 
 .benefits {
   width: 100%;
   position: relative;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
 
-  &::after {
-    content: "";
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 0;
-    bottom: 0;
-    background-image: url("../images/benefit-bg.jpg");
-    // TODO image optimize
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: right;
+  @include breakpoint-up(large) {
+    &::after {
+      content: "";
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      right: 0;
+      bottom: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: right;
+    }
   }
 
   &__wrapper {
-    //TODO fjern procent padding fra hero og kopier herfra
     width: 100%;
     max-width: 1360px;
     margin: 0 auto;
     box-sizing: border-box;
     display: flex;
-
-    padding: 0 1.25rem;
-
-    @include breakpoint-up(large) {
-      padding: 0 2.5rem;
+    @include breakpoint-down(medium) {
+      padding: 1.5rem 0 2rem 0;
     }
   }
 
   &__content {
-    max-width: 50%;
+    @include breakpoint-up(large) {
+      max-width: 50%;
+    }
 
     h2 {
       font-size: var(--h2-size);
-      letter-spacing: -0.91px;
-      line-height: 60px;
+      letter-spacing: -0.55px;
+      line-height: 48.1px;
       font-weight: 700;
-      margin-bottom: 2.5rem;
-      max-width: 80%;
+      margin-bottom: 1.5rem;
+
+      @include breakpoint-up(large) {
+        margin-bottom: 2.5rem;
+        max-width: 80%;
+      }
     }
 
     @include breakpoint-up(large) {
@@ -87,8 +86,11 @@
   &__list {
     font-size: var(--h4-size);
     font-weight: 700;
-    line-height: 33.8px;
-    max-width: 80%;
+    line-height: 25.2px;
+
+    @include breakpoint-up(large) {
+      max-width: 80%;
+    }
   }
   &__elem {
     padding: 1rem 0 1rem 0.5rem;
