@@ -703,7 +703,12 @@ nav .menu-item a {
   background-size: cover;
   background-repeat: no-repeat;
   color: hsl(0deg, 0%, 100%);
-  padding: 3.5rem;
+  padding: 1.25rem;
+}
+@media (min-width: 64em) {
+  .hero__wrapper {
+    padding: 3.5rem;
+  }
 }
 .hero__title {
   font-weight: 700;
