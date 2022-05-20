@@ -2,8 +2,9 @@
 add_filter( 'show_admin_bar', '__return_false' );
 
 function my_scripts() {
-    wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/public/css/style.css', false, '1.0', 'all' );
+  wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/public/css/style.css', false, '1.0', 'all' );
 	wp_enqueue_script("script", get_template_directory_uri() . '/app/js/script.js', null, true);
+  wp_enqueue_script('swiper', 'https://unpkg.com/swiper/swiper-bundle.min.js', [], false, false);
 }
 
 add_action( 'wp_enqueue_scripts', 'my_scripts');

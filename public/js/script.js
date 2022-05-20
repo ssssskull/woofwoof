@@ -75,7 +75,6 @@ inputField.forEach(function (item) {
     inputLabel.classList.remove("has-focus");
   });
 }); // Image hover effect
-// TODO eventlistener på containeren
 
 var links = document.querySelectorAll(".events__element");
 var linkImages = document.querySelectorAll(".events__img");
@@ -90,7 +89,59 @@ links.forEach(function (link) {
       link.firstElementChild.classList.remove("image-visible");
     });
   });
-});
+}); // IIFY function for swiper
+
+(function () {
+  "use strict"; // breakpoint where swiper will be destroyed
+
+  var breakpoint = window.matchMedia("(min-width:64em)"); // keep track of swiper instances to destroy later
+
+  var mySwiper;
+
+  var breakpointChecker = function breakpointChecker() {
+    // if larger viewport destroy instance
+    if (breakpoint.matches === true) {
+      // clean up old instances and inline styles when available
+      if (mySwiper !== undefined) {
+        mySwiper.destroy(false, true);
+      } // or/and do nothing
+
+
+      return; // if mobile screen
+    } else if (breakpoint.matches === false) {
+      // fire small viewport version of swiper
+      return enableSwiper();
+    }
+  };
+
+  var enableSwiper = function enableSwiper() {
+    mySwiper = new Swiper(".mySwiper", {
+      slidesPerView: 1.2,
+      centeredSlides: true,
+      centeredSlidesBounds: true,
+      spaceBetween: 2,
+      // Responsive breakpoints
+      breakpoints: {
+        420: {
+          slidesPerView: 1.6,
+          centeredSlides: true,
+          centeredSlidesBounds: true
+        },
+        640: {
+          slidesPerView: 2.2,
+          centeredSlides: true,
+          centeredSlidesBounds: true
+        }
+      }
+    });
+  }; // keep an eye on viewport size changes
+
+
+  breakpoint.addListener(breakpointChecker); // kickstart
+
+  breakpointChecker();
+})();
+/* IIFE end */
 
 /***/ }),
 

@@ -1,58 +1,31 @@
-@supports (
-  background-image:
-    image-set(
-      url("../images/benefit-bg-1000w.avif") 1x,
-      url("../images/benefit-bg-1000w.webp") 1x
-    )
-) {
-  .benefits {
-    &::after {
-      background-image: image-set(
-        url("../images/benefit-bg-1000w.avif") 1x,
-        url("../images/benefit-bg-1000w.webp") 1x
-      );
-    }
-  }
-}
-@supports not (
-  background-image:
-    image-set(
-      url("../images/benefit-bg-1000w.avif") 1x,
-      url("../images/benefit-bg-1000w.webp") 1x
-    )
-) {
-  .benefits {
-    &::after {
-      background-image: url("../images/benefit-bg-1000w.jpg");
-    }
-  }
-}
-
 .benefits {
   width: 100%;
   position: relative;
   padding: 0 1.25rem;
   box-sizing: border-box;
 
-  @include breakpoint-up(large) {
-    &::after {
-      content: "";
-      z-index: 1;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      right: 0;
-      bottom: 0;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: right;
-    }
+  .wrapper {
+    justify-content: space-between;
   }
 
+  &__illustration {
+    display: none;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    @include breakpoint-up(large) {
+      max-width: 600px;
+      display: block;
+    }
+  }
   &__content {
     width: 100%;
     @include breakpoint-up(large) {
-      max-width: 50%;
+      max-width: 838px;
     }
 
     h2 {
@@ -82,9 +55,11 @@
       max-width: 80%;
     }
   }
+
   &__elem {
     padding: 1rem 0 1rem 0.5rem;
   }
+
   &__elem + &__elem {
     border-top: 1px solid;
   }

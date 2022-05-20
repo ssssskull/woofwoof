@@ -3,15 +3,18 @@
  * Template Name: Home
 */
 get_header();?>
-<div class="site-content">
+<div>
     <main class="main">
-        <div class="hero">
+        <section class="hero">
             <div class="hero__wrapper">
                 <h2 class="hero__title">Are you ready<br>for Wood Woods club?</h2>
                 <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
             </div>
+        </section>
+        <div class="banner">
+            <p class="banner__title">How it works</p>
         </div>
-        <div class="container">
+        <section class="container">
             <div class="wrapper how__wrapper">
                 <figure class="how__illustration">
                     <picture>
@@ -35,8 +38,11 @@ get_header();?>
                     </div>
                 </div>
             </div>
+        </section>
+        <div class="banner">
+            <p class="banner__title">Benefits</p>
         </div>
-        <div class="benefits container">
+        <section class="benefits container">
             <div class="wrapper">
                 <div class="benefits__content">
                     <h2>Enjoy the best Wood Wood has to offer – and more</h2>
@@ -48,20 +54,140 @@ get_header();?>
                         <li class="benefits__elem">Get invited to exclusive events</li>
                     </ul>
                 </div>
+                <figure class="benefits__illustration">
+                    <picture>
+                        <source type="image/avif" srcset="
+                        <?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.avif 1000w">
+                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.webp 1000w">
+                        <img src="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
+                    </picture>
+                </figure>
             </div>
+        </section>
+        <div class="banner">
+            <p class="banner__title">Exclusive offers</p>
         </div>
-        <div class="events">
+        <section class="container headline">
+            <div class="wrapper">
+                <h2>Exclusive offers for members</h2>
+            </div>
+        </section>
+        <section class="offer swiper mySwiper">
+            <div class="offer__list swiper-wrapper">
+                <div class="swiper-slide">
+                    <a class="offer__el">
+                        <figure class="offer__image">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <div class="offer__info">
+                            <div class="offer__details">
+                                <div class="offer__content">
+                                    <h4>Wood Wood</h4>
+                                    <p>Bobby beach wedding T-shirt</p>
+                                </div>
+                                <button class="offer__heart"></button>
+                            </div>
+                            <div class="offer__price">
+                                <del>500 DKK</del>
+                                <span>200 DKK</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="offer__el">
+                        <figure class="offer__image">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <div class="offer__info">
+                            <div class="offer__details">
+                                <div class="offer__content">
+                                    <h4>Wood Wood</h4>
+                                    <p>Bobby beach wedding T-shirt</p>
+                                </div>
+                                <button class="offer__heart"></button>
+                            </div>
+                            <div class="offer__price">
+                                <del>500 DKK</del>
+                                <span>200 DKK</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="offer__el">
+                        <figure class="offer__image">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <div class="offer__info">
+                            <div class="offer__details">
+                                <div class="offer__content">
+                                    <h4>Wood Wood</h4>
+                                    <p>Bobby beach wedding T-shirt</p>
+                                </div>
+                                <button class="offer__heart"></button>
+                            </div>
+                            <div class="offer__price">
+                                <del>500 DKK</del>
+                                <span>200 DKK</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a class="offer__el">
+                        <figure class="offer__image">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <div class="offer__info">
+                            <div class="offer__details">
+                                <div class="offer__content">
+                                    <h4>Wood Wood</h4>
+                                    <p>Bobby beach wedding T-shirt</p>
+                                </div>
+                                <button class="offer__heart"></button>
+                            </div>
+                            <div class="offer__price">
+                                <del>500 DKK</del>
+                                <span>200 DKK</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="events">
             <div class="events__wrapper">
-                <h2>Exclusive events</h2>
+                <p>Exclusive events</p>
                 <div class="events__list">
                     <a class="events__element" href="#!" data-img="1" title="The North Face x Online Ceramics event">
                         <figure class="events__img">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w,
+                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 400w,
                                 <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w,
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 400w,
                                 <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
                                 sizes="(max-width: 1024px) 100vw, 640px">
                                 <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="The North Face x Online Ceramics illustration" loading="lazy" decoding="async" height="428">
@@ -104,8 +230,8 @@ get_header();?>
                     </a>
                 </div>
             </div>
-        </div>
-        <div class="signup">
+        </section>
+        <section class="signup">
             <div class="signup__wrapper">
                 <h3>Sign up now.</h3>
                 <form class="signup__form">
@@ -132,33 +258,36 @@ get_header();?>
                         <a href="#!" class="btn--secondary">Or sign in here.</a>
                     </div>
                 </form>
-        </div>
-    </div>
-    <div class="faq">
-        <div class="faq__wrapper">
-            <h3 class="faq__title">FAQ</h3>
-            <div class="faq__content">
-                <details>
-                    <summary>What if an item I want is out of stock?</summary>
-                    <main>
-                        <p>Since all of the garments are second hand, chances are they are limited and sometimes one-offs. If the item you want is out of stock in your size, you can sign up to be notified when your size is available again. Just register to be notified by emailing us.</p>
-                    </main>
-                </details>
-                <details>
-                    <summary>What is your returns & cancellation policy?</summary>
-                    <main>
-                        <p>If you're not happy with your purchase or think your goods arrived damaged, you can send any unworn* item back to us within 14 days of the delivery date. It can take up to 14 days for your return to be fully processed. Your original payment method will be refunded. It may take 2-3 days to clear depending on your bank.</p>
-                    </main>
-                </details>
-                <details>
-                    <summary>Are there any requirements?</summary>
-                    <main>
-                        <p>Our terms and conditions that you accept at time of sign up and/or order give us this consent.<br>*Products may be purchased for use by individuals under 18 years of age, but we sell only to adults, who may purchase the products with a payment card or other approved payment method.</p>
-                    </main>
-                </details>
             </div>
+        </section>
+        <div class="banner banner--large">
+            <p class="banner__title">Frequently asked questions</p>
         </div>
-    </div>
-</main>
+        <section class="faq">
+            <div class="faq__wrapper">
+                <h3 class="faq__title">FAQ</h3>
+                <div class="faq__content">
+                    <details>
+                        <summary>What if an item I want is out of stock?</summary>
+                        <main>
+                            <p>Since all of the garments are second hand, chances are they are limited and sometimes one-offs. If the item you want is out of stock in your size, you can sign up to be notified when your size is available again. Just register to be notified by emailing us.</p>
+                        </main>
+                    </details>
+                    <details>
+                        <summary>What is your returns & cancellation policy?</summary>
+                        <main>
+                            <p>If you're not happy with your purchase or think your goods arrived damaged, you can send any unworn* item back to us within 14 days of the delivery date. It can take up to 14 days for your return to be fully processed. Your original payment method will be refunded. It may take 2-3 days to clear depending on your bank.</p>
+                        </main>
+                    </details>
+                    <details>
+                        <summary>Are there any requirements?</summary>
+                        <main>
+                            <p>Our terms and conditions that you accept at time of sign up and/or order give us this consent.<br>*Products may be purchased for use by individuals under 18 years of age, but we sell only to adults, who may purchase the products with a payment card or other approved payment method.</p>
+                        </main>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
 <?php get_footer(); ?>

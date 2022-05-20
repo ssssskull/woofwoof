@@ -1,23 +1,16 @@
 .events {
+  margin-top: 5.5rem;
   width: 100%;
   color: $clr-light;
   background-color: $clr-dark;
   overflow: hidden;
 
   &__wrapper {
-    padding: 1.25rem 1.25rem 2.5rem;
-    grid-gap: 1.25rem;
-    align-items: center;
-    display: grid;
-    grid-template:
-      "title . view-all" auto "content content content" minmax(
-        42vw,
-        max-content
-      )
-      / auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5.5rem 2.5rem 1.5rem 2.5rem;
 
-    h2 {
-      grid-area: title;
+    p {
       font-size: var(--h6-size);
       font-weight: 700;
       letter-spacing: 0.0275em;
@@ -27,10 +20,9 @@
   }
 
   &__list {
-    grid-area: content;
+    padding: 2rem 0 2rem 0;
     @include breakpoint-up(large) {
-      padding-left: calc(8.333% - 1.25rem);
-      padding-right: calc(8.333% - 1.25rem);
+      padding: 10rem calc(8.333% - 1.25rem) 10rem calc(8.333% - 1.25rem);
     }
   }
 
