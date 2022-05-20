@@ -152,8 +152,8 @@ if (window.innerWidth > 1024) {
   if (collabCont) {
     collabCont.addEventListener("mouseover", function (e) {
       e.preventDefault();
-      var collabEl = e.target.dataset.collab;
-      var imageToShow = document.querySelector("figure[data-collabimg='".concat(collabEl, "']"));
+      var collabEl = e.target;
+      var imageToShow = document.querySelector("figure[data-collabimg='".concat(collabEl.dataset.collab, "']"));
       console.log(collabEl, imageToShow);
       collabImgs.forEach(function (image) {
         image.style.display = "none";

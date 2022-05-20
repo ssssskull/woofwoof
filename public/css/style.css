@@ -1042,6 +1042,10 @@ nav .menu-item a {
 }
 .faq__content details {
   color: hsl(0deg, 0%, 0%);
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: none;
 }
 .faq__content details + details {
   border-top: 1px solid;
@@ -1055,6 +1059,11 @@ nav .menu-item a {
   color: inherit;
   font-size: var(--h4-size);
   font-weight: 700;
+  transition: background 0.3s ease-out;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: none;
 }
 .faq__content summary::after {
   content: "";
@@ -1070,6 +1079,7 @@ nav .menu-item a {
   top: 0;
   align-items: center;
   justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .faq__content details:not([open]) summary:hover,
 .faq__content details:not([open]) summary:focus {
@@ -1079,10 +1089,12 @@ nav .menu-item a {
 .faq__content details[open] summary {
   background: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
+  transition: background 0.3s ease-out;
 }
 .faq__content details[open] summary::after {
   filter: invert(1);
   transform: rotate(180deg);
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .faq__content details main {
   padding: 1.5rem 1.25rem;

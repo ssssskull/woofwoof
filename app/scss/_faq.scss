@@ -19,6 +19,8 @@
 
     details {
       color: $clr-dark;
+      appearance: none;
+      background-image: none;
     }
 
     details + details {
@@ -34,6 +36,9 @@
       color: inherit;
       font-size: var(--h4-size);
       font-weight: 700;
+      transition: background 0.3s ease-out;
+      appearance: none;
+      background-image: none;
 
       &::after {
         content: "";
@@ -49,6 +54,7 @@
         top: 0;
         align-items: center;
         justify-content: center;
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
     }
 
@@ -61,10 +67,12 @@
     details[open] summary {
       background: $clr-dark;
       color: $clr-light;
+      transition: background 0.3s ease-out;
 
       &::after {
         filter: invert(1);
         transform: rotate(180deg);
+        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
       }
     }
 

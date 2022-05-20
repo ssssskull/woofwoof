@@ -17,6 +17,7 @@
 
   &__image {
     display: none;
+
     @include breakpoint-up(large) {
       &:first-of-type {
         display: block;

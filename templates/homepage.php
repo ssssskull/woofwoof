@@ -138,6 +138,7 @@ get_header();?>
                 <h2>Exclusive offers for members</h2>
             </div>
         </section>
+        <!-- TODO add hover -->
         <section class="offer swiper mySwiper">
             <div class="offer__list swiper-wrapper">
                 <div class="swiper-slide">

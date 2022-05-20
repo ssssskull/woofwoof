@@ -148,9 +148,9 @@ if (window.innerWidth > 1024) {
     collabCont.addEventListener("mouseover", function (e) {
       e.preventDefault();
 
-      const collabEl = e.target.dataset.collab;
+      const collabEl = e.target;
       const imageToShow = document.querySelector(
-        `figure[data-collabimg='${collabEl}']`
+        `figure[data-collabimg='${collabEl.dataset.collab}']`
       );
       console.log(collabEl, imageToShow);
 
