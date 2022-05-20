@@ -142,6 +142,26 @@ links.forEach(function (link) {
   breakpointChecker();
 })();
 /* IIFE end */
+// Collabs tabbed component
+
+
+if (window.innerWidth > 1024) {
+  var collabCont = document.querySelector(".collabs__container");
+  var collabImgs = document.querySelectorAll("figure[data-collabimg]");
+
+  if (collabCont) {
+    collabCont.addEventListener("mouseover", function (e) {
+      e.preventDefault();
+      var collabEl = e.target.dataset.collab;
+      var imageToShow = document.querySelector("figure[data-collabimg='".concat(collabEl, "']"));
+      console.log(collabEl, imageToShow);
+      collabImgs.forEach(function (image) {
+        image.style.display = "none";
+      });
+      imageToShow.style.display = "block";
+    });
+  }
+} //TODO customize it for mobile if there's time
 
 /***/ }),
 

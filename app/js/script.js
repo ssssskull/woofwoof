@@ -137,3 +137,29 @@ links.forEach((link) => {
   // kickstart
   breakpointChecker();
 })(); /* IIFE end */
+
+// Collabs tabbed component
+
+if (window.innerWidth > 1024) {
+  const collabCont = document.querySelector(".collabs__container");
+  const collabImgs = document.querySelectorAll("figure[data-collabimg]");
+
+  if (collabCont) {
+    collabCont.addEventListener("mouseover", function (e) {
+      e.preventDefault();
+
+      const collabEl = e.target.dataset.collab;
+      const imageToShow = document.querySelector(
+        `figure[data-collabimg='${collabEl}']`
+      );
+      console.log(collabEl, imageToShow);
+
+      collabImgs.forEach((image) => {
+        image.style.display = "none";
+      });
+
+      imageToShow.style.display = "block";
+    });
+  }
+}
+//TODO customize it for mobile if there's time

@@ -46,7 +46,8 @@
     }
   }
 
-  &__list {
+  &__list,
+  .collabs__container {
     font-size: var(--h4-size);
     font-weight: 700;
     line-height: 25.2px;
@@ -56,11 +57,13 @@
     }
   }
 
-  &__elem {
+  &__elem,
+  .collabs__container > a {
     padding: 1rem 0 1rem 0.5rem;
   }
 
-  &__elem + &__elem {
+  &__elem + &__elem,
+  .collabs__container > a + .collabs__container > a {
     border-top: 1px solid;
   }
 }
