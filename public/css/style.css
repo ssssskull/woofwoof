@@ -1188,6 +1188,10 @@ nav .menu-item a {
   }
 }
 
+.swiper-slide + .swiper-slide {
+  margin-left: 1px;
+}
+
 .footer {
   grid-area: footer;
 }

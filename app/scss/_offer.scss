@@ -97,3 +97,7 @@
     flex-shrink: 1;
   }
 }
+
+.swiper-slide + .swiper-slide {
+  margin-left: 1px;
+}
