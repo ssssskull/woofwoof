@@ -1590,6 +1590,52 @@ nav .menu-item a {
     scroll-snap-align: center center;
   }
 }
+@supports ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .collabs__illustration-image--1 {
+    background-image: -webkit-image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
+    background-image: image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
+  }
+  .collabs__illustration-image--2 {
+    background-image: -webkit-image-set(url(../images/collab-2-1000w.avif?cc39a35ff99dd9825e1abc5037c36abd) 1x, url(../images/collab-2-1000w.webp?704f3ea7c6842e40e0ca2341b69cf192) 1x);
+    background-image: image-set(url(../images/collab-2-1000w.avif?cc39a35ff99dd9825e1abc5037c36abd) 1x, url(../images/collab-2-1000w.webp?704f3ea7c6842e40e0ca2341b69cf192) 1x);
+  }
+  .collabs__illustration-image--3 {
+    background-image: -webkit-image-set(url(../images/collab-3-1000w.avif?cfeb645312aacd39515395e475d231d0) 1x, url(../images/collab-3-1000w.webp?62b40165c50bcf0ab8c2a78b310b47d1) 1x);
+    background-image: image-set(url(../images/collab-3-1000w.avif?cfeb645312aacd39515395e475d231d0) 1x, url(../images/collab-3-1000w.webp?62b40165c50bcf0ab8c2a78b310b47d1) 1x);
+  }
+  .collabs__illustration-image--4 {
+    background-image: -webkit-image-set(url(../images/collab-4-1000w.avif?bfdff181bc374c43184e13d00ef07a2b) 1x, url(../images/collab-4-1000w.webp?8b06e0d57a1351ccaee36bbe68058067) 1x);
+    background-image: image-set(url(../images/collab-4-1000w.avif?bfdff181bc374c43184e13d00ef07a2b) 1x, url(../images/collab-4-1000w.webp?8b06e0d57a1351ccaee36bbe68058067) 1x);
+  }
+  .collabs__illustration-image--5 {
+    background-image: -webkit-image-set(url(../images/collab-5-1000w.avif?d135280bff80171af85f269483291836) 1x, url(../images/collab-5-1000w.webp?6abe1483edbb23a73b030b5fad2f4cf3) 1x);
+    background-image: image-set(url(../images/collab-5-1000w.avif?d135280bff80171af85f269483291836) 1x, url(../images/collab-5-1000w.webp?6abe1483edbb23a73b030b5fad2f4cf3) 1x);
+  }
+  .collabs__illustration-image--6 {
+    background-image: -webkit-image-set(url(../images/collab-6-1000w.avif?8bc526d3f57f22c131d4a98956150756) 1x, url(../images/collab-6-1000w.webp?c29232fc7921b94a636aa8dbe791ab6a) 1x);
+    background-image: image-set(url(../images/collab-6-1000w.avif?8bc526d3f57f22c131d4a98956150756) 1x, url(../images/collab-6-1000w.webp?c29232fc7921b94a636aa8dbe791ab6a) 1x);
+  }
+}
+@supports not ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .collabs__illustration-image--1 {
+    background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
+  }
+  .collabs__illustration-image--2 {
+    background-image: url(../images/collab-2-1000w.jpg?b9c5dc284edf1826d24ede974dd3bc19);
+  }
+  .collabs__illustration-image--3 {
+    background-image: url(../images/collab-3-1000w.jpg?a68157802a532108ed0b588a885c778c);
+  }
+  .collabs__illustration-image--4 {
+    background-image: url(../images/collab-4-1000w.jpg?24fdf0df5e2fe8cb571f34ea59ca1f27);
+  }
+  .collabs__illustration-image--5 {
+    background-image: url(../images/collab-5-1000w.jpg?74683def0f0e05ef733f2dda699f8ef0);
+  }
+  .collabs__illustration-image--6 {
+    background-image: url(../images/collab-6-1000w.jpg?95450a812b99d8d8fe4c2e7da0592fea);
+  }
+}
 .collabs {
   width: 100%;
   position: relative;
@@ -1618,23 +1664,5 @@ nav .menu-item a {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-  }
-  .collabs__illustration-image--1 {
-    background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
-  }
-  .collabs__illustration-image--2 {
-    background-image: url(../images/collab-2-1000w.jpg?b9c5dc284edf1826d24ede974dd3bc19);
-  }
-  .collabs__illustration-image--3 {
-    background-image: url(../images/collab-3-1000w.jpg?a68157802a532108ed0b588a885c778c);
-  }
-  .collabs__illustration-image--4 {
-    background-image: url(../images/collab-4-1000w.jpg?24fdf0df5e2fe8cb571f34ea59ca1f27);
-  }
-  .collabs__illustration-image--5 {
-    background-image: url(../images/collab-5-1000w.jpg?74683def0f0e05ef733f2dda699f8ef0);
-  }
-  .collabs__illustration-image--6 {
-    background-image: url(../images/collab-6-1000w.jpg?95450a812b99d8d8fe4c2e7da0592fea);
   }
 }
