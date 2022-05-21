@@ -1605,11 +1605,36 @@ nav .menu-item a {
   display: flex;
   flex-direction: column;
 }
-.collabs__image {
-  display: none;
-}
 @media (min-width: 64em) {
-  .collabs__image:first-of-type {
-    display: block;
+  .collabs__illustration {
+    max-width: 600px;
+    display: flex;
+    resize: both;
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+  .collabs__illustration-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+  .collabs__illustration-image--1 {
+    background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
+  }
+  .collabs__illustration-image--2 {
+    background-image: url(../images/collab-2-1000w.jpg?b9c5dc284edf1826d24ede974dd3bc19);
+  }
+  .collabs__illustration-image--3 {
+    background-image: url(../images/collab-3-1000w.jpg?a68157802a532108ed0b588a885c778c);
+  }
+  .collabs__illustration-image--4 {
+    background-image: url(../images/collab-4-1000w.jpg?24fdf0df5e2fe8cb571f34ea59ca1f27);
+  }
+  .collabs__illustration-image--5 {
+    background-image: url(../images/collab-5-1000w.jpg?74683def0f0e05ef733f2dda699f8ef0);
+  }
+  .collabs__illustration-image--6 {
+    background-image: url(../images/collab-6-1000w.jpg?95450a812b99d8d8fe4c2e7da0592fea);
   }
 }

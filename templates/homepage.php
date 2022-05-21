@@ -55,54 +55,9 @@ get_header();?>
                         <a href="#!" class="benefits__elem" data-collab="6">Joe Pilkington for Wood Wood</a>
                     </div>
                 </div>
-                <figure class="benefits__illustration collabs__image" data-collabimg="1">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-1-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-1-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-1-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
-                <figure class="benefits__illustration collabs__image" data-collabimg="2">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-2-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-2-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-2-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
-                <figure class="benefits__illustration collabs__image" data-collabimg="3">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-3-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-3-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-3-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
-                <figure class="benefits__illustration collabs__image" data-collabimg="4">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-4-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-4-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-4-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
-                <figure class="benefits__illustration collabs__image" data-collabimg="5">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-5-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-5-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-5-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
-                <figure class="benefits__illustration collabs__image" data-collabimg="6">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-6-1000w.avif 1000w">
-                        <source type="image/webp" srcset="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-6-1000w.webp 1000w">
-                        <img src="http://localhost/woofwoof/wp-content/themes/woofwoof/app/images/collab-6-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
-                    </picture>
-                </figure>
+                <div class="collabs__illustration">
+                    <figure class="collabs__illustration-image collabs__illustration-image--1"></figure>
+                </div>
             </div>
         </section>
         <div class="banner">

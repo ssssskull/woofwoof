@@ -140,26 +140,25 @@ links.forEach((link) => {
 
 // Collabs tabbed component
 
-if (window.innerWidth > 1024) {
-  const collabCont = document.querySelector(".collabs__container");
-  const collabImgs = document.querySelectorAll("figure[data-collabimg]");
+const collabCont = document.querySelector(".collabs__container");
 
-  if (collabCont) {
-    collabCont.addEventListener("mouseover", function (e) {
-      e.preventDefault();
+if (collabCont) {
+  collabCont.addEventListener("mouseover", function (e) {
+    e.preventDefault();
 
-      const collabEl = e.target;
-      const imageToShow = document.querySelector(
-        `figure[data-collabimg='${collabEl.dataset.collab}']`
-      );
-      console.log(collabEl, imageToShow);
+    const collabEl = e.target;
+    const collabImg = document.querySelector(
+      "[class^=collabs__illustration-image]"
+    );
 
-      collabImgs.forEach((image) => {
-        image.style.display = "none";
-      });
-
-      imageToShow.style.display = "block";
+    collabImg.classList.forEach((item) => {
+      if (item.startsWith("collabs__illustration-image--")) {
+        collabImg.classList.remove(item);
+      }
     });
-  }
+
+    collabImg.classList.add(
+      `collabs__illustration-image--${collabEl.dataset.collab}`
+    );
+  });
 }
-//TODO customize it for mobile if there's time

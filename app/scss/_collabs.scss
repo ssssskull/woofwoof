@@ -15,12 +15,43 @@
     flex-direction: column;
   }
 
-  &__image {
-    display: none;
-
+  &__illustration {
     @include breakpoint-up(large) {
-      &:first-of-type {
-        display: block;
+      max-width: 600px;
+      display: flex;
+      resize: both;
+      width: 100%;
+      aspect-ratio: 3/4;
+
+      &-image {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+
+        &--1 {
+          background-image: url("../../app/images/collab-1-1000w.jpg");
+        }
+
+        &--2 {
+          background-image: url("../../app/images/collab-2-1000w.jpg");
+        }
+
+        &--3 {
+          background-image: url("../../app/images/collab-3-1000w.jpg");
+        }
+
+        &--4 {
+          background-image: url("../../app/images/collab-4-1000w.jpg");
+        }
+
+        &--5 {
+          background-image: url("../../app/images/collab-5-1000w.jpg");
+        }
+
+        &--6 {
+          background-image: url("../../app/images/collab-6-1000w.jpg");
+        }
       }
     }
   }

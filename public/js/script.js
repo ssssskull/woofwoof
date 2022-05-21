@@ -145,23 +145,21 @@ links.forEach(function (link) {
 // Collabs tabbed component
 
 
-if (window.innerWidth > 1024) {
-  var collabCont = document.querySelector(".collabs__container");
-  var collabImgs = document.querySelectorAll("figure[data-collabimg]");
+var collabCont = document.querySelector(".collabs__container");
 
-  if (collabCont) {
-    collabCont.addEventListener("mouseover", function (e) {
-      e.preventDefault();
-      var collabEl = e.target;
-      var imageToShow = document.querySelector("figure[data-collabimg='".concat(collabEl.dataset.collab, "']"));
-      console.log(collabEl, imageToShow);
-      collabImgs.forEach(function (image) {
-        image.style.display = "none";
-      });
-      imageToShow.style.display = "block";
+if (collabCont) {
+  collabCont.addEventListener("mouseover", function (e) {
+    e.preventDefault();
+    var collabEl = e.target;
+    var collabImg = document.querySelector("[class^=collabs__illustration-image]");
+    collabImg.classList.forEach(function (item) {
+      if (item.startsWith("collabs__illustration-image--")) {
+        collabImg.classList.remove(item);
+      }
     });
-  }
-} //TODO customize it for mobile if there's time
+    collabImg.classList.add("collabs__illustration-image--".concat(collabEl.dataset.collab));
+  });
+}
 
 /***/ }),
 
