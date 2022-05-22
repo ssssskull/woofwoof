@@ -36,9 +36,12 @@
     position: relative;
 
     &--back {
-      img {
-        display: none;
-      }
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+      width: 100%;
     }
 
     img {
@@ -102,15 +105,8 @@
 
 .swiper-slide {
   &:hover {
-    figure:first-of-type {
-      img {
-        display: none;
-      }
-    }
-    figure:last-of-type {
-      img {
-        display: block;
-      }
+    .offer__image--back {
+      display: block;
     }
   }
   @include breakpoint-up(large) {

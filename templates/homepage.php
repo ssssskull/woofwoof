@@ -105,9 +105,7 @@ get_header();?>
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
                                 <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" >
                             </picture>
-                        </figure>
-                        <figure class="offer__image offer__image--back">
-                            <picture>
+                            <picture class="offer__image--back">
                                 <source type="image/avif" srcset="
                                 <?php echo get_template_directory_uri();?>/app/images/product-back-600w.avif 600w">
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-back-600w.webp 600w">
@@ -138,9 +136,7 @@ get_header();?>
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-2-front-600w.webp 600w">
                                 <img src="<?php echo get_template_directory_uri();?>/app/images/product-2-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
                             </picture>
-                        </figure>
-                        <figure class="offer__image offer__image--back">
-                            <picture>
+                            <picture class="offer__image--back">
                                 <source type="image/avif" srcset="
                                 <?php echo get_template_directory_uri();?>/app/images/product-2-back-600w.avif 600w">
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-2-back-600w.webp 600w">
@@ -171,9 +167,7 @@ get_header();?>
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-3-front-600w.webp 600w">
                                 <img src="<?php echo get_template_directory_uri();?>/app/images/product-3-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
                             </picture>
-                        </figure>
-                        <figure class="offer__image offer__image--back">
-                            <picture>
+                            <picture class="offer__image--back">
                                 <source type="image/avif" srcset="
                                 <?php echo get_template_directory_uri();?>/app/images/product-3-back-600w.avif 600w">
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-3-back-600w.webp 600w">
@@ -204,9 +198,7 @@ get_header();?>
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-4-front-600w.webp 600w">
                                 <img src="<?php echo get_template_directory_uri();?>/app/images/product-4-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
                             </picture>
-                        </figure>
-                        <figure class="offer__image offer__image--back">
-                            <picture>
+                            <picture class="offer__image--back">
                                 <source type="image/avif" srcset="
                                 <?php echo get_template_directory_uri();?>/app/images/product-4-back-600w.avif 600w">
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-4-back-600w.webp 600w">

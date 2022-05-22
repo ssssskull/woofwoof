@@ -1151,8 +1151,13 @@ nav .menu-item a {
   width: 100%;
   position: relative;
 }
-.offer__image--back img {
+.offer__image--back {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
 }
 .offer__image img {
   width: 100%;
@@ -1208,10 +1213,7 @@ nav .menu-item a {
   width: 110%;
 }
 
-.swiper-slide:hover figure:first-of-type img {
-  display: none;
-}
-.swiper-slide:hover figure:last-of-type img {
+.swiper-slide:hover .offer__image--back {
   display: block;
 }
 @media (min-width: 64em) {
