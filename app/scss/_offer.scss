@@ -30,8 +30,16 @@
     letter-spacing: 0.44px;
     line-height: 22px;
   }
+
   &__image {
     width: 100%;
+    position: relative;
+
+    &--back {
+      img {
+        display: none;
+      }
+    }
 
     img {
       width: 100%;
@@ -93,6 +101,18 @@
 }
 
 .swiper-slide {
+  &:hover {
+    figure:first-of-type {
+      img {
+        display: none;
+      }
+    }
+    figure:last-of-type {
+      img {
+        display: block;
+      }
+    }
+  }
   @include breakpoint-up(large) {
     flex-shrink: 1;
   }

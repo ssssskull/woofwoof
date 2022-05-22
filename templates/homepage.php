@@ -98,12 +98,20 @@ get_header();?>
             <div class="offer__list swiper-wrapper">
                 <div class="swiper-slide">
                     <a class="offer__el">
-                        <figure class="offer__image">
+                        <figure class="offer__image" data-product="1">
                             <picture>
                                 <source type="image/avif" srcset="
                                 <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
                                 <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" >
+                            </picture>
+                        </figure>
+                        <figure class="offer__image offer__image--back">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-back-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-back-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-back-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" class="offer__image--back">
                             </picture>
                         </figure>
                         <div class="offer__info">
@@ -123,12 +131,20 @@ get_header();?>
                 </div>
                 <div class="swiper-slide">
                     <a class="offer__el">
-                        <figure class="offer__image">
+                        <figure class="offer__image" data-product="2">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                                <?php echo get_template_directory_uri();?>/app/images/product-2-front-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-2-front-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-2-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <figure class="offer__image offer__image--back">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-2-back-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-2-back-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-2-back-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" class="offer__image--back">
                             </picture>
                         </figure>
                         <div class="offer__info">
@@ -148,12 +164,20 @@ get_header();?>
                 </div>
                 <div class="swiper-slide">
                     <a class="offer__el">
-                        <figure class="offer__image">
+                        <figure class="offer__image" data-product="3">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                                <?php echo get_template_directory_uri();?>/app/images/product-3-front-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-3-front-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-3-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <figure class="offer__image offer__image--back">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-3-back-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-3-back-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-3-back-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" class="offer__image--back">
                             </picture>
                         </figure>
                         <div class="offer__info">
@@ -173,12 +197,20 @@ get_header();?>
                 </div>
                 <div class="swiper-slide">
                     <a class="offer__el">
-                        <figure class="offer__image">
+                        <figure class="offer__image" data-product="4">
                             <picture>
                                 <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 600w">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 600w">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                                <?php echo get_template_directory_uri();?>/app/images/product-4-front-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-4-front-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-4-front-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760">
+                            </picture>
+                        </figure>
+                        <figure class="offer__image offer__image--back">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/product-4-back-600w.avif 600w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-4-back-600w.webp 600w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/product-4-back-600w.jpg" alt="Wood Wood T-shirt" loading="lazy" decoding="async" height="760" class="offer__image--back">
                             </picture>
                         </figure>
                         <div class="offer__info">

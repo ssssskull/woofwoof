@@ -1149,6 +1149,10 @@ nav .menu-item a {
 }
 .offer__image {
   width: 100%;
+  position: relative;
+}
+.offer__image--back img {
+  display: none;
 }
 .offer__image img {
   width: 100%;
@@ -1204,6 +1208,12 @@ nav .menu-item a {
   width: 110%;
 }
 
+.swiper-slide:hover figure:first-of-type img {
+  display: none;
+}
+.swiper-slide:hover figure:last-of-type img {
+  display: block;
+}
 @media (min-width: 64em) {
   .swiper-slide {
     flex-shrink: 1;

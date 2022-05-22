@@ -159,7 +159,23 @@ if (collabCont) {
     });
     collabImg.classList.add("collabs__illustration-image--".concat(collabEl.dataset.collab));
   });
-}
+} // Show product backside
+// const products = document.querySelector(".swiper-wrapper");
+// if (products) {
+//   products.addEventListener("mouseover", function (e) {
+//     const productImage = e.target.closest("[data-product]");
+//     const productImageBack =
+//       productImage.nextElementSibling.querySelector("img");
+//     if (productImage) {
+//       productImageBack.style.visibility = "visible";
+//       productImageBack.style.opacity = "1";
+//       productImageBack.style.height = "100%";
+//       productImage.style.display = "none";
+//       productImage.style.visibility = "hidden";
+//       productImage.style.opacity = "0";
+//     }
+//   });
+// }
 
 /***/ }),
 
