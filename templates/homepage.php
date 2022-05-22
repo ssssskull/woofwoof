@@ -56,7 +56,7 @@ get_header();?>
                     </div>
                 </div>
                 <div class="collabs__illustration">
-                    <figure class="collabs__illustration-image collabs__illustration-image--1"></figure>
+                    <figure class="collabs__illustration-image"></figure>
                 </div>
             </div>
         </section>

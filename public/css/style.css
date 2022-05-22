@@ -1601,6 +1601,10 @@ nav .menu-item a {
   }
 }
 @supports ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .collabs__illustration-image {
+    background-image: -webkit-image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
+    background-image: image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
+  }
   .collabs__illustration-image--1 {
     background-image: -webkit-image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
     background-image: image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
@@ -1627,6 +1631,9 @@ nav .menu-item a {
   }
 }
 @supports not ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .collabs__illustration-image {
+    background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
+  }
   .collabs__illustration-image--1 {
     background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
   }

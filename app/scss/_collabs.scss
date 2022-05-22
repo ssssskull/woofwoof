@@ -6,6 +6,11 @@
     )
 ) {
   .collabs__illustration-image {
+    background-image: image-set(
+      url("../images/collab-1-1000w.avif") 1x,
+      url("../images/collab-1-1000w.webp") 1x
+    );
+
     &--1 {
       background-image: image-set(
         url("../images/collab-1-1000w.avif") 1x,
@@ -52,6 +57,8 @@
     )
 ) {
   .collabs__illustration-image {
+    background-image: url("../images/collab-1-1000w.jpg");
+
     &--1 {
       background-image: url("../images/collab-1-1000w.jpg");
     }
