@@ -729,25 +729,25 @@ nav .menu-item a {
   padding-right: 2rem;
 }
 
-@supports ((background-image: -webkit-image-set(url("../images/signup-500w.avif") 1x, url("../images/signup-500w.webp") 1x)) or (background-image: image-set(url("../images/signup-500w.avif") 1x, url("../images/signup-500w.webp") 1x))) {
+@supports ((background-image: -webkit-image-set(url("../images/signup-1024w.avif") 1x, url("../images/signup-1024w.webp") 1x)) or (background-image: image-set(url("../images/signup-1024w.avif") 1x, url("../images/signup-1024w.webp") 1x))) {
   .signup {
-    background-image: -webkit-image-set(url(../images/signup-500w.avif?3054f96efe6e0f0e1c8b6787905b729c) 1x, url(../images/signup-500w.webp?6acdce11a4a50f6c14afafc2db839065) 1x);
-    background-image: image-set(url(../images/signup-500w.avif?3054f96efe6e0f0e1c8b6787905b729c) 1x, url(../images/signup-500w.webp?6acdce11a4a50f6c14afafc2db839065) 1x);
+    background-image: -webkit-image-set(url(../images/signup-1024w.avif?7a972cc6cef8725a54cedc74ae18a96e) 1x, url(../images/signup-1024w.webp?2efa0f508fbbe104b1d844fb67e97449) 1x);
+    background-image: image-set(url(../images/signup-1024w.avif?7a972cc6cef8725a54cedc74ae18a96e) 1x, url(../images/signup-1024w.webp?2efa0f508fbbe104b1d844fb67e97449) 1x);
   }
   @media (min-width: 64em) {
     .signup {
-      background-image: -webkit-image-set(url(../images/signup-2000w.avif?1d7280d254a74b69c04aec08693c622f) 1x, url(../images/signup-2000w.webp?1dadc2657af8985ffe00aeb7629c2347) 1x);
-      background-image: image-set(url(../images/signup-2000w.avif?1d7280d254a74b69c04aec08693c622f) 1x, url(../images/signup-2000w.webp?1dadc2657af8985ffe00aeb7629c2347) 1x);
+      background-image: -webkit-image-set(url(../images/signup-1920w.avif?85788539e06f403a5847e9aaadbd52c7) 1x, url(../images/signup-1920w.webp?585898759b49167d2c8319a66f53e7a1) 1x);
+      background-image: image-set(url(../images/signup-1920w.avif?85788539e06f403a5847e9aaadbd52c7) 1x, url(../images/signup-1920w.webp?585898759b49167d2c8319a66f53e7a1) 1x);
     }
   }
 }
-@supports not ((background-image: -webkit-image-set(url("../images/signup-500w.avif") 1x, url("../images/signup-500w.webp") 1x)) or (background-image: image-set(url("../images/signup-500w.avif") 1x, url("../images/signup-500w.webp") 1x))) {
+@supports not ((background-image: -webkit-image-set(url("../images/signup-1024w.avif") 1x, url("../images/signup-1024w.webp") 1x)) or (background-image: image-set(url("../images/signup-1024w.avif") 1x, url("../images/signup-1024w.webp") 1x))) {
   .signup {
-    background-image: url(../images/signup-500w.jpg?b072f48e1f639055f56ddea227637525);
+    background-image: url(../images/signup-1024w.jpg?2c441953f2a27f0c4d85000366a810e0);
   }
   @media (min-width: 64em) {
     .signup {
-      background-image: url(../images/signup-2000w.jpg?f0101a1484a27e0299096af535eb58bd);
+      background-image: url(../images/signup-1920w.jpg?3b50d1c21aaf7a0c5301eac8e67a8043);
     }
   }
 }
