@@ -1,6 +1,11 @@
 .how {
   &__wrapper {
     justify-content: space-between;
+    margin-bottom: 3rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 6.25rem;
+    }
   }
 
   &__content {

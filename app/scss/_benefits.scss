@@ -6,6 +6,10 @@
 
   .wrapper {
     justify-content: space-between;
+    padding-bottom: 2rem;
+    @include breakpoint-up(large) {
+      padding-bottom: 6.25rem;
+    }
   }
 
   &__illustration {
@@ -29,13 +33,14 @@
     }
 
     h2 {
-      font-size: var(--h2-size);
+      font-size: var(--h1-size);
       letter-spacing: -0.55px;
       line-height: 48.1px;
       font-weight: 700;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
 
       @include breakpoint-up(large) {
+        font-size: var(--h2-size);
         margin-bottom: 2.5rem;
         max-width: 80%;
       }

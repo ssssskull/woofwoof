@@ -41,15 +41,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5.5rem 1.25rem;
+  padding: 3rem 1.25rem;
   box-sizing: border-box;
+
+  @include breakpoint-up(large) {
+    padding: 6.25rem 1.25rem;
+  }
 
   &__wrapper {
     border: 1px solid;
     width: 100%;
     background-color: $clr-light;
     max-width: 730px;
-    padding: 3.125rem;
+    padding: 1.25rem 2.25rem 3rem 2.25rem;
 
     h3 {
       font-size: var(--h2-size);

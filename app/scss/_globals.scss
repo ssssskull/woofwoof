@@ -64,19 +64,19 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   display: flex;
-  @include breakpoint-down(medium) {
-    padding: 1.5rem 0 2rem 0;
-  }
 }
 
 .banner {
-  padding: 3.5rem 1.25rem 0 1.25rem;
+  padding: 1.25rem 1.25rem 2rem 1.25rem;
   @include breakpoint-up(large) {
-    padding: 3.5rem 1.25rem 1.5rem 1.25rem;
+    padding: 1.25rem 1.25rem 5rem 1.25rem;
   }
 
   &--large {
-    padding: 5.5rem 1.25rem 0 1.25rem;
+    padding: 1.25rem 1.25rem 2rem 1.25rem;
+    @include breakpoint-up(large) {
+      padding: 1.25rem 1.25rem 5rem 1.25rem;
+    }
   }
 
   &--dark {

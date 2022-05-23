@@ -1,5 +1,4 @@
 .events {
-  margin-top: 5.5rem;
   width: 100%;
   color: $clr-light;
   background-color: $clr-dark;
@@ -8,7 +7,10 @@
   &__wrapper {
     display: flex;
     flex-direction: column;
-    padding: 5.5rem 2.5rem 1.5rem 2.5rem;
+    padding: 2rem 1.25rem 0rem 1.25rem;
+    @include breakpoint-up(large) {
+      padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+    }
 
     p {
       font-size: var(--h6-size);
@@ -20,7 +22,7 @@
   }
 
   &__list {
-    padding: 2rem 0 2rem 0;
+    padding: 2rem 0 1.75rem 0;
     @include breakpoint-up(large) {
       padding: 10rem calc(8.333% - 1.25rem) 10rem calc(8.333% - 1.25rem);
     }
@@ -58,7 +60,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    max-width: 450px;
+    max-width: 350px;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.15s cubic-bezier(0.2, 0.4, 0.8, 1);

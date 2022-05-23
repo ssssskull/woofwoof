@@ -4,15 +4,24 @@
   }
 
   h2 {
-    font-size: var(--h2-size);
+    font-size: var(--h1-size);
     font-weight: 700;
     letter-spacing: -0.55px;
     line-height: 48.1px;
+    margin-bottom: 2rem;
+
+    @include breakpoint-up(large) {
+      font-size: var(--h2-size);
+    }
   }
 }
 .offer {
   width: 100%;
   box-sizing: border-box;
+  margin-bottom: 1.75rem;
+  @include breakpoint-up(large) {
+    margin-bottom: 6.25rem;
+  }
 
   &__list {
     width: 100%;

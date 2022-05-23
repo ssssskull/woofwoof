@@ -94,6 +94,11 @@
 
   .wrapper {
     justify-content: space-between;
+    padding-bottom: 2rem;
+
+    @include breakpoint-up(large) {
+      padding-bottom: 6.25rem;
+    }
   }
 
   &__container {
