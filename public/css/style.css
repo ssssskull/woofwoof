@@ -785,14 +785,12 @@ nav .menu-item a {
 .signup__form * + * {
   margin-top: 1.875rem;
 }
-@media (min-width: 64em) {
-  .signup__actions {
-    display: flex;
-    align-items: baseline;
-  }
-  .signup__actions * + * {
-    margin-left: 1.5rem;
-  }
+.signup__actions {
+  display: flex;
+  align-items: baseline;
+}
+.signup__actions * + * {
+  margin-left: 1.5rem;
 }
 
 .events {

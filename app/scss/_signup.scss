@@ -69,16 +69,16 @@
   }
 
   // TODO delete hvis vi vælgere at de skal være under hinanden
-  @include breakpoint-up(large) {
-    &__actions {
-      display: flex;
-      align-items: baseline;
 
-      * + * {
-        margin-left: 1.5rem;
-      }
+  &__actions {
+    display: flex;
+    align-items: baseline;
+
+    * + * {
+      margin-left: 1.5rem;
     }
   }
+
   // .btn--primary {
   //   padding: 1rem 0;
   //   cursor: pointer;
