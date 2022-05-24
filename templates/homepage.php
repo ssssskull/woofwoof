@@ -12,55 +12,6 @@ get_header();?>
             </div>
         </section>
         <div class="banner">
-            <p class="banner__title">How it works</p>
-        </div>
-        <section class="container">
-            <div class="wrapper how__wrapper">
-                <figure class="how__illustration">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        <?php echo get_template_directory_uri();?>/app/images/how-it-works-800w.avif 800w">
-                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/how-it-works-800w.webp 800w">
-                        <img src="<?php echo get_template_directory_uri();?>/app/images/how-it-works-800w.jpg" alt=" " loading="lazy" decoding="async" height="602">
-                    </picture>
-                </figure>
-                <div class="how__content">
-                    <h2 class="how__title">Become a part of the Wood Wood family</h2>
-                    <ul class="how__list">
-                        <li>Sign up in store or online.</li>
-                        <li>Connect your card to your account. Exclusive member offers will automatically be discounted at check out in-store.<br>Remember to sign in when shopping online to make use of the offers.</li>
-                        <li>Receive notifications about offers, invitations to events, and pre-access to curated collections straight in your inbox.</li>
-                        <li>Enjoy the perks of being a member of the WW family!</li>
-                    </ul>
-                    <div class="how__actions">
-                        <a href="#!" class="btn--primary">Become a member</a>
-                        <a href="#!" class="btn--secondary">Or sign in here.</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="banner banner--dark">
-            <p class="banner__title">Recent Collaborations</p>
-        </div>
-        <section class="collabs benefits container">
-            <div class="wrapper">
-                <div class="benefits__content">
-                    <h2>Recent collabs</h2>
-                    <div class="benefits__list collabs__container">
-                        <a href="#!" class="benefits__elem" data-collab="1">Garfield by WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="2">Solovair for WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="3">Hermansen by WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="4">Wood Wood x Rune Glifberg </a>
-                        <a href="#!" class="benefits__elem" data-collab="5">Roskilde Festival 2021</a>
-                        <a href="#!" class="benefits__elem" data-collab="6">Joe Pilkington for Wood Wood</a>
-                    </div>
-                </div>
-                <div class="collabs__illustration">
-                    <figure class="collabs__illustration-image"></figure>
-                </div>
-            </div>
-        </section>
-        <div class="banner">
             <p class="banner__title">Benefits</p>
         </div>
         <section class="benefits container">
@@ -78,11 +29,110 @@ get_header();?>
                 <figure class="benefits__illustration">
                     <picture>
                         <source type="image/avif" srcset="
-                        <?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.avif 1000w">
-                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.webp 1000w">
-                        <img src="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-1000w.jpg" alt=" " loading="lazy" decoding="async" height="798">
+                        <?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.avif 600w">
+                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.webp 600w">
+                        <img src="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.jpg" alt=" " loading="lazy" decoding="async" height="800">
                     </picture>
                 </figure>
+            </div>
+        </section>
+        <div class="banner banner--divider">
+            <p class="banner__title">How it works</p>
+        </div>
+        <section class="container">
+            <div class="wrapper how__wrapper">
+                <figure class="how__illustration">
+                    <picture>
+                        <source type="image/avif" srcset="
+                        <?php echo get_template_directory_uri();?>/app/images/how-it-works-600w.avif 600w">
+                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/how-it-works-600w.webp 600w">
+                        <img src="<?php echo get_template_directory_uri();?>/app/images/how-it-works-600w.jpg" alt=" " loading="lazy" decoding="async" height="800">
+                    </picture>
+                </figure>
+                <div class="how__content">
+                    <h2 class="how__title">Become a part of the Wood Wood family</h2>
+                    <ul class="how__list">
+                        <li>Sign up in store or online.</li>
+                        <li>Connect your card to your account. Exclusive member offers will automatically be discounted at check out in-store.<br>Remember to sign in when shopping online to make use of the offers.</li>
+                        <li>Receive notifications about offers, invitations to events, and pre-access to curated collections straight in your inbox.</li>
+                        <li>Enjoy the perks of being a member of the WW family!</li>
+                    </ul>
+                    <div class="how__actions">
+                        <a href="#!" class="btn--primary">Become a member</a>
+                        <a href="#!" class="btn--secondary">Or sign in here.</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="signup">
+            <div class="signup__wrapper">
+                <h3>Sign up now.</h3>
+                <form class="signup__form">
+                    <div class="footer__newsletter-fields">
+                        <div class="footer__newsletter-field">
+                            <label for="name" class="footer__newsletter-label">First name</label>
+                            <input type="text" id="name" name="name" class="footer__newsletter-input" value="">
+                        </div>
+                    </div>
+                    <div class="footer__newsletter-fields">
+                        <div class="footer__newsletter-field">
+                            <label for="loyalty-mail" class="footer__newsletter-label">Email address</label>
+                            <input type="email" id="loyalty-mail" name="email" class="footer__newsletter-input" value="">
+                        </div>
+                    </div>
+                    <div class="footer__newsletter-fields">
+                        <div class="footer__newsletter-field">
+                            <label for="password" class="footer__newsletter-label">Password</label>
+                            <input type="password" id="password" name="password" class="footer__newsletter-input" value="">
+                        </div>
+                    </div>
+                    <div class="signup__actions">
+                        <button>Sign up</button>
+                        <a href="#!" class="btn--secondary">Or sign in here.</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="events">
+            <div class="events__wrapper">
+                <p>Exclusive events</p>
+                <div class="events__list">
+                    <a class="events__element" href="#!" data-img="1" title="The North Face x Online Ceramics event">
+                        <figure class="events__img">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-1-400w.avif 400w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.webp 400w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-400w.jpg" alt="The North Face x Online Ceramics illustration" loading="lazy" decoding="async" height="500">
+                            </picture>
+                        </figure>
+                        <span>28.04.22</span>
+                        <h3>The North Face x Online Ceramics</h3>
+                    </a>
+                    <a class="events__element" href="#!" data-img="2" title="WOOD WOOD Life Store opening event">
+                        <figure class="events__img">
+                            <picture>
+                                <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-2-400w.avif 400w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-2-400w.webp 400w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-2-400w.jpg" alt="WOOD WOOD Life Store opening illustration" loading="lazy" decoding="async" height="428">
+                            </picture>
+                        </figure>
+                        <span>28.04.22</span>
+                        <h3>WOOD WOOD Life Store™ opening</h3>
+                    </a>
+                    <a class="events__element" href="#!" data-img="3" title="Biking through Copenhagen event">
+                         <figure class="events__img">
+                             <source type="image/avif" srcset="
+                                <?php echo get_template_directory_uri();?>/app/images/event-3-400w.avif 400w">
+                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-3-400w.webp 400w">
+                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-3-400w.jpg" alt="Biking through Copenhagen illustration" loading="lazy" decoding="async" height="428">
+                            </picture>
+                        </figure>
+                        <span>06.06.22</span>
+                        <h3>Biking through Copenhagen</h3>
+                    </a>
+                </div>
             </div>
         </section>
         <div class="banner">
@@ -93,7 +143,6 @@ get_header();?>
                 <h2>Exclusive offers for members</h2>
             </div>
         </section>
-        <!-- TODO add hover -->
         <section class="offer swiper mySwiper">
             <div class="offer__list swiper-wrapper">
                 <div class="swiper-slide">
@@ -222,88 +271,25 @@ get_header();?>
                 </div>
             </div>
         </section>
-        <section class="events">
-            <div class="events__wrapper">
-                <p>Exclusive events</p>
-                <div class="events__list">
-                    <a class="events__element" href="#!" data-img="1" title="The North Face x Online Ceramics event">
-                        <figure class="events__img">
-                            <picture>
-                                <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/product-600w.avif 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.avif 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/product-600w.webp 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-1-600w.webp 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-1-600w.jpg" alt="The North Face x Online Ceramics illustration" loading="lazy" decoding="async" height="428">
-                            </picture>
-                        </figure>
-                        <span>28.04.22</span>
-                        <h3>The North Face x Online Ceramics</h3>
-                    </a>
-                    <a class="events__element" href="#!" data-img="2" title="WOOD WOOD Life Store opening event">
-                        <figure class="events__img">
-                            <picture>
-                                <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/event-2-400w.avif 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-2-600w.avif 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-2-400w.webp 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-2-600w.webp 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-2-600w.jpg" alt="WOOD WOOD Life Store opening illustration" loading="lazy" decoding="async" height="428">
-                            </picture>
-                        </figure>
-                        <span>28.04.22</span>
-                        <h3>WOOD WOOD Life Store™ opening</h3>
-                    </a>
-                    <a class="events__element" href="#!" data-img="3" title="Biking through Copenhagen event">
-                         <figure class="events__img">
-                            <picture>
-                                <source type="image/avif" srcset="
-                                <?php echo get_template_directory_uri();?>/app/images/event-3-400w.avif 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-3-600w.avif 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/event-3-400w.webp 400w,
-                                <?php echo get_template_directory_uri();?>/app/images/event-3-600w.webp 600w"
-                                sizes="(max-width: 1024px) 100vw, 640px">
-                                <img src="<?php echo get_template_directory_uri();?>/app/images/event-3-600w.jpg" alt="Biking through Copenhagen illustration" loading="lazy" decoding="async" height="428">
-                            </picture>
-                        </figure>
-                        <span>06.06.22</span>
-                        <h3>Biking through Copenhagen</h3>
-                    </a>
+        <div class="banner banner--dark">
+            <p class="banner__title">Recent Collaborations</p>
+        </div>
+        <section class="collabs benefits container">
+            <div class="wrapper">
+                <div class="benefits__content">
+                    <h2>Recent collabs</h2>
+                    <div class="benefits__list collabs__container">
+                        <a href="#!" class="benefits__elem" data-collab="1">Garfield by WOOD WOOD</a>
+                        <a href="#!" class="benefits__elem" data-collab="2">Solovair for WOOD WOOD</a>
+                        <a href="#!" class="benefits__elem" data-collab="3">Hermansen by WOOD WOOD</a>
+                        <a href="#!" class="benefits__elem" data-collab="4">Wood Wood x Rune Glifberg </a>
+                        <a href="#!" class="benefits__elem" data-collab="5">Roskilde Festival 2021</a>
+                        <a href="#!" class="benefits__elem" data-collab="6">Joe Pilkington for Wood Wood</a>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="signup">
-            <div class="signup__wrapper">
-                <h3>Sign up now.</h3>
-                <form class="signup__form">
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="name" class="footer__newsletter-label">First name</label>
-                            <input type="text" id="name" name="name" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="loyalty-mail" class="footer__newsletter-label">Email address</label>
-                            <input type="email" id="loyalty-mail" name="email" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="password" class="footer__newsletter-label">Password</label>
-                            <input type="password" id="password" name="password" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="signup__actions">
-                        <button>Sign up</button>
-                        <a href="#!" class="btn--secondary">Or sign in here.</a>
-                    </div>
-                </form>
+                <div class="collabs__illustration">
+                    <figure class="collabs__illustration-image"></figure>
+                </div>
             </div>
         </section>
         <div class="banner banner--large">
