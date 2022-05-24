@@ -272,12 +272,12 @@ get_header();?>
             </div>
         </section>
         <div class="banner banner--dark">
-            <p class="banner__title">Recent Collaborations</p>
+            <p class="banner__title">Collaborations</p>
         </div>
         <section class="collabs benefits container">
             <div class="wrapper">
                 <div class="benefits__content">
-                    <h2>Recent collabs</h2>
+                    <h2>Be the first to hear about our newest collaborations</h2>
                     <div class="benefits__list collabs__container">
                         <a href="#!" class="benefits__elem" data-collab="1">Garfield by WOOD WOOD</a>
                         <a href="#!" class="benefits__elem" data-collab="2">Solovair for WOOD WOOD</a>
