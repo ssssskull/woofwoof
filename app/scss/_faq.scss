@@ -39,6 +39,11 @@
       transition: background 0.3s ease-out;
       appearance: none;
       background-image: none;
+      list-style: none;
+
+      &::-webkit-details-marker {
+        display: none;
+      }
 
       &::after {
         content: "";

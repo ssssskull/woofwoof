@@ -1086,6 +1086,10 @@ nav .menu-item a {
      -moz-appearance: none;
           appearance: none;
   background-image: none;
+  list-style: none;
+}
+.faq__content summary::-webkit-details-marker {
+  display: none;
 }
 .faq__content summary::after {
   content: "";
