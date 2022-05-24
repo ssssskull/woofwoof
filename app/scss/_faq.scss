@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 730px;
     @include breakpoint-up(large) {
-      padding: 3.125rem;
+      padding: 0 3.125rem 3.125rem 3.125rem;
     }
   }
 
@@ -36,7 +36,9 @@
       color: inherit;
       font-size: var(--h4-size);
       font-weight: 700;
-      transition: background 0.3s ease-out;
+      @include breakpoint-up(large) {
+        transition: background 0.3s ease-out;
+      }
       appearance: none;
       background-image: none;
       list-style: none;
@@ -59,7 +61,10 @@
         top: 0;
         align-items: center;
         justify-content: center;
-        transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+        @include breakpoint-up(large) {
+          transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
       }
     }
 

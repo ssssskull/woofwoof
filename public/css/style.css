@@ -901,14 +901,19 @@ nav .menu-item a {
   display: none;
   width: 100%;
 }
+.benefits__illustration picture {
+  display: block;
+  height: 100%;
+}
 .benefits__illustration img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 @media (min-width: 64em) {
   .benefits__illustration {
     max-width: 600px;
     display: block;
+    aspect-ratio: 3/4;
   }
 }
 .benefits__content {
@@ -1056,7 +1061,7 @@ nav .menu-item a {
 }
 @media (min-width: 64em) {
   .faq__wrapper {
-    padding: 3.125rem;
+    padding: 0 3.125rem 3.125rem 3.125rem;
   }
 }
 .faq__content {
@@ -1081,12 +1086,16 @@ nav .menu-item a {
   color: inherit;
   font-size: var(--h4-size);
   font-weight: 700;
-  transition: background 0.3s ease-out;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
   background-image: none;
   list-style: none;
+}
+@media (min-width: 64em) {
+  .faq__content summary {
+    transition: background 0.3s ease-out;
+  }
 }
 .faq__content summary::-webkit-details-marker {
   display: none;
@@ -1105,7 +1114,11 @@ nav .menu-item a {
   top: 0;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@media (min-width: 64em) {
+  .faq__content summary::after {
+    transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
 }
 .faq__content details:not([open]) summary:hover,
 .faq__content details:not([open]) summary:focus {
