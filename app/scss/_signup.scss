@@ -68,23 +68,39 @@
     }
   }
 
-  button {
-    padding: 1rem 0;
-    cursor: pointer;
-    font-weight: 700;
-    width: 100%;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    font-size: var(--base-size);
-    background-color: $clr-dark;
-    appearance: button;
-    border: none;
-    color: $clr-light;
-    transition: background-color 0.1s ease;
-    margin-bottom: 1.5rem;
-    &:hover,
-    :focus {
-      background-color: $clr-grey;
+  // TODO delete hvis vi vælgere at de skal være under hinanden
+  @include breakpoint-up(large) {
+    &__actions {
+      display: flex;
+      align-items: baseline;
+
+      * + * {
+        margin-left: 1.5rem;
+      }
     }
   }
+  // .btn--primary {
+  //   padding: 1rem 0;
+  //   cursor: pointer;
+  //   font-weight: 700;
+  //   width: 100%;
+  //   letter-spacing: 0.6px;
+  //   text-transform: uppercase;
+  //   font-size: var(--base-size);
+  //   background-color: $clr-dark;
+  //   appearance: button;
+  //   border: none;
+  //   color: $clr-light;
+  //   transition: background-color 0.1s ease;
+  //   margin-bottom: 1.5rem;
+
+  //   @include breakpoint-up(large) {
+  //     width: unset;
+  //     padding: 1.37rem 1rem;
+  //   }
+  //   &:hover,
+  //   :focus {
+  //     background-color: $clr-grey;
+  //   }
+  // }
 }

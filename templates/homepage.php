@@ -87,7 +87,7 @@ get_header();?>
                         </div>
                     </div>
                     <div class="signup__actions">
-                        <button>Sign up</button>
+                        <a href="#!" class="btn--primary">Sign up</a>
                         <a href="#!" class="btn--secondary">Or sign in here.</a>
                     </div>
                 </form>

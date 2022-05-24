@@ -80,7 +80,6 @@ var links = document.querySelectorAll(".events__element");
 var linkImages = document.querySelectorAll(".events__img");
 links.forEach(function (link) {
   link.addEventListener("mousemove", function (e) {
-    console.log(link, link.firstElementChild);
     link.firstElementChild.classList.add("image-visible");
     link.firstElementChild.style.transform = "translate(".concat(e.clientX - link.firstElementChild.offsetWidth / 2, "px, ").concat(e.pageY - link.firstElementChild.offsetHeight / 2, "px)");
   });

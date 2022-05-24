@@ -287,7 +287,7 @@ a:hover, a:focus {
 .btn--primary {
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
-  padding: 1.37rem 1rem;
+  padding: 1rem 1.37rem;
   text-transform: uppercase;
   letter-spacing: 0.44px;
   line-height: 22px;
@@ -785,26 +785,14 @@ nav .menu-item a {
 .signup__form * + * {
   margin-top: 1.875rem;
 }
-.signup button {
-  padding: 1rem 0;
-  cursor: pointer;
-  font-weight: 700;
-  width: 100%;
-  letter-spacing: 0.6px;
-  text-transform: uppercase;
-  font-size: var(--base-size);
-  background-color: hsl(0deg, 0%, 0%);
-  -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
-  border: none;
-  color: hsl(0deg, 0%, 100%);
-  transition: background-color 0.1s ease;
-  margin-bottom: 1.5rem;
-}
-.signup button:hover,
-.signup button :focus {
-  background-color: hsl(0deg, 0%, 46%);
+@media (min-width: 64em) {
+  .signup__actions {
+    display: flex;
+    align-items: baseline;
+  }
+  .signup__actions * + * {
+    margin-left: 1.5rem;
+  }
 }
 
 .events {

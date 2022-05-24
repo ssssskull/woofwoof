@@ -68,7 +68,6 @@ const linkImages = document.querySelectorAll(".events__img");
 
 links.forEach((link) => {
   link.addEventListener("mousemove", (e) => {
-    console.log(link, link.firstElementChild);
     link.firstElementChild.classList.add("image-visible");
     link.firstElementChild.style.transform = `translate(${
       e.clientX - link.firstElementChild.offsetWidth / 2
