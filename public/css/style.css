@@ -285,6 +285,7 @@ a:hover, a:focus {
 }
 
 .btn--primary {
+  display: block;
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
   padding: 1rem 1.37rem;
@@ -299,6 +300,20 @@ a:hover, a:focus {
 .btn--secondary {
   text-decoration: underline;
   text-underline-position: under;
+}
+.btn--arrow {
+  display: flex;
+  align-items: center;
+}
+.btn--arrow::after {
+  margin-left: 1rem;
+  background-image: url(../images/Icon=Icon-arrow-white.svg?61ad17c2f2bb4d4534f502573938b084);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 1.375rem;
+  width: 1.375rem;
 }
 
 .nav {
@@ -934,6 +949,19 @@ nav .menu-item a {
     padding: 5rem 0 6rem 0;
   }
 }
+.benefits__actions {
+  margin-top: 2rem;
+}
+@media (min-width: 64em) {
+  .benefits__actions {
+    margin-top: 3.5rem;
+  }
+}
+.benefits__actions .btn--primary {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
 .benefits__list,
 .benefits .collabs__container {
   font-size: var(--h4-size);
@@ -1036,13 +1064,6 @@ nav .menu-item a {
   padding: 0.75rem;
   box-sizing: border-box;
   margin-right: 1rem;
-}
-.how__actions {
-  display: flex;
-  align-items: baseline;
-}
-.how__actions a + a {
-  margin-left: 1.5rem;
 }
 
 .faq {

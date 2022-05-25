@@ -25,6 +25,9 @@ get_header();?>
                         <li class="benefits__elem">Get digital receipts</li>
                         <li class="benefits__elem">Get invited to exclusive events</li>
                     </ul>
+                    <div class="benefits__actions">
+                        <a href="#!" class="btn--primary btn--arrow">Become a member</a>
+                    </div>
                 </div>
                 <figure class="benefits__illustration">
                     <picture>
@@ -57,10 +60,6 @@ get_header();?>
                         <li>Receive notifications about offers, invitations to events, and pre-access to curated collections straight in your inbox.</li>
                         <li>Enjoy the perks of being a member of the WW family!</li>
                     </ul>
-                    <div class="how__actions">
-                        <a href="#!" class="btn--primary">Become a member</a>
-                        <a href="#!" class="btn--secondary">Or sign in here.</a>
-                    </div>
                 </div>
             </div>
         </section>

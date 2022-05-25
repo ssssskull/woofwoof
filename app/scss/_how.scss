@@ -81,13 +81,4 @@
       }
     }
   }
-
-  &__actions {
-    display: flex;
-    align-items: baseline;
-
-    a + a {
-      margin-left: 1.5rem;
-    }
-  }
 }
