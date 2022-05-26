@@ -34,41 +34,66 @@
 }
 
 .signup {
+  position: relative;
   width: 100%;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1.25rem;
+  flex-direction: column;
   box-sizing: border-box;
+  color: $clr-dark;
 
-  @include breakpoint-up(large) {
-    padding: 6.25rem 1.25rem;
+  &::before {
+    content: "";
+    inset: 0;
+    background-color: hsla(0, 100%, 100%, 85%);
+    position: absolute;
+  }
+
+  .banner {
+    z-index: 10;
   }
 
   &__wrapper {
-    border: 1px solid;
     width: 100%;
-    background-color: $clr-light;
-    max-width: 730px;
-    padding: 1.25rem 2.25rem 3rem 2.25rem;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    @include breakpoint-up(large) {
+      text-align: center;
+      padding-bottom: 10rem;
+    }
+    h2 {
+      font-size: var(--h1-size);
+      letter-spacing: -0.55px;
+      line-height: 48.1px;
+      font-weight: 700;
+
+      @include breakpoint-up(large) {
+        line-height: 61.65px;
+        font-size: var(--h2-size);
+      }
+    }
+
+    a {
+      width: max-content;
+      margin: 2rem 0 3rem 0;
+      @include breakpoint-up(large) {
+        margin: 5rem auto 6rem auto;
+      }
+    }
 
     h3 {
-      font-size: var(--h2-size);
-      letter-spacing: -1.27px;
+      font-size: var(--h4-size);
+      line-height: 25.2px;
       font-weight: 700;
+
+      @include breakpoint-up(large) {
+        line-height: 50.5px;
+      }
     }
   }
-
-  &__form {
-    * + * {
-      margin-top: 1.875rem;
-    }
-  }
-
-  // TODO delete hvis vi vælgere at de skal være under hinanden
 
   &__actions {
     display: flex;
@@ -78,29 +103,4 @@
       margin-left: 1.5rem;
     }
   }
-
-  // .btn--primary {
-  //   padding: 1rem 0;
-  //   cursor: pointer;
-  //   font-weight: 700;
-  //   width: 100%;
-  //   letter-spacing: 0.6px;
-  //   text-transform: uppercase;
-  //   font-size: var(--base-size);
-  //   background-color: $clr-dark;
-  //   appearance: button;
-  //   border: none;
-  //   color: $clr-light;
-  //   transition: background-color 0.1s ease;
-  //   margin-bottom: 1.5rem;
-
-  //   @include breakpoint-up(large) {
-  //     width: unset;
-  //     padding: 1.37rem 1rem;
-  //   }
-  //   &:hover,
-  //   :focus {
-  //     background-color: $clr-grey;
-  //   }
-  // }
 }

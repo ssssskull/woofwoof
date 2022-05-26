@@ -770,35 +770,69 @@ nav .menu-item a {
   }
 }
 .signup {
+  position: relative;
   width: 100%;
-  background-position: top;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 1.25rem;
+  flex-direction: column;
   box-sizing: border-box;
+  color: hsl(0deg, 0%, 0%);
 }
-@media (min-width: 64em) {
-  .signup {
-    padding: 6.25rem 1.25rem;
-  }
+.signup::before {
+  content: "";
+  inset: 0;
+  background-color: hsla(0deg, 100%, 100%, 0.85);
+  position: absolute;
+}
+.signup .banner {
+  z-index: 10;
 }
 .signup__wrapper {
-  border: 1px solid;
   width: 100%;
-  background-color: hsl(0deg, 0%, 100%);
-  max-width: 730px;
-  padding: 1.25rem 2.25rem 3rem 2.25rem;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
 }
-.signup__wrapper h3 {
-  font-size: var(--h2-size);
-  letter-spacing: -1.27px;
+@media (min-width: 64em) {
+  .signup__wrapper {
+    text-align: center;
+    padding-bottom: 10rem;
+  }
+}
+.signup__wrapper h2 {
+  font-size: var(--h1-size);
+  letter-spacing: -0.55px;
+  line-height: 48.1px;
   font-weight: 700;
 }
-.signup__form * + * {
-  margin-top: 1.875rem;
+@media (min-width: 64em) {
+  .signup__wrapper h2 {
+    line-height: 61.65px;
+    font-size: var(--h2-size);
+  }
+}
+.signup__wrapper a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 2rem 0 3rem 0;
+}
+@media (min-width: 64em) {
+  .signup__wrapper a {
+    margin: 5rem auto 6rem auto;
+  }
+}
+.signup__wrapper h3 {
+  font-size: var(--h4-size);
+  line-height: 25.2px;
+  font-weight: 700;
+}
+@media (min-width: 64em) {
+  .signup__wrapper h3 {
+    line-height: 50.5px;
+  }
 }
 .signup__actions {
   display: flex;
@@ -936,6 +970,7 @@ nav .menu-item a {
 }
 @media (min-width: 64em) {
   .how__title {
+    line-height: 61.65px;
     font-size: var(--h2-size);
   }
 }
@@ -1761,6 +1796,7 @@ nav .menu-item a {
     font-size: var(--h2-size);
     margin-bottom: 2.5rem;
     max-width: 80%;
+    line-height: 61.65px;
   }
 }
 @media (min-width: 64em) {

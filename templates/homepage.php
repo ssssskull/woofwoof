@@ -69,32 +69,15 @@ get_header();?>
             </div>
         </section>
         <section class="signup">
-            <div class="signup__wrapper">
-                <h3>Sign up now.</h3>
-                <form class="signup__form">
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="name" class="footer__newsletter-label">First name</label>
-                            <input type="text" id="name" name="name" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="loyalty-mail" class="footer__newsletter-label">Email address</label>
-                            <input type="email" id="loyalty-mail" name="email" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="footer__newsletter-fields">
-                        <div class="footer__newsletter-field">
-                            <label for="password" class="footer__newsletter-label">Password</label>
-                            <input type="password" id="password" name="password" class="footer__newsletter-input" value="">
-                        </div>
-                    </div>
-                    <div class="signup__actions">
-                        <a href="#!" class="btn--primary">Sign up</a>
-                        <a href="#!" class="btn--secondary">Or sign in here.</a>
-                    </div>
-                </form>
+             <div class="banner">
+                <p class="banner__title">Become a member</p>
+            </div>
+            <div class="container">
+                <div class="signup__wrapper">
+                    <h2>Tap into the essence of WOOD WOOD.<br>Join the community.</h2>
+                    <a href="#!" class="btn--primary btn--arrow">Become a member for free</a>
+                    <h3>If you’re still curious, you can check out offers for members and recent collaborations we’ve made. They’re right below here.</h3>
+                </div>
             </div>
         </section>
         <section class="events">
