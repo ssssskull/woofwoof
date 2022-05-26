@@ -886,103 +886,6 @@ nav .menu-item a {
   }
 }
 
-.benefits {
-  width: 100%;
-  position: relative;
-  padding: 0 1.25rem;
-  box-sizing: border-box;
-}
-.benefits .wrapper {
-  justify-content: space-between;
-  padding-bottom: 2rem;
-}
-@media (min-width: 64em) {
-  .benefits .wrapper {
-    padding-bottom: 6.25rem;
-  }
-}
-.benefits__illustration {
-  display: none;
-  width: 100%;
-}
-.benefits__illustration picture {
-  display: block;
-  height: 100%;
-}
-.benefits__illustration img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 64em) {
-  .benefits__illustration {
-    max-width: 600px;
-    display: block;
-    aspect-ratio: 3/4;
-  }
-}
-.benefits__content {
-  width: 100%;
-}
-@media (min-width: 64em) {
-  .benefits__content {
-    max-width: 838px;
-  }
-}
-.benefits__content h2 {
-  font-size: var(--h1-size);
-  letter-spacing: -0.55px;
-  line-height: 48.1px;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-@media (min-width: 64em) {
-  .benefits__content h2 {
-    font-size: var(--h2-size);
-    margin-bottom: 2.5rem;
-    max-width: 80%;
-  }
-}
-@media (min-width: 64em) {
-  .benefits__content {
-    padding: 5rem 0 6rem 0;
-  }
-}
-.benefits__actions {
-  margin-top: 2rem;
-}
-@media (min-width: 64em) {
-  .benefits__actions {
-    margin-top: 3.5rem;
-  }
-}
-.benefits__actions .btn--primary {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-.benefits__list,
-.benefits .collabs__container {
-  font-size: var(--h4-size);
-  font-weight: 700;
-  line-height: 25.2px;
-}
-@media (min-width: 64em) {
-  .benefits__list,
-.benefits .collabs__container {
-    max-width: 80%;
-  }
-}
-.benefits__elem,
-.benefits .collabs__container > a {
-  padding: 1rem 0 1rem 0.5rem;
-}
-.benefits__elem + .benefits__elem,
-.benefits .collabs__container > a + .collabs__container > a {
-  border-top: 1px solid;
-}
-
 .how__wrapper {
   justify-content: space-between;
   margin-bottom: 3rem;
@@ -1673,55 +1576,101 @@ nav .menu-item a {
   }
 }
 @supports ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .benefits__illustration-image {
+    background-image: -webkit-image-set(url(../images/benefit-4-600w.avif?3621cebccb55fbdadf1df7052681bbcd) 1x, url(../images/benefit-4-600w.webp?d072d34f0c9c5fdc25560dac56e96be0) 1x);
+    background-image: image-set(url(../images/benefit-4-600w.avif?3621cebccb55fbdadf1df7052681bbcd) 1x, url(../images/benefit-4-600w.webp?d072d34f0c9c5fdc25560dac56e96be0) 1x);
+  }
+
   .collabs__illustration-image {
     background-image: -webkit-image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
     background-image: image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
   }
-  .collabs__illustration-image--1 {
+
+  .reveal-image--1 {
+    background-image: -webkit-image-set(url(../images/benefit-1-600w.avif?b7f5cea30aaa073522bb5261f0918653) 1x, url(../images/benefit-1-600w.webp?d68aa7d593429c71ee1971b465001574) 1x);
+    background-image: image-set(url(../images/benefit-1-600w.avif?b7f5cea30aaa073522bb5261f0918653) 1x, url(../images/benefit-1-600w.webp?d68aa7d593429c71ee1971b465001574) 1x);
+  }
+  .reveal-image--2 {
+    background-image: -webkit-image-set(url(../images/benefit-2-600w.avif?7f79b72072114ecff344619d6125a81e) 1x, url(../images/benefit-2-600w.webp?3a6d6e60f920bf4939ae4e72a6bfad61) 1x);
+    background-image: image-set(url(../images/benefit-2-600w.avif?7f79b72072114ecff344619d6125a81e) 1x, url(../images/benefit-2-600w.webp?3a6d6e60f920bf4939ae4e72a6bfad61) 1x);
+  }
+  .reveal-image--3 {
+    background-image: -webkit-image-set(url(../images/benefit-3-600w.avif?f09dbac176f1c893113b5872627992a7) 1x, url(../images/benefit-3-600w.webp?a3483a21a513e74b45c9e596c24d0a62) 1x);
+    background-image: image-set(url(../images/benefit-3-600w.avif?f09dbac176f1c893113b5872627992a7) 1x, url(../images/benefit-3-600w.webp?a3483a21a513e74b45c9e596c24d0a62) 1x);
+  }
+  .reveal-image--4 {
+    background-image: -webkit-image-set(url(../images/benefit-4-600w.avif?3621cebccb55fbdadf1df7052681bbcd) 1x, url(../images/benefit-4-600w.webp?d072d34f0c9c5fdc25560dac56e96be0) 1x);
+    background-image: image-set(url(../images/benefit-4-600w.avif?3621cebccb55fbdadf1df7052681bbcd) 1x, url(../images/benefit-4-600w.webp?d072d34f0c9c5fdc25560dac56e96be0) 1x);
+  }
+  .reveal-image--5 {
+    background-image: -webkit-image-set(url(../images/benefit-5-600w.avif?4dc47881a5223ca8dcec0c30bd821dc3) 1x, url(../images/benefit-5-600w.webp?91c08260a14e94337a8f7037ccf6bfaf) 1x);
+    background-image: image-set(url(../images/benefit-5-600w.avif?4dc47881a5223ca8dcec0c30bd821dc3) 1x, url(../images/benefit-5-600w.webp?91c08260a14e94337a8f7037ccf6bfaf) 1x);
+  }
+  .reveal-image--6 {
     background-image: -webkit-image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
     background-image: image-set(url(../images/collab-1-1000w.avif?525c555f02301d49b6d6d7c6c7f88829) 1x, url(../images/collab-1-1000w.webp?319e059d342ed468c38dd5bc3f4ee50e) 1x);
   }
-  .collabs__illustration-image--2 {
+  .reveal-image--7 {
     background-image: -webkit-image-set(url(../images/collab-2-1000w.avif?cc39a35ff99dd9825e1abc5037c36abd) 1x, url(../images/collab-2-1000w.webp?704f3ea7c6842e40e0ca2341b69cf192) 1x);
     background-image: image-set(url(../images/collab-2-1000w.avif?cc39a35ff99dd9825e1abc5037c36abd) 1x, url(../images/collab-2-1000w.webp?704f3ea7c6842e40e0ca2341b69cf192) 1x);
   }
-  .collabs__illustration-image--3 {
+  .reveal-image--8 {
     background-image: -webkit-image-set(url(../images/collab-3-1000w.avif?cfeb645312aacd39515395e475d231d0) 1x, url(../images/collab-3-1000w.webp?62b40165c50bcf0ab8c2a78b310b47d1) 1x);
     background-image: image-set(url(../images/collab-3-1000w.avif?cfeb645312aacd39515395e475d231d0) 1x, url(../images/collab-3-1000w.webp?62b40165c50bcf0ab8c2a78b310b47d1) 1x);
   }
-  .collabs__illustration-image--4 {
+  .reveal-image--9 {
     background-image: -webkit-image-set(url(../images/collab-4-1000w.avif?bfdff181bc374c43184e13d00ef07a2b) 1x, url(../images/collab-4-1000w.webp?8b06e0d57a1351ccaee36bbe68058067) 1x);
     background-image: image-set(url(../images/collab-4-1000w.avif?bfdff181bc374c43184e13d00ef07a2b) 1x, url(../images/collab-4-1000w.webp?8b06e0d57a1351ccaee36bbe68058067) 1x);
   }
-  .collabs__illustration-image--5 {
-    background-image: -webkit-image-set(url(../images/collab-5-1000w.avif?d135280bff80171af85f269483291836) 1x, url(../images/collab-5-1000w.webp?6abe1483edbb23a73b030b5fad2f4cf3) 1x);
-    background-image: image-set(url(../images/collab-5-1000w.avif?d135280bff80171af85f269483291836) 1x, url(../images/collab-5-1000w.webp?6abe1483edbb23a73b030b5fad2f4cf3) 1x);
+  .reveal-image--10 {
+    background-image: -webkit-image-set(url(../images/collab-5-1000w.avif?7888391bf28c1851b9001bffaa9ed39a) 1x, url(../images/collab-5-1000w.webp?a31cfbfa289e6f8b14273899ccd1d8f5) 1x);
+    background-image: image-set(url(../images/collab-5-1000w.avif?7888391bf28c1851b9001bffaa9ed39a) 1x, url(../images/collab-5-1000w.webp?a31cfbfa289e6f8b14273899ccd1d8f5) 1x);
   }
-  .collabs__illustration-image--6 {
+  .reveal-image--11 {
     background-image: -webkit-image-set(url(../images/collab-6-1000w.avif?8bc526d3f57f22c131d4a98956150756) 1x, url(../images/collab-6-1000w.webp?c29232fc7921b94a636aa8dbe791ab6a) 1x);
     background-image: image-set(url(../images/collab-6-1000w.avif?8bc526d3f57f22c131d4a98956150756) 1x, url(../images/collab-6-1000w.webp?c29232fc7921b94a636aa8dbe791ab6a) 1x);
   }
 }
 @supports not ((background-image: -webkit-image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x)) or (background-image: image-set(url("../images/collab-1-1000w.avif") 1x, url("../images/collab-1-1000w.webp") 1x))) {
+  .benefits__illustration-image {
+    background-image: url(../images/benefit-4-600w.jpg?8eaaa146cf2ed4dc2f27305ae3921008);
+  }
+
   .collabs__illustration-image {
     background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
   }
-  .collabs__illustration-image--1 {
+
+  .reveal-image--1 {
+    background-image: url(../images/benefit-1-600w.jpg?1df397606db9933584659a7be8f36a94);
+  }
+  .reveal-image--2 {
+    background-image: url(../images/benefit-2-600w.jpg?e94334af3d3087c465a0e0928a81c1df);
+  }
+  .reveal-image--3 {
+    background-image: url(../images/benefit-3-600w.jpg?af659a96e7bad0d9b05eb02c5b0df490);
+  }
+  .reveal-image--4 {
+    background-image: url(../images/benefit-4-600w.jpg?8eaaa146cf2ed4dc2f27305ae3921008);
+  }
+  .reveal-image--5 {
+    background-image: url(../images/benefit-5-600w.jpg?e1208226f7dbdbe4e0bdbc9cb69cfbac);
+  }
+  .reveal-image--6 {
     background-image: url(../images/collab-1-1000w.jpg?7240834bcae1e2c4fbd25f0c114975f8);
   }
-  .collabs__illustration-image--2 {
+  .reveal-image--7 {
     background-image: url(../images/collab-2-1000w.jpg?b9c5dc284edf1826d24ede974dd3bc19);
   }
-  .collabs__illustration-image--3 {
+  .reveal-image--8 {
     background-image: url(../images/collab-3-1000w.jpg?a68157802a532108ed0b588a885c778c);
   }
-  .collabs__illustration-image--4 {
+  .reveal-image--9 {
     background-image: url(../images/collab-4-1000w.jpg?24fdf0df5e2fe8cb571f34ea59ca1f27);
   }
-  .collabs__illustration-image--5 {
-    background-image: url(../images/collab-5-1000w.jpg?74683def0f0e05ef733f2dda699f8ef0);
+  .reveal-image--10 {
+    background-image: url(../images/collab-5-1000w.jpg?5ca8503ee4b2fa7efca93f64f49c94c5);
   }
-  .collabs__illustration-image--6 {
+  .reveal-image--11 {
     background-image: url(../images/collab-6-1000w.jpg?95450a812b99d8d8fe4c2e7da0592fea);
   }
 }
@@ -1760,4 +1709,95 @@ nav .menu-item a {
     background-repeat: no-repeat;
     width: 100%;
   }
+}
+
+.benefits {
+  width: 100%;
+  position: relative;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+}
+.benefits .wrapper {
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+@media (min-width: 64em) {
+  .benefits .wrapper {
+    padding-bottom: 6.25rem;
+  }
+}
+@media (min-width: 64em) {
+  .benefits__illustration {
+    max-width: 600px;
+    display: flex;
+    resize: both;
+    width: 100%;
+    aspect-ratio: 3/4;
+  }
+  .benefits__illustration-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+.benefits__content {
+  width: 100%;
+}
+@media (min-width: 64em) {
+  .benefits__content {
+    max-width: 838px;
+  }
+}
+.benefits__content h2 {
+  font-size: var(--h1-size);
+  letter-spacing: -0.55px;
+  line-height: 48.1px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+@media (min-width: 64em) {
+  .benefits__content h2 {
+    font-size: var(--h2-size);
+    margin-bottom: 2.5rem;
+    max-width: 80%;
+  }
+}
+@media (min-width: 64em) {
+  .benefits__content {
+    padding: 5rem 0 6rem 0;
+  }
+}
+.benefits__actions {
+  margin-top: 2rem;
+}
+@media (min-width: 64em) {
+  .benefits__actions {
+    margin-top: 3.5rem;
+  }
+}
+.benefits__actions .btn--primary {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.benefits__list,
+.benefits .collabs__container {
+  font-size: var(--h4-size);
+  font-weight: 700;
+  line-height: 25.2px;
+}
+@media (min-width: 64em) {
+  .benefits__list,
+.benefits .collabs__container {
+    max-width: 80%;
+  }
+}
+.benefits__elem,
+.benefits .collabs__container > a {
+  padding: 1rem 0 1rem 0.5rem;
+}
+.benefits__elem + .benefits__elem,
+.benefits .collabs__container > a + .collabs__container > a {
+  border-top: 1px solid;
 }

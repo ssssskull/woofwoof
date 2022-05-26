@@ -1,0 +1,142 @@
+@supports (
+  background-image:
+    image-set(
+      url("../images/collab-1-1000w.avif") 1x,
+      url("../images/collab-1-1000w.webp") 1x
+    )
+) {
+  .benefits__illustration-image {
+    background-image: image-set(
+      url("../images/benefit-4-600w.avif") 1x,
+      url("../images/benefit-4-600w.webp") 1x
+    );
+  }
+  .collabs__illustration-image {
+    background-image: image-set(
+      url("../images/collab-1-1000w.avif") 1x,
+      url("../images/collab-1-1000w.webp") 1x
+    );
+  }
+
+  .reveal-image {
+    &--1 {
+      background-image: image-set(
+        url("../images/benefit-1-600w.avif") 1x,
+        url("../images/benefit-1-600w.webp") 1x
+      );
+    }
+    &--2 {
+      background-image: image-set(
+        url("../images/benefit-2-600w.avif") 1x,
+        url("../images/benefit-2-600w.webp") 1x
+      );
+    }
+    &--3 {
+      background-image: image-set(
+        url("../images/benefit-3-600w.avif") 1x,
+        url("../images/benefit-3-600w.webp") 1x
+      );
+    }
+    &--4 {
+      background-image: image-set(
+        url("../images/benefit-4-600w.avif") 1x,
+        url("../images/benefit-4-600w.webp") 1x
+      );
+    }
+    &--5 {
+      background-image: image-set(
+        url("../images/benefit-5-600w.avif") 1x,
+        url("../images/benefit-5-600w.webp") 1x
+      );
+    }
+    &--6 {
+      background-image: image-set(
+        url("../images/collab-1-1000w.avif") 1x,
+        url("../images/collab-1-1000w.webp") 1x
+      );
+    }
+    &--7 {
+      background-image: image-set(
+        url("../images/collab-2-1000w.avif") 1x,
+        url("../images/collab-2-1000w.webp") 1x
+      );
+    }
+    &--8 {
+      background-image: image-set(
+        url("../images/collab-3-1000w.avif") 1x,
+        url("../images/collab-3-1000w.webp") 1x
+      );
+    }
+    &--9 {
+      background-image: image-set(
+        url("../images/collab-4-1000w.avif") 1x,
+        url("../images/collab-4-1000w.webp") 1x
+      );
+    }
+    &--10 {
+      background-image: image-set(
+        url("../images/collab-5-1000w.avif") 1x,
+        url("../images/collab-5-1000w.webp") 1x
+      );
+    }
+    &--11 {
+      background-image: image-set(
+        url("../images/collab-6-1000w.avif") 1x,
+        url("../images/collab-6-1000w.webp") 1x
+      );
+    }
+  }
+}
+@supports not (
+  background-image:
+    image-set(
+      url("../images/collab-1-1000w.avif") 1x,
+      url("../images/collab-1-1000w.webp") 1x
+    )
+) {
+  .benefits__illustration-image {
+    background-image: url("../images/benefit-4-600w.jpg");
+  }
+  .collabs__illustration-image {
+    background-image: url("../images/collab-1-1000w.jpg");
+  }
+  .reveal-image {
+    &--1 {
+      background-image: url("../images/benefit-1-600w.jpg");
+    }
+    &--2 {
+      background-image: url("../images/benefit-2-600w.jpg");
+    }
+    &--3 {
+      background-image: url("../images/benefit-3-600w.jpg");
+    }
+    &--4 {
+      background-image: url("../images/benefit-4-600w.jpg");
+    }
+    &--5 {
+      background-image: url("../images/benefit-5-600w.jpg");
+    }
+    &--6 {
+      background-image: url("../images/collab-1-1000w.jpg");
+    }
+    &--7 {
+      background-image: url("../../app/images/collab-2-1000w.jpg");
+    }
+
+    &--8 {
+      background-image: url("../../app/images/collab-3-1000w.jpg");
+    }
+
+    &--9 {
+      background-image: url("../../app/images/collab-4-1000w.jpg");
+    }
+
+    &--10 {
+      background-image: url("../../app/images/collab-5-1000w.jpg");
+    }
+
+    &--11 {
+      background-image: url("../../app/images/collab-6-1000w.jpg");
+    }
+  }
+}

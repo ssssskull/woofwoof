@@ -14,29 +14,34 @@ get_header();?>
         <div class="banner">
             <p class="banner__title">Benefits</p>
         </div>
-        <section class="benefits container">
+        <section class="benefits container reveal-container">
             <div class="wrapper">
                 <div class="benefits__content">
-                    <h2>Enjoy the best Wood Wood has to offer – and more</h2>
+                    <h2>As a member, you enjoy benefits such as</h2>
                     <ul class="benefits__list">
-                        <li class="benefits__elem">Get free shipping and returns</li>
-                        <li class="benefits__elem">Gain pre-access to new releases</li>
-                        <li class="benefits__elem">Receive personalised offers</li>
-                        <li class="benefits__elem">Get digital receipts</li>
-                        <li class="benefits__elem">Get invited to exclusive events</li>
+                        <li class="benefits__elem">
+                             <a href="#!" data-reveal="1">Free shipping and returns on all orders.</a>
+                         </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="2">Pre-access to new releases.</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="3">Personalised offers.</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="4">Exclusive events for members only.</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="5">Digital receipts on your phone.</a>
+                        </li>
                     </ul>
                     <div class="benefits__actions">
                         <a href="#!" class="btn--primary btn--arrow">Become a member</a>
                     </div>
                 </div>
-                <figure class="benefits__illustration">
-                    <picture>
-                        <source type="image/avif" srcset="
-                        <?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.avif 600w">
-                        <source type="image/webp" srcset="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.webp 600w">
-                        <img src="<?php echo get_template_directory_uri();?>/app/images/benefit-bg-600w.jpg" alt=" " loading="lazy" decoding="async" height="800">
-                    </picture>
-                </figure>
+                <div class="benefits__illustration">
+                    <figure class="benefits__illustration-image reveal-image"></figure>
+                </div>
             </div>
         </section>
         <div class="banner banner--divider">
@@ -271,32 +276,43 @@ get_header();?>
             </div>
         </section>
         <div class="banner banner--dark">
-            <p class="banner__title">Collaborations</p>
+            <p class="banner__title">Pre-access</p>
         </div>
         <section class="collabs benefits container">
             <div class="wrapper">
                 <div class="benefits__content">
                     <h2>Be the first to hear about our newest collaborations</h2>
-                    <div class="benefits__list collabs__container">
-                        <a href="#!" class="benefits__elem" data-collab="1">Garfield by WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="2">Solovair for WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="3">Hermansen by WOOD WOOD</a>
-                        <a href="#!" class="benefits__elem" data-collab="4">Wood Wood x Rune Glifberg </a>
-                        <a href="#!" class="benefits__elem" data-collab="5">Roskilde Festival 2021</a>
-                        <a href="#!" class="benefits__elem" data-collab="6">Joe Pilkington for Wood Wood</a>
-                    </div>
+                    <ul class="benefits__list collabs__container">
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="6">Garfield by WOOD WOOD</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="7">Solovair for WOOD WOOD</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="8">Hermansen by WOOD WOOD</a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="9">Wood Wood x Rune Glifberg </a>
+                        </li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="10">Roskilde Festival 2021</a></li>
+                        <li class="benefits__elem">
+                            <a href="#!" data-reveal="11">Joe Pilkington for Wood Wood</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="collabs__illustration">
-                    <figure class="collabs__illustration-image"></figure>
+                    <figure class="collabs__illustration-image reveal-image"></figure>
                 </div>
             </div>
         </section>
         <div class="banner banner--large">
-            <p class="banner__title">Frequently asked questions</p>
+            <p class="banner__title">FAQ</p>
         </div>
         <section class="faq">
             <div class="faq__wrapper">
-                <h3 class="faq__title">FAQ</h3>
+                <h3 class="faq__title">Frequently Asked Questions</h3>
                 <div class="faq__content">
                     <details>
                         <summary>What if an item I want is out of stock?</summary>

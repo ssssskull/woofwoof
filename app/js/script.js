@@ -139,25 +139,31 @@ links.forEach((link) => {
 
 // Collabs tabbed component
 
-const collabCont = document.querySelector(".collabs__container");
+const collabsContainer = document.querySelector(".collabs__container");
+const benefitContainer = document.querySelector(".benefits__content");
 
-if (collabCont) {
-  collabCont.addEventListener("mouseover", function (e) {
-    e.preventDefault();
+const revealEffect = function (e) {
+  e.preventDefault();
+  // TODO check for picture data and use z-index with grid to show it
+  const revealEl = e.target.closest("[data-reveal]");
+  if (!revealEl) return;
 
-    const collabEl = e.target;
-    const collabImg = document.querySelector(
-      "[class^=collabs__illustration-image]"
-    );
+  const revealImg =
+    revealEl.parentElement.parentElement.parentElement.nextElementSibling
+      .firstElementChild;
 
-    collabImg.classList.forEach((item) => {
-      if (item.startsWith("collabs__illustration-image--")) {
-        collabImg.classList.remove(item);
-      }
-    });
-
-    collabImg.classList.add(
-      `collabs__illustration-image--${collabEl.dataset.collab}`
-    );
+  revealImg.classList.forEach((item) => {
+    if (item.startsWith("reveal-image--")) {
+      revealImg.classList.remove(item);
+    }
   });
-}
+
+  revealImg.classList.add(`reveal-image--${revealEl.dataset.reveal}`);
+};
+
+const revealListener = function (container) {
+  container.addEventListener("mouseover", revealEffect);
+};
+
+revealListener(benefitContainer);
+revealListener(collabsContainer);

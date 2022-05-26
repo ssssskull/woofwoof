@@ -144,21 +144,29 @@ links.forEach(function (link) {
 // Collabs tabbed component
 
 
-var collabCont = document.querySelector(".collabs__container");
+var collabsContainer = document.querySelector(".collabs__container");
+var benefitContainer = document.querySelector(".benefits__content");
 
-if (collabCont) {
-  collabCont.addEventListener("mouseover", function (e) {
-    e.preventDefault();
-    var collabEl = e.target;
-    var collabImg = document.querySelector("[class^=collabs__illustration-image]");
-    collabImg.classList.forEach(function (item) {
-      if (item.startsWith("collabs__illustration-image--")) {
-        collabImg.classList.remove(item);
-      }
-    });
-    collabImg.classList.add("collabs__illustration-image--".concat(collabEl.dataset.collab));
+var revealEffect = function revealEffect(e) {
+  e.preventDefault(); // TODO check for picture data and use z-index with grid to show it
+
+  var revealEl = e.target.closest("[data-reveal]");
+  if (!revealEl) return;
+  var revealImg = revealEl.parentElement.parentElement.parentElement.nextElementSibling.firstElementChild;
+  revealImg.classList.forEach(function (item) {
+    if (item.startsWith("reveal-image--")) {
+      revealImg.classList.remove(item);
+    }
   });
-}
+  revealImg.classList.add("reveal-image--".concat(revealEl.dataset.reveal));
+};
+
+var revealListener = function revealListener(container) {
+  container.addEventListener("mouseover", revealEffect);
+};
+
+revealListener(benefitContainer);
+revealListener(collabsContainer);
 
 /***/ }),
 
