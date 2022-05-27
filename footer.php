@@ -3,7 +3,7 @@
         <div class="footer__customer">
             <a href="<?php echo home_url(); ?>/my-profile" class="footer__customer-link">My account</a>
             <a href="#!" class="footer__customer-link">CSR</a>
-            <a href="#!" class="footer__customer-link">Account</a>
+            <a href="#!" class="footer__customer-link">Artefact</a>
             <div class="nav__lang">
                 <strong>Language</strong>
                 <ul>
