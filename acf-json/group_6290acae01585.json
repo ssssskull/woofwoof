@@ -1,0 +1,44 @@
+{
+    "key": "group_6290acae01585",
+    "title": "Create account link",
+    "fields": [
+        {
+            "key": "field_6290acb7bd50b",
+            "label": "Create Account CTA",
+            "name": "create_account_cta",
+            "type": "page_link",
+            "instructions": "Add a page to navigate to.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "allow_archives": 1,
+            "multiple": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "7"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1653662023
+}
