@@ -158,7 +158,7 @@ body {
 }
 
 @media (min-width: 64em) {
-  .main--split {
+  .main--third, .main--split {
     border-left: 1px solid;
     align-items: flex-start;
   }
@@ -169,13 +169,22 @@ body {
   grid-template-areas: "content";
   grid-template-columns: 1fr;
 }
+.site-content--third {
+  display: grid;
+}
+@media (min-width: 64em) {
+  .site-content--third {
+    grid-template-areas: "sidebar content";
+    grid-template-columns: 1fr 3fr;
+  }
+}
 .site-content--split {
   display: grid;
 }
 @media (min-width: 64em) {
   .site-content--split {
     grid-template-areas: "sidebar content";
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 2fr 2fr;
   }
 }
 
@@ -284,8 +293,10 @@ a:hover, a:focus {
   color: hsl(0deg, 0%, 46%);
 }
 
-.btn--primary {
+.btn {
   display: block;
+}
+.btn--primary {
   background-color: hsl(0deg, 0%, 0%);
   color: hsl(0deg, 0%, 100%);
   padding: 1rem 1.37rem;
@@ -438,7 +449,7 @@ a:hover, a:focus {
   background-repeat: no-repeat;
   background-position: 100%;
   text-align: initial;
-  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
+  background-image: url(../images/Icon=Icon-chevron.svg?6d0f5da061b49553532e76b8b5ae381e);
 }
 @media (min-width: 64em) {
   .nav__icon--lang {
@@ -457,13 +468,13 @@ a:hover, a:focus {
   }
 }
 .nav__icon--search {
-  background-image: url(../images/Icon=Icon-search.svg?155fa09c34892a8351a916ef4747226b);
+  background-image: url(../images/Icon=Icon-search.svg?64e48fb02e71aa8e919a5035674f30b8);
 }
 .nav__icon--profile {
-  background-image: url(../images/Icon=Icon-face.svg?f5eaf4a5805ee3401d9053975819d2b1);
+  background-image: url(../images/Icon=Icon-face.svg?cf9b93f4e0f13c8920dabbb26c0849aa);
 }
 .nav__icon--cart {
-  background-image: url(../images/Icon=Icon-bag.svg?55ddb6abdd601f32e74469d56ba18458);
+  background-image: url(../images/Icon=Icon-bag.svg?fc1ac035489a4a6c50b817193e442fc8);
 }
 .nav__icon--cart span {
   font-size: 0.625rem;
@@ -661,6 +672,9 @@ nav .menu-item a {
 }
 .rescue__title {
   margin-bottom: 2rem;
+}
+.rescue__paragraph {
+  margin-bottom: 1.5rem;
 }
 
 .document {
@@ -1061,7 +1075,7 @@ nav .menu-item a {
   content: "";
   display: flex;
   position: absolute;
-  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
+  background-image: url(../images/Icon=Icon-chevron.svg?6d0f5da061b49553532e76b8b5ae381e);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 2.5rem;
@@ -1836,4 +1850,95 @@ nav .menu-item a {
 .benefits__elem + .benefits__elem,
 .benefits .collabs__container > a + .collabs__container > a {
   border-top: 1px solid;
+}
+
+.register .sidebar {
+  padding: 1.25rem;
+}
+@media (min-width: 64em) {
+  .register .sidebar {
+    padding: 8.333% 16.66667%;
+  }
+}
+.register__form {
+  margin-top: 1rem;
+}
+.register__form > * + * {
+  margin-top: 1.875rem;
+}
+.register button {
+  font-family: WW beta8, sans-serif;
+  padding: 1rem 0;
+  cursor: pointer;
+  font-weight: 700;
+  width: 100%;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  font-size: var(--base-size);
+  background-color: hsl(0deg, 0%, 0%);
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  transition: background-color 0.2s linear;
+  margin-bottom: 1.5rem;
+}
+.register button:hover,
+.register button :focus {
+  background-color: hsl(0deg, 0%, 46%);
+}
+.register__title {
+  font-size: var(--h4-size);
+  line-height: 25.2px;
+  font-weight: 700;
+  max-width: 65ch;
+}
+@media (min-width: 64em) {
+  .register__title {
+    line-height: 1.4;
+  }
+}
+.register__notice {
+  border-top: 1px solid;
+  padding: 1rem 0.5rem;
+}
+.register__notice * + * {
+  margin-top: 2rem;
+}
+.register__checkbox {
+  display: flex;
+  justify-content: left;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.register__checkbox label {
+  margin-left: 0.5rem;
+}
+.register__checkbox input[type=checkbox] {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: hsl(0deg, 0%, 100%);
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid currentColor;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.register__checkbox input[type=checkbox]::before {
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  transform: scale(0);
+  transition: transform 0.1s ease-in-out;
+  background-color: CanvasText;
+}
+.register__checkbox input[type=checkbox]:checked::before {
+  transform: scale(1);
 }

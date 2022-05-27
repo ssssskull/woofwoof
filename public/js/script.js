@@ -61,7 +61,7 @@ window.onscroll = function () {
 }; // Input field anim
 
 
-var inputField = document.querySelectorAll("input");
+var inputField = document.querySelectorAll(".footer__newsletter-input");
 inputField.forEach(function (item) {
   item.addEventListener("focus", function (event) {
     var inputLabel = event.currentTarget.previousElementSibling;
@@ -71,8 +71,10 @@ inputField.forEach(function (item) {
     }
   });
   item.addEventListener("blur", function (event) {
-    var inputLabel = event.currentTarget.previousElementSibling;
-    inputLabel.classList.remove("has-focus");
+    if (item.value === "") {
+      var inputLabel = event.currentTarget.previousElementSibling;
+      inputLabel.classList.remove("has-focus");
+    }
   });
 }); // Image hover effect
 
@@ -162,11 +164,24 @@ var revealEffect = function revealEffect(e) {
 };
 
 var revealListener = function revealListener(container) {
-  container.addEventListener("mouseover", revealEffect);
+  if (container) {
+    container.addEventListener("mouseover", revealEffect);
+  }
 };
 
 revealListener(benefitContainer);
-revealListener(collabsContainer);
+revealListener(collabsContainer); // Create account redirect
+
+var submitButton = document.querySelector(".register__submit");
+
+if (submitButton) {
+  submitButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    var submitButtonAddress = submitButton.dataset.link;
+    console.log(submitButtonAddress);
+    window.location.href = submitButtonAddress;
+  });
+}
 
 /***/ }),
 

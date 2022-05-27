@@ -1,0 +1,94 @@
+.register {
+  .sidebar {
+    padding: 1.25rem;
+    @include breakpoint-up(large) {
+      padding: 8.333% 16.66667%;
+    }
+  }
+  &__form {
+    margin-top: 1rem;
+    > * + * {
+      margin-top: 1.875rem;
+    }
+  }
+
+  button {
+    font-family: WW beta8, sans-serif;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-size: var(--base-size);
+    background-color: $clr-dark;
+    appearance: button;
+    border: none;
+    color: $clr-light;
+    transition: background-color 0.2s linear;
+    margin-bottom: 1.5rem;
+    &:hover,
+    :focus {
+      background-color: $clr-grey;
+    }
+  }
+
+  &__title {
+    font-size: var(--h4-size);
+    line-height: 25.2px;
+    font-weight: 700;
+    max-width: 65ch;
+
+    @include breakpoint-up(large) {
+      line-height: 1.4;
+    }
+  }
+
+  &__notice {
+    border-top: 1px solid;
+    padding: 1rem 0.5rem;
+
+    * + * {
+      margin-top: 2rem;
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    justify-content: left;
+    flex-direction: row-reverse;
+    align-items: center;
+
+    label {
+      margin-left: 0.5rem;
+    }
+
+    input[type="checkbox"] {
+      cursor: pointer;
+      appearance: none;
+      background-color: $clr-light;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 1.5em;
+      height: 1.5em;
+      border: 2px solid currentColor;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+
+      &::before {
+        content: "";
+        width: 0.75rem;
+        height: 0.75rem;
+        transform: scale(0);
+        transition: transform 0.1s ease-in-out;
+        background-color: CanvasText;
+      }
+
+      &:checked::before {
+        transform: scale(1);
+      }
+    }
+  }
+}

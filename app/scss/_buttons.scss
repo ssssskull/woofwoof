@@ -1,6 +1,7 @@
 .btn {
+  display: block;
+
   &--primary {
-    display: block;
     background-color: $clr-dark;
     color: $clr-light;
     padding: 1rem 1.37rem;

@@ -47,7 +47,7 @@ window.onscroll = function () {
 };
 
 // Input field anim
-const inputField = document.querySelectorAll("input");
+const inputField = document.querySelectorAll(".footer__newsletter-input");
 
 inputField.forEach((item) => {
   item.addEventListener("focus", (event) => {
@@ -57,8 +57,10 @@ inputField.forEach((item) => {
     }
   });
   item.addEventListener("blur", (event) => {
-    const inputLabel = event.currentTarget.previousElementSibling;
-    inputLabel.classList.remove("has-focus");
+    if (item.value === "") {
+      const inputLabel = event.currentTarget.previousElementSibling;
+      inputLabel.classList.remove("has-focus");
+    }
   });
 });
 
@@ -162,8 +164,22 @@ const revealEffect = function (e) {
 };
 
 const revealListener = function (container) {
-  container.addEventListener("mouseover", revealEffect);
+  if (container) {
+    container.addEventListener("mouseover", revealEffect);
+  }
 };
 
 revealListener(benefitContainer);
 revealListener(collabsContainer);
+
+// Create account redirect
+const submitButton = document.querySelector(".register__submit");
+
+if (submitButton) {
+  submitButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    const submitButtonAddress = submitButton.dataset.link;
+    console.log(submitButtonAddress);
+    window.location.href = submitButtonAddress;
+  });
+}

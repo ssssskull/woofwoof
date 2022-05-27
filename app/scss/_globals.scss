@@ -20,6 +20,7 @@ body {
   position: relative;
 }
 .main {
+  &--third,
   &--split {
     @include breakpoint-up(large) {
       border-left: 1px solid;
@@ -33,11 +34,19 @@ body {
   grid-template-areas: "content";
   grid-template-columns: 1fr;
 
-  &--split {
+  &--third {
     display: grid;
     @include breakpoint-up(large) {
       grid-template-areas: "sidebar content";
       grid-template-columns: 1fr 3fr;
+    }
+  }
+
+  &--split {
+    display: grid;
+    @include breakpoint-up(large) {
+      grid-template-areas: "sidebar content";
+      grid-template-columns: 2fr 2fr;
     }
   }
 }
