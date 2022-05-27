@@ -7,6 +7,10 @@
 
   &__title {
     margin-bottom: 2rem;
+    font-size: var(--h1-size);
+    letter-spacing: -0.0125em;
+    line-height: 1.09375;
+    font-weight: 700;
   }
 
   &__paragraph {
