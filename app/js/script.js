@@ -32,13 +32,18 @@ if (window.innerWidth < 1024) {
 
 // Nav hide on scroll
 
+
+const scrollTracker = document.querySelector(".scroll-tracker");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     nav.style.top = "0";
+    scrollTracker.style.top = "60px";
   } else {
     nav.style.top = "-60px";
+    scrollTracker.style.top = "0px";
+    
     if (window.innerWidth >= 1920) {
       nav.style.top = "-68.433px";
     }
@@ -182,10 +187,4 @@ if (submitButton) {
     console.log(submitButtonAddress);
     window.location.href = submitButtonAddress;
   });
-}
-
-// Scroll progress bar on frontpage
-
-if (benefitContainer) {
-
 }

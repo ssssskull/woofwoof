@@ -3,9 +3,10 @@
  * Template Name: Home
 */
 get_header();?>
+<div class="scroll-tracker"></div>
 <div>
-    <main class="main">
-        <section class="hero">
+    <section class="hero">
+        <main class="main">
             <div class="hero__wrapper">
                 <h2 class="hero__title">Are you ready<br>for Wood Woods club?</h2>
                 <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>

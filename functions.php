@@ -9,6 +9,21 @@ function my_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'my_scripts');
 
+function enqueue_plugin_scripts() {
+    wp_enqueue_script('module_handle', get_template_directory_uri() . '/app/js/modul.js');
+};
+
+add_action( 'wp_enqueue_scripts', 'enqueue_plugin_scripts' );
+
+function set_scripts_type_attribute( $tag, $handle, $src ) {
+  if ( 'module_handle' === $handle ) {
+      $tag = '<script type="module" src="'. $src .'"></script>';
+  }
+  return $tag;
+}
+
+add_filter( 'script_loader_tag', 'set_scripts_type_attribute', 10, 3 );
+
 function woodwood_theme_setup() {
   register_nav_menus( array(
     'header' => 'Header menu',
