@@ -1,5 +1,77 @@
 .profile {
- &__title {
-     color: red;
- }   
+    @include breakpoint-up(large) {
+        padding: 6% 11.11111%;
+
+        .offer {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    h2 {
+        @include breakpoint-up(large){
+            display: flex;
+            align-items: center;
+            &::after {
+                content: "";
+                display: block;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-image: url("../images/smiley.png");
+                height: 50px;
+                width: 50px;
+                margin-left: 1rem;
+            }
+        }
+    }
+
+
+    &__title {
+        color: blue;
+    }   
+
+    &__padding {
+        @include breakpoint-down(medium) {
+            padding: 1.25rem;
+
+        }
+    }
+
+    &__greeting {
+        padding: 1rem 0rem 3rem 0rem;
+        
+        @include breakpoint-up(large) {
+            padding: 1.5rem 0rem 3rem 0rem;
+        }
+    }
+
+    &__suggestion {
+        padding: 0rem 0rem 1rem 0rem;
+    }
+
+    h3 {
+        font-size: var(--h4-size);
+        line-height: 25.2px;
+        font-weight: 700;
+        @include breakpoint-up(large) {
+            line-height: 50.5px;
+        }
+    }
+
+    h2 {
+        font-size: var(--h1-size);
+        letter-spacing: -0.55px;
+        line-height: 48.1px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+  
+        @include breakpoint-up(large) {
+          font-size: var(--h2-size);
+          margin-bottom: 0;
+          max-width: 80%;
+          line-height: 61.65px;
+        }
+    }
+
+
 }

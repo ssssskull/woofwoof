@@ -154,7 +154,7 @@ var revealEffect = function revealEffect(e) {
 
   var revealEl = e.target.closest("[data-reveal]");
   if (!revealEl) return;
-  var revealImg = revealEl.parentElement.parentElement.parentElement.nextElementSibling.firstElementChild;
+  var revealImg = revealEl.parentElement.parentElement.nextElementSibling.firstElementChild;
   revealImg.classList.forEach(function (item) {
     if (item.startsWith("reveal-image--")) {
       revealImg.classList.remove(item);
@@ -181,7 +181,10 @@ if (submitButton) {
     console.log(submitButtonAddress);
     window.location.href = submitButtonAddress;
   });
-}
+} // Scroll progress bar on frontpage
+
+
+if (benefitContainer) {}
 
 /***/ }),
 

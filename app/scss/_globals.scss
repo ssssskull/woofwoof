@@ -30,13 +30,16 @@ body {
 }
 
 .site-content {
-  display: grid;
+  @include breakpoint-up(large) {
+    display: grid;
+
+  }
   grid-template-areas: "content";
   grid-template-columns: 1fr;
-
+  
   &--third {
-    display: grid;
     @include breakpoint-up(large) {
+      display: grid;
       grid-template-areas: "sidebar content";
       grid-template-columns: 1fr 3fr;
     }

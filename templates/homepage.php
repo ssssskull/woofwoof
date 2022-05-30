@@ -19,21 +19,11 @@ get_header();?>
                 <div class="benefits__content">
                     <h2>As a member, you enjoy benefits such as</h2>
                     <ul class="benefits__list">
-                        <li class="benefits__elem">
-                             <a href="#!" data-reveal="1">Free shipping and returns on all orders.</a>
-                         </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="2">Pre-access to new releases.</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="3">Personalised offers.</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="4">Exclusive events for members only.</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="5">Digital receipts on your phone.</a>
-                        </li>
+                        <li class="benefits__elem" data-reveal="1">Free shipping and returns on all orders.</li>
+                        <li class="benefits__elem" data-reveal="2">Pre-access to new releases. </li>
+                        <li class="benefits__elem" data-reveal="3">Personalised offers.                    </li>
+                        <li class="benefits__elem" data-reveal="4">Exclusive events for members only.</li>
+                        <li class="benefits__elem" data-reveal="5">Digital receipts on your phone.</li>
                     </ul>
                     <div class="benefits__actions">
                         <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member</a>
@@ -267,23 +257,12 @@ get_header();?>
                 <div class="benefits__content">
                     <h2>Be the first to hear about our newest collaborations</h2>
                     <ul class="benefits__list collabs__container">
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="6">Garfield by WOOD WOOD</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="7">Solovair for WOOD WOOD</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="8">Hermansen by WOOD WOOD</a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="9">Wood Wood x Rune Glifberg </a>
-                        </li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="10">Roskilde Festival 2021</a></li>
-                        <li class="benefits__elem">
-                            <a href="#!" data-reveal="11">Joe Pilkington for Wood Wood</a>
-                        </li>
+                        <li class="benefits__elem" data-reveal="6">Garfield by WOOD WOOD</li>
+                        <li class="benefits__elem" data-reveal="7">Solovair for WOOD WOOD</li>
+                        <li class="benefits__elem" data-reveal="8">Hermansen by WOOD WOOD</li>
+                        <li class="benefits__elem" data-reveal="9">Wood Wood x Rune Glifberg </li>
+                        <li class="benefits__elem" data-reveal="10">Roskilde Festival 2021</li>
+                        <li class="benefits__elem" data-reveal="11">Joe Pilkington for Wood Wood</li>
                     </ul>
                 </div>
                 <div class="collabs__illustration">

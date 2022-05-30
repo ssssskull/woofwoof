@@ -151,7 +151,7 @@ const revealEffect = function (e) {
   if (!revealEl) return;
 
   const revealImg =
-    revealEl.parentElement.parentElement.parentElement.nextElementSibling
+    revealEl.parentElement.parentElement.nextElementSibling
       .firstElementChild;
 
   revealImg.classList.forEach((item) => {
@@ -182,4 +182,10 @@ if (submitButton) {
     console.log(submitButtonAddress);
     window.location.href = submitButtonAddress;
   });
+}
+
+// Scroll progress bar on frontpage
+
+if (benefitContainer) {
+
 }
