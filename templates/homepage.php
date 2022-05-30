@@ -37,6 +37,7 @@ get_header();?>
                     </ul>
                     <div class="benefits__actions">
                         <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member</a>
+                        <a href="#!" class="btn--secondary">Or explore the program</a>
                     </div>
                 </div>
                 <div class="benefits__illustration">
@@ -76,7 +77,7 @@ get_header();?>
                 <div class="signup__wrapper">
                     <h2>Tap into the essence of WOOD WOOD.<br>Join the community.</h2>
                     <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member for free</a>
-                    <h3>If you’re still curious, you can check out offers for members and recent collaborations we’ve made. They’re right below here.</h3>
+                    <h3>If you’re still curious, you can check out offers for members and recent collaborations we’ve made.<br>They’re right <span>below</span> here.</h3>
                 </div>
             </div>
         </section>

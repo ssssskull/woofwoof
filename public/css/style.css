@@ -449,7 +449,7 @@ a:hover, a:focus {
   background-repeat: no-repeat;
   background-position: 100%;
   text-align: initial;
-  background-image: url(../images/Icon=Icon-chevron.svg?6d0f5da061b49553532e76b8b5ae381e);
+  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
 }
 @media (min-width: 64em) {
   .nav__icon--lang {
@@ -468,13 +468,13 @@ a:hover, a:focus {
   }
 }
 .nav__icon--search {
-  background-image: url(../images/Icon=Icon-search.svg?64e48fb02e71aa8e919a5035674f30b8);
+  background-image: url(../images/Icon=Icon-search.svg?155fa09c34892a8351a916ef4747226b);
 }
 .nav__icon--profile {
-  background-image: url(../images/Icon=Icon-face.svg?cf9b93f4e0f13c8920dabbb26c0849aa);
+  background-image: url(../images/Icon=Icon-face.svg?f5eaf4a5805ee3401d9053975819d2b1);
 }
 .nav__icon--cart {
-  background-image: url(../images/Icon=Icon-bag.svg?fc1ac035489a4a6c50b817193e442fc8);
+  background-image: url(../images/Icon=Icon-bag.svg?55ddb6abdd601f32e74469d56ba18458);
 }
 .nav__icon--cart span {
   font-size: 0.625rem;
@@ -852,6 +852,11 @@ nav .menu-item a {
     line-height: 50.5px;
   }
 }
+.signup__wrapper span {
+  text-decoration: underline;
+  text-underline-position: under;
+  text-decoration-thickness: 3px;
+}
 .signup__actions {
   display: flex;
   align-items: baseline;
@@ -1079,7 +1084,7 @@ nav .menu-item a {
   content: "";
   display: flex;
   position: absolute;
-  background-image: url(../images/Icon=Icon-chevron.svg?6d0f5da061b49553532e76b8b5ae381e);
+  background-image: url(../images/Icon=Icon-chevron.svg?9a8f0f501b84b3553174e8d2173c0686);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   height: 2.5rem;
@@ -1400,8 +1405,10 @@ nav .menu-item a {
   position: relative;
   top: -0.1em;
 }
-.footer__campaign, .footer__links, .footer__newsletter {
-  border-left: 1px solid;
+@media (min-width: 64em) {
+  .footer__campaign, .footer__links, .footer__newsletter {
+    border-left: 1px solid;
+  }
 }
 .footer__end {
   align-items: center;
@@ -1823,10 +1830,14 @@ nav .menu-item a {
   }
 }
 .benefits__actions {
+  display: flex;
+  align-items: baseline;
   margin-top: 2rem;
+  flex-direction: column;
 }
 @media (min-width: 64em) {
   .benefits__actions {
+    flex-direction: row;
     margin-top: 3.5rem;
   }
 }
@@ -1834,6 +1845,14 @@ nav .menu-item a {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+}
+.benefits__actions > * + * {
+  margin-top: 1rem;
+}
+@media (min-width: 64em) {
+  .benefits__actions > * + * {
+    margin-left: 1rem;
+  }
 }
 .benefits__list,
 .benefits .collabs__container {
@@ -1917,7 +1936,7 @@ nav .menu-item a {
   align-items: center;
 }
 .register__checkbox label {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 .register__checkbox input[type=checkbox] {
   cursor: pointer;
@@ -1928,8 +1947,9 @@ nav .menu-item a {
   margin: 0;
   font: inherit;
   color: currentColor;
-  width: 1.5em;
-  height: 1.5em;
+  max-width: 24px;
+  width: 100%;
+  height: 24px;
   border: 2px solid currentColor;
   transform: translateY(-0.075em);
   display: grid;

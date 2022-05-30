@@ -39,7 +39,7 @@ get_header();?>
                     </div>
                 </div>
                 <div class="register__checkbox">
-                    <label for="loyalty_program">I'd like to join the Loyalty Program</label>
+                    <label for="loyalty_program">Yes, sign me up for the Wood Wood community. I agree to Wood Wood’s <a href="#!" class="btn--secondary">privacy policy.</a></label>
                     <input type="checkbox" id="loyalty_program" />
                     <span aria-hidden="true"></span>
                 </div>

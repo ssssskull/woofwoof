@@ -93,6 +93,12 @@
         line-height: 50.5px;
       }
     }
+
+    span {
+      text-decoration: underline;
+      text-underline-position: under;
+      text-decoration-thickness: 3px;
+    }
   }
 
   &__actions {

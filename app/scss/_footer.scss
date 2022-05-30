@@ -162,7 +162,9 @@
   &__campaign,
   &__links,
   &__newsletter {
-    border-left: 1px solid;
+    @include breakpoint-up(large) {
+      border-left: 1px solid;
+    }
   }
   &__end {
     align-items: center;

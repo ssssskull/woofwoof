@@ -56,12 +56,23 @@
   }
 
   &__actions {
+    display: flex;
+    align-items: baseline;
     margin-top: 2rem;
+    flex-direction: column;
     @include breakpoint-up(large) {
+      flex-direction: row;
       margin-top: 3.5rem;
     }
     .btn--primary {
       width: max-content;
+    }
+
+    > * + * {
+      margin-top: 1rem;
+      @include breakpoint-up(large) {
+        margin-left: 1rem;
+      }
     }
   }
 
