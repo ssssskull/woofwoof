@@ -8,10 +8,10 @@ get_header();?>
         <?php wp_nav_menu(array( 'menu' => 'profile', 'container'=> false, 'menu_class' => 'document-list', 'menu_id' => false));?>
     </nav>
     <main class="main main--third">
-        <article class="document">
-            <h1 class="document__title">Hey Mathilde!</h1>
+        <article class="document profile">
+            <h1 class="document__title">Hey smukke!</h1>
             <div class="document__content">
-                <h2 class="document__subheading">My benefits</h2>
+                <h2 class="document__subheading profile__title">My benefits</h2>
                 <p>Wow all these benefits omg</p>
             </div>
         </article>
