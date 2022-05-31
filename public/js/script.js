@@ -130,7 +130,8 @@ links.forEach(function (link) {
 (function () {
   "use strict"; // breakpoint where swiper will be destroyed
 
-  var breakpoint = window.matchMedia("(min-width:64em)"); // keep track of swiper instances to destroy later
+  var breakpoint = window.matchMedia("(min-width:64em)");
+  var thisIsProfilePage = document.querySelector(".profile__padding"); // keep track of swiper instances to destroy later
 
   var mySwiper;
 
@@ -139,7 +140,15 @@ links.forEach(function (link) {
     if (breakpoint.matches === true) {
       // clean up old instances and inline styles when available
       if (mySwiper !== undefined) {
-        mySwiper.destroy(false, true);
+        if (benefitContainer) {
+          mySwiper.destroy(false, true);
+        }
+
+        if (thisIsProfilePage) {
+          mySwiper.forEach(function (swipey, i) {
+            swipey.destroy(false, true);
+          });
+        }
       } // or/and do nothing
 
 

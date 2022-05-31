@@ -10,7 +10,7 @@ get_header();?>
     <main class="main main--third">
         <article class="profile">
             <div class="profile__padding">
-                <h2 id="message">Good morning Mikael</h2>
+                <h2 id="message">Good morning, Mikael</h2>
                 <p class="profile__greeting">How are you today? It’s good to see you again.</br>
                     Check out what we’ve collected for you.</p>
                 <h3 class="profile__suggestion">We think you’ll like this</h3>
