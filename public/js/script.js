@@ -184,7 +184,14 @@ if (submitButton) {
     console.log(submitButtonAddress);
     window.location.href = submitButtonAddress;
   });
-}
+} //Create time based greeting
+
+
+today = new Date();
+hrs = today.getHours();
+var greet;
+if (hrs < 12) greet = 'Good morning';else if (hrs >= 12 && hrs <= 17) greet = 'Good afternoon';else if (hrs >= 17 && hrs <= 24) greet = 'Good evening';
+document.getElementById('message').innerHTML = greet;
 
 /***/ }),
 
