@@ -1,10 +1,9 @@
 .scroll-tracker {
-    position: fixed;
-    inset: 0 0 auto;
-    height: 10px;
-    background-color: $clr-light;
-    transform-origin: left;
-    transition: background-color 0.25s ease;
-    z-index: 10000;
-    border-bottom: 1px $clr-dark solid;
+  position: fixed;
+  inset: 0 0 auto;
+  height: 10px;
+  background-color: rgb(240, 78, 35);
+  transform-origin: left;
+  transition: all 0.25s ease;
+  z-index: 10000;
 }

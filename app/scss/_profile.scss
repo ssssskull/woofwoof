@@ -1,124 +1,118 @@
 .profile {
+  @include breakpoint-up(large) {
+    padding: 6% 11.11111%;
+
+    .offer {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h2 {
     @include breakpoint-up(large) {
-        padding: 6% 11.11111%;
-
-        .offer {
-            margin-bottom: 1.5rem;
-        }
-    }
-
-    h2 {
-        @include breakpoint-up(large){
-            display: flex;
-            align-items: center;
-            &::after {
-                content: "";
-                display: block;
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-image: url("../images/smiley.png");
-                height: 50px;
-                width: 50px;
-                margin-left: 1rem;
-            }
-        }
-    }
-
-
-    &__title {
-        color: blue;
-    }   
-
-    &__padding {
-        @include breakpoint-down(medium) {
-            padding: 1.25rem;
-
-        }
-    }
-
-    &__greeting {
-        padding: 1rem 0rem 3rem 0rem;
-        
-        @include breakpoint-up(large) {
-            padding: 1.5rem 0rem 3rem 0rem;
-        }
-    }
-
-    &__suggestion {
-        padding: 0rem 0rem 1rem 0rem;
-    }
-
-    h3 {
-        font-size: var(--h4-size);
-        line-height: 25.2px;
-        font-weight: 700;
-        @include breakpoint-up(large) {
-            line-height: 50.5px;
-        }
-    }
-
-    h2 {
-        font-size: var(--h1-size);
-        letter-spacing: -0.55px;
-        line-height: 48.1px;
-        font-weight: 700;
-        margin-bottom: 1rem;
-  
-        @include breakpoint-up(large) {
-          font-size: var(--h2-size);
-          margin-bottom: 0;
-          max-width: 80%;
-          line-height: 61.65px;
-        }
-    }
-
-    h4 {
-        font-size: var(--h5-size);
-        font-weight: 700; 
+      display: flex;
+      align-items: center;
+      &::after {
+        content: "";
+        display: block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/smiley.png");
+        height: 50px;
+        width: 50px;
+        margin-left: 1rem;
       }
+    }
+  }
 
-    &__accesslist { 
-        font-size: var(--base-size);
-        padding: 1.5rem 0 2rem 0;
-        @include breakpoint-up(large) {
-        padding: 2.5rem 0 5rem;
-        }
+  &__title {
+    color: blue;
+  }
 
-        li {
-            display: flex;
-            align-items: center;
-            padding: 0.5rem 0;
-            max-width: 65ch;
-            border-bottom: 1px solid $clr-dark;
-            @include breakpoint-up(large) {
-                max-width: 100%;
-            }
-  
-        &::after {
-          content: "";
-          display: inline-block;
-          background-size: 100% 100%;
-          height: 1.375rem;
-          width: 1.375rem;
-          background-image: url("../images/icons/Icon=Icon-arrow.svg");
-          background-repeat: no-repeat;
-          background-position: left;
-          padding: 0.75rem;
-          box-sizing: border-box;
-          margin-left: auto;
-        }
-      }
+  &__padding {
+    @include breakpoint-down(medium) {
+      padding: 1.25rem;
+    }
+  }
 
-      div {
-          margin-right: 2em;
+  &__greeting {
+    padding: 1rem 0rem 3rem 0rem;
+
+    @include breakpoint-up(large) {
+      padding: 1.5rem 0rem 3rem 0rem;
+    }
+  }
+
+  &__suggestion {
+    padding: 0rem 0rem 1rem 0rem;
+  }
+
+  h3 {
+    font-size: var(--h4-size);
+    line-height: 25.2px;
+    font-weight: 700;
+    @include breakpoint-up(large) {
+      line-height: 50.5px;
+    }
+  }
+
+  h2 {
+    font-size: var(--h1-size);
+    letter-spacing: -0.55px;
+    line-height: 48.1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+
+    @include breakpoint-up(large) {
+      font-size: var(--h2-size);
+      margin-bottom: 0;
+      max-width: 80%;
+      line-height: 61.65px;
+    }
+  }
+
+  h4 {
+    font-size: var(--h5-size);
+    font-weight: 700;
+  }
+
+  &__accesslist {
+    font-size: var(--base-size);
+    padding: 1.5rem 0 2rem 0;
+    @include breakpoint-up(large) {
+      padding: 2.5rem 0 5rem;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid $clr-dark;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        background-size: 100% 100%;
+        height: 1.375rem;
+        width: 1.375rem;
+        background-image: url("../images/icons/Icon=Icon-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: left;
+        padding: 0.75rem;
+        box-sizing: border-box;
+        margin-left: auto;
       }
     }
 
-    &__sectionchange {
-        padding: 0rem 1.25rem 3rem 1.25rem;
-        @include breakpoint-up(large) {
-            padding: 0 0 5rem 0;
-        }
+    div {
+      margin-right: 2em;
     }
+  }
+
+  &__sectionchange {
+    padding: 0rem 1.25rem 3rem 1.25rem;
+    @include breakpoint-up(large) {
+      padding: 0 0 5rem 0;
+    }
+  }
 }

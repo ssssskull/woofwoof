@@ -7,40 +7,62 @@
   \**************************/
 /***/ (() => {
 
-// Nav functionality
+// Collabs tabbed component
+var collabsContainer = document.querySelector(".collabs__container");
+var benefitContainer = document.querySelector(".benefits__content");
+
+var revealEffect = function revealEffect(e) {
+  e.preventDefault(); // TODO check for picture data and use z-index with grid to show it
+
+  var revealEl = e.target.closest("[data-reveal]");
+  if (!revealEl) return;
+  var revealImg = revealEl.parentElement.parentElement.nextElementSibling.firstElementChild;
+  revealImg.classList.forEach(function (item) {
+    if (item.startsWith("reveal-image--")) {
+      revealImg.classList.remove(item);
+    }
+  });
+  revealImg.classList.add("reveal-image--".concat(revealEl.dataset.reveal));
+};
+
+var revealListener = function revealListener(container) {
+  if (container) {
+    container.addEventListener("mouseover", revealEffect);
+  }
+};
+
+revealListener(benefitContainer);
+revealListener(collabsContainer); // Nav functionality
+
 var nav = document.querySelector(".nav");
 var dropdown = document.querySelector(".nav__list");
 var icons = document.querySelectorAll("[data-visibility]");
+nav.addEventListener("click", function (e) {
+  var toggle = e.target.closest(".nav__toggle");
+  var submenu = e.target.closest(".menu-item");
 
-if (window.innerWidth < 1024) {
-  nav.addEventListener("click", function (e) {
-    var toggle = e.target.closest(".nav__toggle");
-    var submenu = e.target.closest(".menu-item");
+  if (submenu) {
+    var nestedDropdown = submenu.lastElementChild;
+    nestedDropdown.classList.toggle("sub-menu--visible");
+  }
 
-    if (submenu) {
-      var nestedDropdown = submenu.lastElementChild;
-      nestedDropdown.classList.toggle("sub-menu--visible");
-    }
+  if (!toggle) return;
+  toggle.classList.toggle("nav-is-expanded");
 
-    if (!toggle) return;
-    toggle.classList.toggle("nav-is-expanded");
-
-    if (toggle.classList.contains("nav-is-expanded")) {
-      dropdown.classList.add("visible");
-      icons.forEach(function (el) {
-        return el.classList.add("hidden-icon");
-      });
-      nav.classList.add("overlay");
-    } else {
-      dropdown.classList.remove("visible");
-      icons.forEach(function (el) {
-        return el.classList.remove("hidden-icon");
-      });
-      nav.classList.remove("overlay");
-    }
-  });
-} // Nav hide on scroll
-
+  if (toggle.classList.contains("nav-is-expanded")) {
+    dropdown.classList.add("visible");
+    icons.forEach(function (el) {
+      return el.classList.add("hidden-icon");
+    });
+    nav.classList.add("overlay");
+  } else {
+    dropdown.classList.remove("visible");
+    icons.forEach(function (el) {
+      return el.classList.remove("hidden-icon");
+    });
+    nav.classList.remove("overlay");
+  }
+}); // Nav hide on scroll
 
 var scrollTracker = document.querySelector(".scroll-tracker");
 var prevScrollpos = window.pageYOffset;
@@ -50,10 +72,20 @@ window.onscroll = function () {
 
   if (prevScrollpos > currentScrollPos) {
     nav.style.top = "0";
-    scrollTracker.style.top = "60px";
+
+    if (collabsContainer) {
+      scrollTracker.style.top = "60px";
+
+      if (window.innerWidth >= 1920) {
+        scrollTracker.style.top = "68.433px";
+      }
+    }
   } else {
     nav.style.top = "-60px";
-    scrollTracker.style.top = "0px";
+
+    if (collabsContainer) {
+      scrollTracker.style.top = "0px";
+    }
 
     if (window.innerWidth >= 1920) {
       nav.style.top = "-68.433px";
@@ -146,34 +178,8 @@ links.forEach(function (link) {
   breakpointChecker();
 })();
 /* IIFE end */
-// Collabs tabbed component
+// Create account redirect
 
-
-var collabsContainer = document.querySelector(".collabs__container");
-var benefitContainer = document.querySelector(".benefits__content");
-
-var revealEffect = function revealEffect(e) {
-  e.preventDefault(); // TODO check for picture data and use z-index with grid to show it
-
-  var revealEl = e.target.closest("[data-reveal]");
-  if (!revealEl) return;
-  var revealImg = revealEl.parentElement.parentElement.nextElementSibling.firstElementChild;
-  revealImg.classList.forEach(function (item) {
-    if (item.startsWith("reveal-image--")) {
-      revealImg.classList.remove(item);
-    }
-  });
-  revealImg.classList.add("reveal-image--".concat(revealEl.dataset.reveal));
-};
-
-var revealListener = function revealListener(container) {
-  if (container) {
-    container.addEventListener("mouseover", revealEffect);
-  }
-};
-
-revealListener(benefitContainer);
-revealListener(collabsContainer); // Create account redirect
 
 var submitButton = document.querySelector(".register__submit");
 
@@ -187,11 +193,15 @@ if (submitButton) {
 } //Create time based greeting
 
 
-today = new Date();
-hrs = today.getHours();
-var greet;
-if (hrs < 12) greet = 'Good morning';else if (hrs >= 12 && hrs <= 17) greet = 'Good afternoon';else if (hrs >= 17 && hrs <= 24) greet = 'Good evening';
-document.getElementById('message').innerHTML = greet;
+var profileMessage = document.getElementById("message");
+
+if (profileMessage) {
+  today = new Date();
+  hrs = today.getHours();
+  var greet;
+  if (hrs < 12) greet = "Good morning beautiful";else if (hrs >= 12 && hrs <= 17) greet = "Good afternoon beautiful";else if (hrs >= 17 && hrs <= 24) greet = "Good evening beautiful";
+  profileMessage.innerHTML = greet;
+}
 
 /***/ }),
 

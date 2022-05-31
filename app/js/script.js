@@ -1,37 +1,66 @@
+// Collabs tabbed component
+
+const collabsContainer = document.querySelector(".collabs__container");
+const benefitContainer = document.querySelector(".benefits__content");
+
+const revealEffect = function (e) {
+  e.preventDefault();
+  // TODO check for picture data and use z-index with grid to show it
+  const revealEl = e.target.closest("[data-reveal]");
+  if (!revealEl) return;
+
+  const revealImg =
+    revealEl.parentElement.parentElement.nextElementSibling.firstElementChild;
+
+  revealImg.classList.forEach((item) => {
+    if (item.startsWith("reveal-image--")) {
+      revealImg.classList.remove(item);
+    }
+  });
+
+  revealImg.classList.add(`reveal-image--${revealEl.dataset.reveal}`);
+};
+
+const revealListener = function (container) {
+  if (container) {
+    container.addEventListener("mouseover", revealEffect);
+  }
+};
+
+revealListener(benefitContainer);
+revealListener(collabsContainer);
+
 // Nav functionality
 
 const nav = document.querySelector(".nav");
 const dropdown = document.querySelector(".nav__list");
 const icons = document.querySelectorAll("[data-visibility]");
 
-if (window.innerWidth < 1024) {
-  nav.addEventListener("click", function (e) {
-    const toggle = e.target.closest(".nav__toggle");
-    const submenu = e.target.closest(".menu-item");
+nav.addEventListener("click", function (e) {
+  const toggle = e.target.closest(".nav__toggle");
+  const submenu = e.target.closest(".menu-item");
 
-    if (submenu) {
-      const nestedDropdown = submenu.lastElementChild;
-      nestedDropdown.classList.toggle("sub-menu--visible");
-    }
+  if (submenu) {
+    const nestedDropdown = submenu.lastElementChild;
+    nestedDropdown.classList.toggle("sub-menu--visible");
+  }
 
-    if (!toggle) return;
+  if (!toggle) return;
 
-    toggle.classList.toggle("nav-is-expanded");
+  toggle.classList.toggle("nav-is-expanded");
 
-    if (toggle.classList.contains("nav-is-expanded")) {
-      dropdown.classList.add("visible");
-      icons.forEach((el) => el.classList.add("hidden-icon"));
-      nav.classList.add("overlay");
-    } else {
-      dropdown.classList.remove("visible");
-      icons.forEach((el) => el.classList.remove("hidden-icon"));
-      nav.classList.remove("overlay");
-    }
-  });
-}
+  if (toggle.classList.contains("nav-is-expanded")) {
+    dropdown.classList.add("visible");
+    icons.forEach((el) => el.classList.add("hidden-icon"));
+    nav.classList.add("overlay");
+  } else {
+    dropdown.classList.remove("visible");
+    icons.forEach((el) => el.classList.remove("hidden-icon"));
+    nav.classList.remove("overlay");
+  }
+});
 
 // Nav hide on scroll
-
 
 const scrollTracker = document.querySelector(".scroll-tracker");
 var prevScrollpos = window.pageYOffset;
@@ -39,11 +68,19 @@ window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     nav.style.top = "0";
-    scrollTracker.style.top = "60px";
+
+    if (collabsContainer) {
+      scrollTracker.style.top = "60px";
+      if (window.innerWidth >= 1920) {
+        scrollTracker.style.top = "68.433px";
+      }
+    }
   } else {
     nav.style.top = "-60px";
-    scrollTracker.style.top = "0px";
-    
+    if (collabsContainer) {
+      scrollTracker.style.top = "0px";
+    }
+
     if (window.innerWidth >= 1920) {
       nav.style.top = "-68.433px";
     }
@@ -144,39 +181,6 @@ links.forEach((link) => {
   breakpointChecker();
 })(); /* IIFE end */
 
-// Collabs tabbed component
-
-const collabsContainer = document.querySelector(".collabs__container");
-const benefitContainer = document.querySelector(".benefits__content");
-
-const revealEffect = function (e) {
-  e.preventDefault();
-  // TODO check for picture data and use z-index with grid to show it
-  const revealEl = e.target.closest("[data-reveal]");
-  if (!revealEl) return;
-
-  const revealImg =
-    revealEl.parentElement.parentElement.nextElementSibling
-      .firstElementChild;
-
-  revealImg.classList.forEach((item) => {
-    if (item.startsWith("reveal-image--")) {
-      revealImg.classList.remove(item);
-    }
-  });
-
-  revealImg.classList.add(`reveal-image--${revealEl.dataset.reveal}`);
-};
-
-const revealListener = function (container) {
-  if (container) {
-    container.addEventListener("mouseover", revealEffect);
-  }
-};
-
-revealListener(benefitContainer);
-revealListener(collabsContainer);
-
 // Create account redirect
 const submitButton = document.querySelector(".register__submit");
 
@@ -189,18 +193,17 @@ if (submitButton) {
   });
 }
 
-
 //Create time based greeting
-today = new Date();
-hrs = today.getHours();
+const profileMessage = document.getElementById("message");
+if (profileMessage) {
+  today = new Date();
+  hrs = today.getHours();
 
-var greet;
+  var greet;
 
-if (hrs < 12)
-  greet = 'Good morning';
-else if (hrs >= 12 && hrs <= 17)
-  greet = 'Good afternoon';
-else if (hrs >= 17 && hrs <= 24)
-  greet = 'Good evening';
+  if (hrs < 12) greet = "Good morning beautiful";
+  else if (hrs >= 12 && hrs <= 17) greet = "Good afternoon beautiful";
+  else if (hrs >= 17 && hrs <= 24) greet = "Good evening beautiful";
 
-document.getElementById('message').innerHTML = greet
+  profileMessage.innerHTML = greet;
+}

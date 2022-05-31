@@ -9,8 +9,8 @@ get_header();?>
     </nav>
     <main class="main main--third">
         <article class="profile">
-            <div class="profile__padding"> 
-                <h2 id="message">Good morning, Mikael</h2>
+            <div class="profile__padding">
+                <h2 id="message">Good morning Mikael</h2>
                 <p class="profile__greeting">How are you today? It’s good to see you again.</br>
                     Check out what we’ve collected for you.</p>
                 <h3 class="profile__suggestion">We think you’ll like this</h3>
@@ -139,9 +139,9 @@ get_header();?>
                     </div>
                 </div>
             </section>
-            <div class="profile__sectionchange"> 
+            <div class="profile__sectionchange">
                 <a href="#!" class="btn btn--secondary">See everything we’ve collected for you</a>
-            </div> 
+            </div>
             <div class="profile__padding">
                 <h3 class="profile__suggestion">Upcoming releases</h3>
                 <p>As a member, you enjoy early access to a number of releases and collaborations.</p>
@@ -315,9 +315,9 @@ get_header();?>
                     </div>
                 </div>
             </section>
-            <div class="profile__sectionchange"> 
+            <div class="profile__sectionchange">
                 <a href="#!" class="btn btn--secondary">Shop all offers for members</a>
-            </div> 
+            </div>
         </article>
     </main>
 </div>
