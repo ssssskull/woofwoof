@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   @include breakpoint-up("xlarge") {
     font-size: 114.2857142857%;
   }
