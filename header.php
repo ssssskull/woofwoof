@@ -44,7 +44,7 @@
                         <span>EN</span>
                     </button>
                     <a href="<?php echo home_url(); ?>/register" class="nav__icon--profile nav__icon" data-visibility="hide-on-expand" title="Profile" aria-label="Profile"></a>
-                    <button href="#" class="nav__icon--heart nav__icon nav__icon--button hide-for-mobile" data-visibility="hide-on-expand" title="Heart" aria-label="Heart"></button>
+                    <button href="#" class="nav__icon--heart nav__icon nav__icon--button hide-for-mobile" data-visibility="hide-on-expand" title="Wishlist" aria-label="Heart"></button>
                     <button href="#" class="nav__icon--search nav__icon nav__icon--button hide-for-mobile" data-visibility="hide-on-expand" title="Search" aria-label="Search"></button>
                     <button href="#" class="nav__icon--cart nav__icon nav__icon--button" data-visibility="hide-on-expand" title="Cart" aria-label="Cart">
                         <span>1</span>

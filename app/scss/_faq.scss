@@ -14,6 +14,14 @@
     }
   }
 
+  &__lead {
+    margin-bottom: 2rem;
+    @include breakpoint-up(large) {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+  }
+
   &__content {
     border: 1px solid;
 
@@ -102,6 +110,7 @@
     margin-bottom: 2rem;
 
     @include breakpoint-up(medium) {
+      margin-bottom: 2.5rem;
       text-align: center;
     }
   }

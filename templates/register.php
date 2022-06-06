@@ -13,7 +13,7 @@ get_header();?>
         </ul>
         <div class="register__notice">
             <p>By activating the loyalty button you become a member of the Wood Wood community. It’s free and you’ll gain access to a number of exclusive benefits.</p>
-            <a href="<?php echo home_url()?>" class="btn btn--secondary">Read more about them here.</a>
+            <a href="#!" class="btn btn--secondary">Read more about them here.</a>
         </div>
     </div>
     <main class="main main--split">
@@ -43,7 +43,7 @@ get_header();?>
                     <input type="checkbox" id="loyalty_program" />
                     <span aria-hidden="true"></span>
                 </div>
-                <button class="register__submit" data-link="<?php the_field('my_profile_cta'); ?>">Sign up</button>
+                <button class="register__submit" data-link="<?php the_field('my_profile_cta'); ?>">Register</button>
             </form>
             <div class="register__actions">
                 <a href="#!" class="btn btn--secondary">Or sign in here.</a>

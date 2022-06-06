@@ -8,8 +8,8 @@ get_header();?>
     <section class="hero">
         <main class="main">
             <div class="hero__wrapper">
-                <h2 class="hero__title">Are you ready<br>for Wood Woods club?</h2>
-                <p class="hero__paragraph">Enjoy benefits, sales, pre-access to new collections and events hosted for our loyal customers</p>
+                <h2 class="hero__title">Join us in the<br>WOOD WOOD community.</h2>
+                <p class="hero__paragraph">Explore the world of WOOD WOOD and enjoy all the perks we have to offer – all for free.</p>
             </div>
         </section>
         <div class="banner">
@@ -28,7 +28,7 @@ get_header();?>
                     </ul>
                     <div class="benefits__actions">
                         <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member</a>
-                        <a href="#howItWorks" class="btn--secondary">Or explore the program</a>
+                        <a href="#!" class="btn--secondary">Or discover more</a>
                     </div>
                 </div>
                 <div class="benefits__illustration">
@@ -36,7 +36,7 @@ get_header();?>
                 </div>
             </div>
         </section>
-        <div class="banner banner--divider" id="howItWorks">
+        <div class="banner banner--divider">
             <p class="banner__title">How it works</p>
         </div>
         <section class="container">
@@ -50,12 +50,12 @@ get_header();?>
                     </picture>
                 </figure>
                 <div class="how__content">
-                    <h2 class="how__title">Become a part of the Wood Wood family</h2>
+                    <h2 class="how__title">Here’s how it works.</h2>
                     <ul class="how__list">
-                        <li>Sign up in store or online.</li>
-                        <li>Connect your card to your account. Exclusive member offers will automatically be discounted at check out in-store.<br>Remember to sign in when shopping online to make use of the offers.</li>
-                        <li>Receive notifications about offers, invitations to events, and pre-access to curated collections straight in your inbox.</li>
-                        <li>Enjoy the perks of being a member of the WW family!</li>
+                        <li>Sign up for free in store or online.</li>
+                        <li>Connect your card to your account – we’ll show you how once you’re signed in.<br>Exclusive member offers will automatically be discounted at check out in-store if your card is connected.<br>Remember to sign in when shopping online to make use of the offers.</li>
+                        <li>Receive notifications about exclusive offers, invitations to events, and pre-access to curated campaigns straight to your inbox.</li>
+                        <li>Sit back and enjoy the full WOOD WOOD experience.</li>
                     </ul>
                 </div>
             </div>
@@ -68,7 +68,7 @@ get_header();?>
                 <div class="signup__wrapper">
                     <h2>Tap into the essence of WOOD WOOD.<br>Join the community.</h2>
                     <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member for free</a>
-                    <h3>If you’re still curious, you can check out offers for members and recent collaborations we’ve made.<br>They’re right <span>below</span> here.</h3>
+                    <h3>If you’re still curious, you can check out this weeks exclusive offers and <br>recent collaborations. They’re right <span>below</span> here.</h3>
                 </div>
             </div>
         </section>
@@ -119,7 +119,7 @@ get_header();?>
         </div>
         <section class="container headline">
             <div class="wrapper">
-                <h2>Exclusive offers for members</h2>
+                <h2>Browse members’ exclusive offers</h2>
             </div>
         </section>
         <section class="offer swiper mySwiper">
@@ -256,7 +256,7 @@ get_header();?>
         <section class="collabs benefits container">
             <div class="wrapper">
                 <div class="benefits__content">
-                    <h2>Be the first to hear about our newest collaborations</h2>
+                    <h2>Gain pre-access to new releases.</h2>
                     <ul class="benefits__list collabs__container">
                         <li class="benefits__elem" data-reveal="6">Garfield by WOOD WOOD</li>
                         <li class="benefits__elem" data-reveal="7">Solovair for WOOD WOOD</li>
@@ -277,6 +277,7 @@ get_header();?>
         <section class="faq">
             <div class="faq__wrapper">
                 <h3 class="faq__title">Frequently Asked Questions</h3>
+                <p class="faq__lead">Here you can find the most commonly asked questions about our loyalty programme.<br> If you didn’t find an answer, you can always contact us. We’re happy to help.</p>
                 <div class="faq__content">
                     <details>
                         <summary>What if an item I want is out of stock?</summary>
