@@ -1,5 +1,7 @@
 import "https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js";
-
+/*
+Victor
+*/
 // Scroll progress bar on frontpage
 
 const scrollTracker = document.querySelector(".scroll-tracker");

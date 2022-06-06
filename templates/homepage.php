@@ -28,7 +28,7 @@ get_header();?>
                     </ul>
                     <div class="benefits__actions">
                         <a href="<?php the_field('create_account_cta'); ?>" class="btn btn--primary btn--arrow">Become a member</a>
-                        <a href="#!" class="btn--secondary">Or discover more</a>
+                        <a href="#!" class="btn--secondary" id="btnScrollTo">Or discover more</a>
                     </div>
                 </div>
                 <div class="benefits__illustration">
@@ -36,7 +36,7 @@ get_header();?>
                 </div>
             </div>
         </section>
-        <div class="banner banner--divider">
+        <div class="banner banner--divider" id="how">
             <p class="banner__title">How it works</p>
         </div>
         <section class="container">

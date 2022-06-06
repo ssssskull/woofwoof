@@ -7,6 +7,9 @@
   \**************************/
 /***/ (() => {
 
+/*
+Daniel
+*/
 // Collabs tabbed component
 var collabsContainer = document.querySelector(".collabs__container");
 var benefitContainer = document.querySelector(".benefits__content");
@@ -93,7 +96,7 @@ window.onscroll = function () {
   }
 
   prevScrollpos = currentScrollPos;
-}; // Input field anim
+}; // Adaptive placeholder
 
 
 var inputField = document.querySelectorAll(".footer__newsletter-input");
@@ -179,7 +182,7 @@ links.forEach(function (link) {
         }
       }
     });
-  }; // keep an eye on viewport size changes
+  }; // keep an eye on viewport size
 
 
   breakpoint.addListener(breakpointChecker); // kickstart
@@ -199,14 +202,32 @@ if (submitButton) {
     console.log(submitButtonAddress);
     window.location.href = submitButtonAddress;
   });
-} //Create time based greeting
+} // Smooth scroll to position
+
+
+var btnScrollTo = document.querySelector("#btnScrollTo");
+var scrolledPos = document.querySelector("#how");
+
+if (btnScrollTo) {
+  btnScrollTo.addEventListener("click", function (e) {
+    var scrolledPosCoords = scrolledPos.getBoundingClientRect();
+    window.scrollTo({
+      top: scrolledPosCoords.top + window.pageYOffset,
+      behavior: "smooth"
+    });
+  });
+}
+/*
+Frederikke
+*/
+//Create time based greeting
 
 
 var profileMessage = document.getElementById("message");
 
 if (profileMessage) {
-  today = new Date();
-  hrs = today.getHours();
+  var today = new Date();
+  var hrs = today.getHours();
   var greet;
   if (hrs < 12) greet = "Good morning beautiful";else if (hrs >= 12 && hrs <= 17) greet = "Good afternoon beautiful";else if (hrs >= 17 && hrs <= 24) greet = "Good evening beautiful";
   profileMessage.innerHTML = greet;

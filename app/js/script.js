@@ -1,3 +1,6 @@
+/*
+Daniel
+*/
 // Collabs tabbed component
 
 const collabsContainer = document.querySelector(".collabs__container");
@@ -63,9 +66,9 @@ nav.addEventListener("click", function (e) {
 // Nav hide on scroll
 
 const scrollTracker = document.querySelector(".scroll-tracker");
-var prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     nav.style.top = "0";
 
@@ -88,7 +91,8 @@ window.onscroll = function () {
   prevScrollpos = currentScrollPos;
 };
 
-// Input field anim
+// Adaptive placeholder
+
 const inputField = document.querySelectorAll(".footer__newsletter-input");
 
 inputField.forEach((item) => {
@@ -107,6 +111,7 @@ inputField.forEach((item) => {
 });
 
 // Image hover effect
+
 const links = document.querySelectorAll(".events__element");
 const linkImages = document.querySelectorAll(".events__img");
 
@@ -184,7 +189,7 @@ links.forEach((link) => {
     });
   };
 
-  // keep an eye on viewport size changes
+  // keep an eye on viewport size
   breakpoint.addListener(breakpointChecker);
 
   // kickstart
@@ -192,6 +197,7 @@ links.forEach((link) => {
 })(); /* IIFE end */
 
 // Create account redirect
+
 const submitButton = document.querySelector(".register__submit");
 
 if (submitButton) {
@@ -203,13 +209,32 @@ if (submitButton) {
   });
 }
 
+// Smooth scroll to position
+
+const btnScrollTo = document.querySelector("#btnScrollTo");
+const scrolledPos = document.querySelector("#how");
+
+if (btnScrollTo) {
+  btnScrollTo.addEventListener("click", function (e) {
+    const scrolledPosCoords = scrolledPos.getBoundingClientRect();
+    window.scrollTo({
+      top: scrolledPosCoords.top + window.pageYOffset,
+      behavior: "smooth",
+    });
+  });
+}
+
+/*
+Frederikke
+*/
 //Create time based greeting
+
 const profileMessage = document.getElementById("message");
 if (profileMessage) {
-  today = new Date();
-  hrs = today.getHours();
+  let today = new Date();
+  let hrs = today.getHours();
 
-  var greet;
+  let greet;
 
   if (hrs < 12) greet = "Good morning beautiful";
   else if (hrs >= 12 && hrs <= 17) greet = "Good afternoon beautiful";
